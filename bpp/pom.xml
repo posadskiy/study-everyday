@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.posadskiy.java</groupId>
-    <artifactId>todo-soap-maven</artifactId>
+    <artifactId>bpp</artifactId>
     <version>0.1-SNAPSHOT</version>
 
     <properties>
