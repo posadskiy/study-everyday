@@ -7,11 +7,24 @@
     <groupId>dev.posadskiy.java</groupId>
     <artifactId>maven</artifactId>
     <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
 
     <properties>
         <maven.compiler.source>9</maven.compiler.source>
         <maven.compiler.target>9</maven.compiler.target>
     </properties>
+
+    <build>
+        <outputDirectory>target</outputDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>my-empty-not-exist-repo</id>
+            <url>http://not-exist-site.com/repo</url>
+        </repository>
+    </repositories>
 
 </project>
