@@ -9,7 +9,6 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-
     <properties>
         <maven.compiler.source>9</maven.compiler.source>
         <maven.compiler.target>9</maven.compiler.target>
@@ -19,6 +18,18 @@
         <outputDirectory>target</outputDirectory>
         <sourceDirectory>src/main/java</sourceDirectory>
     </build>
+
+    <profiles>
+        <profile>
+            <id>develop</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>production</id>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>
