@@ -9,6 +9,31 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <name>maven</name>
+    <url>https://github.com/DmitryPosadskiy/StudyEveryday/tree/develop/maven</url>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Dmitry Posadskiy</name>
+        <url>https://github.com/DmitryPosadskiy</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>dmitryposadskiy</id>
+            <name>Dmitry Posadskiy</name>
+            <email>dmitry.posadsky@gmail.com</email>
+            <url>https://github.com/DmitryPosadskiy</url>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>9</maven.compiler.source>
         <maven.compiler.target>9</maven.compiler.target>
