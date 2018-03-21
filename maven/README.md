@@ -1,7 +1,24 @@
 # Maven
 
+## Phases
+| Phase  | Plugin:goal |
+| ------------- | ------------- |
+| process-resources | resources:resources |
+| compile | compiler:compile |
+| process-test-resources | resources:testResources |
+| test-compile | compiler:testCompile |
+| test | surefire:test |
+| package | jar:jar |
+| install | install:install |
+| deploy | deploy:deploy |
+
+Все фазы: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources,
+test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, 
+post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy.
+
 ### Profiles
-Команда с профилем: mvn <фаза> -P <профиль>
+Команда с профилем: `mvn <фаза> -P <профиль>`
 
 ## Dependencies
 ### Dependency mediation
@@ -25,3 +42,5 @@ pom.xml, создаваемый для проекта, по умолчанию �
 * плагинов, привязанных к фазам сборки (plugins)
 
 POM, включающий в себя текущий, всех родителей и корневой, можно увидеть командой `mvn help:effective-pom`
+Скомпилировать тесты и положить в test-out, но не запускать: -DskipTests.
+Пропустить тесты полностью: `-Dmaven.test.skip=true`
