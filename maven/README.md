@@ -27,9 +27,14 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 ### IntelliJ Dependencies Diagram
 Кликом в любом месте pom.xml файла и выбором пункта Diagram -> Show Dependencies `[Ctrl+Alt+Shift+U]` можно открыть диаграмму зависимостей.
 На ней красными стрелками обозначен путь к конфликтующим зависимостям, которые не будут использоваться.
+### Project dependencies
+Команда `mvn dependency:resolve` отображает список всех зависимостей проекта в формате `[groupId:artifactId:version:phase]`.
+Команда `mvn dependency:tree` делает аналогичный список, только в формате дерева.
 
 ## Plugins
-Плагин включает в себя цели. (Plugin includes goals)
+Плагин включает в себя цели. (Plugin includes goals)\
+**exec-maven-plugin**: позволяет выполнить программу (внешнюю или jar), сконфигурировав настройки в POM.xml.
+* mainClass 
 
 ## Other
 ### POM inheritance

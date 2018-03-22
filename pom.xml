@@ -7,6 +7,7 @@
     <groupId>dev.posadskiy</groupId>
     <artifactId>study-everyday</artifactId>
     <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
