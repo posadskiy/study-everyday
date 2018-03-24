@@ -27,7 +27,7 @@
 
     <developers>
         <developer>
-            <id>dmitryposadskiy</id>
+            <id>posadskiy</id>
             <name>Dmitry Posadskiy</name>
             <email>dmitry.posadsky@gmail.com</email>
             <url>https://github.com/DmitryPosadskiy</url>
@@ -95,6 +95,23 @@
                         <phase>process-test-resources</phase>
                         <goals>
                             <goal>testResources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <mainClass>Start</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default-exec</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>java</goal>
                         </goals>
                     </execution>
                 </executions>

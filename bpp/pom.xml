@@ -4,9 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.posadskiy.java</groupId>
     <artifactId>bpp</artifactId>
     <version>0.1-SNAPSHOT</version>
+
+    <parent>
+        <groupId>dev.posadskiy.java</groupId>
+        <artifactId>study-everyday</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
 
     <properties>
         <maven.compiler.target>9</maven.compiler.target>
@@ -27,22 +32,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>LATEST</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-beans</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>

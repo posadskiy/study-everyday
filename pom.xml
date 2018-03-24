@@ -4,21 +4,39 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.posadskiy</groupId>
+    <groupId>dev.posadskiy.java</groupId>
     <artifactId>study-everyday</artifactId>
     <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>5.0.4.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>5.0.4.RELEASE</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
-            <groupId>dev.posadskiy.java</groupId>
-            <artifactId>bpp</artifactId>
-            <version>0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>dev.posadskiy.java</groupId>
-            <artifactId>spring</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <modules>
+        <module>bpp</module>
+        <module>maven</module>
+        <module>spring</module>
+    </modules>
 
 </project>
