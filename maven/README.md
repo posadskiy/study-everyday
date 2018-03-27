@@ -11,6 +11,17 @@
 В данном разделе определяются настройки сборки
 #### POM relationships
 Зависимости, родитель и модули.
+## POM
+#### POM inheritance
+pom.xml, создаваемый для проекта, по умолчанию является наследником super-POM, предоставляемого Maven. 
+В нем находятся объявления:
+- репозитория Maven Central (repository)
+- репозитория плагинов (pluginRepository)
+- директорий исходных кодов, тестов, и т.д. (sourceDirectory, testSourceDirectory, outputDirectory, etc.)
+- версии плагинов (pluginManagement)
+- плагинов, привязанных к фазам сборки (plugins)
+#### Super POM
+POM, включающий в себя текущий, всех родителей и корневой, можно увидеть командой `mvn help:effective-pom`
 
 ## Phases
 | Phase | Plugin:goal |
@@ -28,8 +39,7 @@
 process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources,
 test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, 
 post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy.
-
-### Profiles
+#### Profiles
 Команда с профилем: `mvn <фаза> -P <профиль>`
 
 ## Dependencies
@@ -39,7 +49,6 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 - **provided** - используется только для фазы компиляции. Предполагается, что на месте запуска приложения данная библиотека
 есть (servlet-api)
 - **test** - используется только для компиляции и выполнения тестов
-
 ### Dependency management
 Это возможность управлять зависимостями самого модуля и транзитивными от него. Для этого служит блок `<dependencyManagement>`. 
 В нем нужно указать зависимости и, что самое главное, их версии. После данной операции указывать версии данных зависимостей
@@ -51,8 +60,7 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 Кликом в любом месте pom.xml файла и выбором пункта Diagram -> Show Dependencies `[Ctrl+Alt+Shift+U]` можно открыть диаграмму зависимостей.
 На ней красными стрелками обозначен путь к конфликтующим зависимостям, которые не будут использоваться.
 #### Project dependencies
-Команда `mvn dependency:resolve` отображает список всех зависимостей проекта в форма
-те `[groupId:artifactId:version:phase]`.
+Команда `mvn dependency:resolve` отображает список всех зависимостей проекта в формате `[groupId:artifactId:version:phase]`.
 Команда `mvn dependency:tree` делает аналогичный список, только в формате дерева.
 #### Exclusion
 Для исключения транзитивной зависимости из объявляемой в POM.xml необходимо добавить блок <exclusion> непосредственно 
@@ -60,29 +68,20 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 #### Optional
 Зависимость можно задать, как необязательную. Например: A->B->C, где С - необязательная. Тогда, она попадет в A только в
 том случае, если явно указать зависимость от C в A. Сделать зависимость необязательной можно, указав `<optional>true</optional>`
-внутри зависимости.
+внутри зависимости. Данный вид зависимости не рекомендуется ввиду того, что он может быть разделен на несколько модулей
+с выигрышем в очевидности.
 
 ## Plugins
 Плагин включает в себя цели. (Plugin includes goals)\
+#### Exec maven plugin
 **exec-maven-plugin**: позволяет выполнить программу (внешнюю или jar), сконфигурировав настройки в POM.xml.
 * mainClass 
 
 ## Other
-#### POM inheritance
-pom.xml, создаваемый для проекта, по умолчанию является наследником super-POM, предоставляемого Maven. 
-В нем находятся объявления:
-- репозитория Maven Central (repository)
-- репозитория плагинов (pluginRepository)
-- директорий исходных кодов, тестов, и т.д. (sourceDirectory, testSourceDirectory, outputDirectory, etc.)
-- версии плагинов (pluginManagement)
-- плагинов, привязанных к фазам сборки (plugins)
-
-#### Super POM
-POM, включающий в себя текущий, всех родителей и корневой, можно увидеть командой `mvn help:effective-pom`
 #### Tests
 Скомпилировать тесты и положить в test-out, но не запускать: -DskipTests.
 Пропустить тесты полностью: `-Dmaven.test.skip=true`
-
+#### Tips and trucks
 В многомодульном проекте groupId и version для вложенных модулей лучше задавать через имена родительского проекта:
 `${groupId}` и `${version}`
 
