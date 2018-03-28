@@ -4,10 +4,15 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.posadskiy.java</groupId>
     <artifactId>maven</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <parent>
+        <groupId>dev.posadskiy.java</groupId>
+        <artifactId>study-everyday</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
 
     <name>maven</name>
     <url>https://github.com/DmitryPosadskiy/StudyEveryday/tree/develop/maven</url>
