@@ -34,9 +34,9 @@
     </dependencies>
 
     <modules>
-        <module>spring/bpp</module>
+        <module>spring</module>
         <module>maven</module>
-        <module>spring/spring-di</module>
+        <module>pattern</module>
     </modules>
 
 </project>
