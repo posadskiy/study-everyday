@@ -34,10 +34,11 @@
     </dependencies>
 
     <modules>
-        <module>spring</module>
+        <module>exception</module>
         <module>maven</module>
         <module>pattern</module>
         <module>react-native</module>
+        <module>spring</module>
     </modules>
 
 </project>
