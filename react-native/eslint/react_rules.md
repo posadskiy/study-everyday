@@ -2,7 +2,7 @@
 
 `react/boolean-prop-naming` - не позволяет определить внутри PropTypes Boolean иначе, чем начинающийся с `is` (шаблон
 проверки можно задать самому и разрешить еще, например, `has`)\
-`react/button-has-type` - `<button />` должна иметь тип ("button", "submit" или "reset").\ 
+`react/button-has-type` - `<button />` должна иметь тип ("button", "submit" или "reset").\
 `react/default-props-match-prop-types` [Не использую]\
 `react/destructuring-assignment` - деструктуризация параметров перед использованием. Два режима: `always` и `never`. Во
 втором случае правило работает наоборот - никакой деструктуризации.\
