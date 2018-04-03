@@ -16,8 +16,28 @@
 В данном примере, выбрасывая исключение на 5-ом "листе" стека, можно вернуться сразу на третий, минуя остальные и
 продолжить выполнение программы.
 
-##### Выброшенное дважды не поймать
-Exception, выброшенные из блока catch, не перехватываются дальше, даже если соответствуют сигнатуре.
+#### Деление
+Исключение делятся на проверяемые (`checked`) и непроверяемые (`unchecked`). Первые обычно вызваны ошибками в работе
+программы, в то время, как вторые, обычно, плохим качеством программирования или ошибками системы.
+
+#### Лови, не проверяй
+В обработчике `catch` можно прописать логику отлова `unchecked` исключения, даже если код в `try` явно не декларирует
+возможность его выбросить. А вот попросить программу отловить `checked` исключения, которые не могут быть выброшены в
+`try`, не получится.
+```java
+public class NotThrowButCatch {
+    public static void main(String[] args) {
+        try {
+            String s = "This code don't generate any exceptions";
+        } catch (NullPointerException | IllegalArgumentException/*FileNotFoundException*/ e) { // FileNotFoundException - checked
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### Выброшенное дважды не поймать
+`Exception`, выброшенное из блока `catch`, не перехватывается дальше, даже если соответствует сигнатуре.
 ```java
 public class DoubleThrow {
     public static void main(String[] args) {
@@ -62,6 +82,23 @@ class InheritanceMethodsWithThrow {
 class Children extends InheritanceMethodsWithThrow {
     @Override
     protected void execute() throws IOException {}; 
+}
+```
+
+#### Исключения - неизменны
+Пойманное в блоке `catch` исключение можно переопределить, но только экземпляром того же класса или потомка.
+```java
+public class DoNotChangeException {
+    public static void main(String[] args) {
+        try {
+            throw new IOException("In-try exception");
+        } catch (IOException e) {
+            e = new IOException("In-catch exception");
+            e = new EOFException();
+            // e = new Exception("In-catch exception"); Так нельзя. 
+            e.printStackTrace();
+        } 
+    }
 }
 ```
 
