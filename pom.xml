@@ -35,6 +35,7 @@
 
     <modules>
         <module>exception</module>
+        <module>language</module>
         <module>maven</module>
         <module>pattern</module>
         <module>react-native</module>
