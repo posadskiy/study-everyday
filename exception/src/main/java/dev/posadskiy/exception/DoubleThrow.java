@@ -1,6 +1,6 @@
 package dev.posadskiy.exception;
 
-public class Start {
+public class DoubleThrow {
     public static void main(String[] args) {
         try {
             throw new NullPointerException();
