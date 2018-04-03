@@ -2,7 +2,7 @@
 Исключения используются, когда выполнение программы зашло в тупик. Это происходит, когда невозможно продолжать выполнение
 приложения в нормальном режиме.
 
-##### Применимость
+#### Применимость
 Одно из важных применений исключений - возможность с помощью одной команды убрать всё со стека. Перехват исключений 
 используется, чтобы позволять очистку стека до определенного момента. Представим, что снизу представлен стек с уровнями
 вложенности:
@@ -19,7 +19,7 @@
 ##### Выброшенное дважды не поймать
 Exception, выброшенные из блока catch, не перехватываются дальше, даже если соответствуют сигнатуре.
 ```java
-public class Start {
+public class DoubleThrow {
     public static void main(String[] args) {
         try {
             throw new NullPointerException();
@@ -32,7 +32,40 @@ public class Start {
 }
 ```
 
-##### System.err
+#### Бросаем Exception внутри Throwable
+Если выбрасывается родитель, внутри которого находится потомок, то в catch можно отловить потомка, но обязательно должен
+быть обработчик на родителя или, как в случае ниже, сигнатура метода указывает возможность выброса родителя. Другие
+варианты не пропустит компилятор.
+```java
+public class ThrowThrowableCatchException {
+    public static void main(String[] args) throws Throwable {
+        try {
+            Throwable t = new Exception();
+            throw t;
+        } catch (Exception e) {
+            System.err.println("Exception");
+        }
+    }
+}
+```
+
+#### Наследование методов, бросающих исключения
+Список исключений, которые могут быть выброшены из метода, при наследовании можно оставить прежним или сузить. Но
+расширять нельзя. Это может привести к тому, что на месте использования родителя, будет получено неожиданное исключение,
+"серьезнее" того, которые ожидаются и могут быть обработаны. В примере ниже в потомке описана возможность выброса
+`IOException`, которое является родителем `FileNotFoundException`.
+```java
+class InheritanceMethodsWithThrow {
+    protected void execute() throws FileNotFoundException {}
+}
+
+class Children extends InheritanceMethodsWithThrow {
+    @Override
+    protected void execute() throws IOException {}; 
+}
+```
+
+#### System.err
 `System.out` - буфферизованный поток вывода в консоль, а `System.err` - нет. Поэтому, в таком примере:
 ```java
 public class Start {
@@ -45,6 +78,6 @@ public class Start {
 может сначала вывестись `Message`, а затем `Error`, а может наоборот. Если же `System.out` заменить на `System.err`, то
 всегда будет выведено сначала `Message`, потом `Error`.
 
-##### Throw null
+#### Throw null
 Java позволяет выбросить null-исключение: `throw null`. В этом случае происходит проверка аргумента и, в данном случае,
 геренируется NullPointerException.
