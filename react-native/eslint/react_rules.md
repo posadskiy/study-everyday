@@ -60,12 +60,28 @@ key до изменения массива и после.
 #### react/no-did-mount-set-state
 #### react/no-did-update-set-state
 #### react/no-direct-mutation-state
+Никогда нельзя менять `this.state` напрямую. Он преобразовывается использованием метода `setState(...)`. Стейт всегда
+должен быть неизменным, согласно архитектуре React. 
+
 #### react/no-find-dom-node
+Использование `findDOMNode` является устаревшим. Вместо этого рекомендуется использовать обратные вызовы
+
 #### react/no-is-mounted
+[Не использую]
+
 #### react/no-multi-comp
+Объявление только одного компонента на файл улучшает читаемость и повторное использование компонентов.
+
 #### react/no-redundant-should-component-update
+[Не использую]
+
 #### react/no-render-return-value
+Не рекомендуется использовать возвращаемое значение от функции render(). Это связано с тем, что React может рендерить
+компоненты ассинхронно.
+
 #### react/no-set-state
+[Не использую]
+
 #### react/no-typos
 #### react/no-string-refs
 #### react/no-this-in-sfc
@@ -90,13 +106,10 @@ key до изменения массива и после.
 #### Примеры
 ##### react/boolean-prop-naming
 ```jsx harmony
-const Hello = createReactClass({
-  propTypes: {
-    enabled: PropTypes.bool, // warning
-    isEnabled: PropTypes.bool // is ok
-  },
-  render: function() { return <div />; }
-})
+Component.propTypes = {
+  enabled: PropTypes.bool, // warning
+  isEnabled: PropTypes.bool // is ok
+}
 ```
 
 ##### react/button-has-type
@@ -189,4 +202,41 @@ things.map((thing) => (
 ```jsx harmony
 const Hello = <div dangerouslySetInnerHTML={{ __html: "Hello World" }}></div>; // warning
 const Hello = <div>Hello World</div>; // is ok
+```
+
+##### react/no-direct-mutation-state
+```jsx harmony
+class Component extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = 'bad'; // warning
+  }
+}
+```
+
+##### react/no-find-dom-node
+```jsx harmony
+class MyComponent extends Component {
+  componentDidMount() {
+    findDOMNode(this).scrollIntoView(); // warning
+    this.node.scrollIntoView(); // is ok
+  }
+  
+}
+```
+
+##### react/no-multi-comp
+```jsx harmony
+class Hello extends React.Component {
+  // ...
+}
+class HelloJohn extends React.Component { // warning
+  // ...
+}
+```
+
+##### react/no-render-return-value
+```jsx harmony
+const inst = ReactDOM.render(<App />, document.body);
+doSomethingWithInst(inst);
 ```
