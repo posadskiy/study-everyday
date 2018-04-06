@@ -1,10 +1,17 @@
 ### React Native Rules
 
-`react-native/no-unused-styles` - инициализированные, но неиспользованные стили. [Пример](#react-nativeno-unused-styles)\
-[Не использую]`react-native/split-platform-components` - использование компонент разных платформ (iOS и Android) в одном файле.\
-`react-native/no-inline-styles` - стили должны быть отделены от разметки. Правило обнаруживает inline-стили внутри разметки.
-[Пример](#react-nativeno-inline-styles)\
-`react-native/no-color-literals` - все значения цвета в стилях должны быть вынесены в константы для переиспользования и
+#### react-native/no-unused-styles
+Инициализированные, но неиспользованные стили. [Пример](#react-nativeno-unused-styles)
+
+#### react-native/split-platform-components
+[Не использую] Использование компонент разных платформ (iOS и Android) в одном файле.
+
+#### react-native/no-inline-styles
+Стили должны быть отделены от разметки. Правило обнаруживает inline-стили внутри разметки.
+[Пример](#react-nativeno-inline-styles)
+
+#### react-native/no-color-literals
+Все значения цвета в стилях должны быть вынесены в константы для переиспользования и
 управления из единого расположения. [Пример](#react-nativeno-color-literals)
 
 #### Примеры
