@@ -45,9 +45,18 @@
 key до изменения массива и после.
 
 #### react/no-children-prop
+Дети должны быть настоящими детьми и располагаться между открывающим и закрывающим тегами, а не быть переданными, как
+тег children.
+
 #### react/no-danger
+Предостерегает от использования dangerouslySetInnerHTML, являющегося аналогом innerHTML.
+
 #### react/no-danger-with-children
+[Не использую] Предостерегает от одновременного использования dangerouslySetInnerHTML и children.
+
 #### react/no-deprecated
+Позволяет увидеть методы, признанные устаревшими для используемой версии React.
+
 #### react/no-did-mount-set-state
 #### react/no-did-update-set-state
 #### react/no-direct-mutation-state
@@ -163,4 +172,21 @@ things.map((thing, index) => (
 things.map((thing) => (
   <Hello key={thing.id} />
 ));
+```
+
+##### react/no-children-prop
+```jsx harmony
+<MyComponent children={<AnotherComponent />} />; // warning
+<MyComponent children={['Child 1', 'Child 2']} />; // warning
+
+<MyComponent>
+  <span>Child 1</span> // is ok
+  <span>Child 2</span>
+</MyComponent>
+```
+
+##### react/no-danger
+```jsx harmony
+const Hello = <div dangerouslySetInnerHTML={{ __html: "Hello World" }}></div>; // warning
+const Hello = <div>Hello World</div>; // is ok
 ```
