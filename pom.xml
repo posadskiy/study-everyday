@@ -24,22 +24,16 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
     <modules>
         <module>exception</module>
+        <module>java-book</module>
         <module>language</module>
         <module>maven</module>
         <module>pattern</module>
         <module>react-native</module>
         <module>spring</module>
+        <module>interview-tasks</module>
+        <module>git</module>
     </modules>
 
 </project>
