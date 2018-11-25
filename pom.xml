@@ -14,22 +14,22 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>5.0.4.RELEASE</version>
+                <version>5.1.2.RELEASE</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
-                <version>5.0.4.RELEASE</version>
+                <version>5.1.2.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <modules>
         <module>exception</module>
-        <module>java-book</module>
         <module>language</module>
         <module>maven</module>
         <module>pattern</module>
+        <module>react</module>
         <module>react-native</module>
         <module>spring</module>
         <module>interview-tasks</module>
