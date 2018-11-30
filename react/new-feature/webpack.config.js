@@ -1,6 +1,7 @@
 const path = require("path");
 
-module.exports = {
+const config = {
+    mode: 'development',
     entry: './app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -17,4 +18,13 @@ module.exports = {
             }
         ]
     }
+};
+
+module.exports = (env, argv) => {
+
+    if (argv.mode === 'development') {
+        console.info("Включен режим разработки");
+    }
+
+    return config;
 };
