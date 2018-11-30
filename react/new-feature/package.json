@@ -4,7 +4,9 @@
   "description": "Test React JS new features",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --mode none ./",
+    "start": "webpack",
+    "start-dev": "webpack --mode development",
+    "start-prod": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
