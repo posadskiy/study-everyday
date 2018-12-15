@@ -35,6 +35,7 @@
         <module>interview-tasks</module>
         <module>git</module>
         <module>webpack</module>
+        <module>kata</module>
     </modules>
 
 </project>
