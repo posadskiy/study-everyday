@@ -86,3 +86,6 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 `${groupId}` и `${version}`
 
 Через запись ${project.*} можно обратиться ко всем свойствам текущего проекта, где * - имя свойства.
+
+Если Maven обращается к удаленному репозиторию, вместо использования локальных библиотек, нужно в папке с библиотекой
+удалить файл `_remote.repositories`
