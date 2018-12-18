@@ -36,6 +36,7 @@
         <module>git</module>
         <module>webpack</module>
         <module>kata</module>
+        <module>util</module>
     </modules>
 
 </project>
