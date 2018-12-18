@@ -32,7 +32,6 @@
         <module>react</module>
         <module>react-native</module>
         <module>spring</module>
-        <module>interview-tasks</module>
         <module>git</module>
         <module>webpack</module>
         <module>kata</module>
