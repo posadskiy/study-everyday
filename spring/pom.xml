@@ -17,7 +17,6 @@
     <modules>
         <module>annotation-configuration</module>
         <module>bpp</module>
-        <module>spring-data</module>
         <module>spring-di</module>
     </modules>
 
