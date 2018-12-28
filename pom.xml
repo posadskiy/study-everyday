@@ -28,7 +28,6 @@
         <module>exception</module>
         <module>language</module>
         <module>maven</module>
-        <module>pattern</module>
         <module>react</module>
         <module>react-native</module>
         <module>spring</module>
