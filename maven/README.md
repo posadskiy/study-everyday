@@ -72,7 +72,7 @@ post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pr
 с выигрышем в очевидности.
 
 ## Plugins
-Плагин включает в себя цели. (Plugin includes goals)\
+Плагин включает в себя цели. (Plugin includes goals)
 #### Exec maven plugin
 **exec-maven-plugin**: позволяет выполнить программу (внешнюю или jar), сконфигурировав настройки в POM.xml.
 * mainClass 
