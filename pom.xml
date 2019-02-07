@@ -33,6 +33,7 @@
         <module>react-native</module>
         <module>spring</module>
         <module>git</module>
+        <module>internet</module>
         <module>webpack</module>
         <module>kata</module>
         <module>util</module>
