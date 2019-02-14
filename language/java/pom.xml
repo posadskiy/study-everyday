@@ -4,21 +4,20 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>language</artifactId>
+    <artifactId>java</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>dev.posadskiy.java</groupId>
-        <artifactId>study-everyday</artifactId>
+        <artifactId>language</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
     <modules>
-        <module>java</module>
-
-        <module>english</module>
-        <module>french</module>
+        <module>concurrency</module>
+        <module>core</module>
+        <module>exception</module>
     </modules>
 
 

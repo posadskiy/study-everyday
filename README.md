@@ -14,10 +14,10 @@
 ##### Архитектура компьютера
 
 ### Языки программировния
-#### Java
-##### Java Core
-###### [Exception](exception)
-##### Concurrency
+#### [Java](language/java)
+##### [Java Core](language/java/core)
+##### [Exception](language/java/exception)
+##### [Concurrency](language/java/concurrency)
 ##### [Spring](spring)
 ###### Spring MVC
 ###### Spring IoC
