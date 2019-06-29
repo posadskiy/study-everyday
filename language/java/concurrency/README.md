@@ -32,6 +32,16 @@ Integer и другие).
 счетчик захватов и записывает владельца. Если в процессе выполнения когда внутри синхронного блока
 процессу нужно снова зайти в тот же самый синхронный блок (рекурсия?), счетчик снова увеличивается.
 
+#### Deadlock
+Два потока блокируют по одному объекту и начинают ожидать освобождение другого, но этого не
+произойдет. [Пример](#deadlock)
+
+#### Livelock
+Два потока нивелируют работу друг друга. Причем, действия одного потока не дают другому
+завершиться. [Пример](#livelock)
+
+#### Starvation
+Поток редко получает процессорное время в связи с наличием "жадного" потока.
 
 #### Примеры
 ##### synchronized-block
@@ -45,5 +55,38 @@ synchronized(mutex) {
 ```java
 synchronized void syncMethod() {
     // синхронный код
+}
+```
+
+##### deadlock
+```java
+Object a = new Object;
+Object b = new Object;
+
+// in thread one
+synchronized(a) {
+	synchronized(b) {}
+}
+
+// in thread two
+synchronized(b) {
+	synchronized(a) {}
+}
+```
+
+##### livelock
+```java
+int x = 0;
+
+// in thread one
+while (x < 100) {
+	sendPrintRequest();
+	++x;
+}
+
+// in thread two
+while (x >= 0) {
+	clearRequest();
+	--x;
 }
 ```
