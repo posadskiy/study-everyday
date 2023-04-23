@@ -38,7 +38,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>coursera</module>
         <module>language</module>
         <module>maven</module>
         <module>react</module>
