@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kotlin_for_Java_Developers._Week_3.iml" filepath="$PROJECT_DIR$/.idea/Kotlin_for_Java_Developers._Week_3.iml" group="Kotlin_for_Java_Developers._Week_3" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task.iml" filepath="$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task.iml" group="Kotlin_for_Java_Developers._Week_3/Nice_String-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task_main.iml" group="Kotlin_for_Java_Developers._Week_3/Nice_String-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Nice String/Task/Nice_String-Task_test.iml" group="Kotlin_for_Java_Developers._Week_3/Nice_String-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task.iml" filepath="$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task.iml" group="Kotlin_for_Java_Developers._Week_3/Taxi_Park-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task_main.iml" group="Kotlin_for_Java_Developers._Week_3/Taxi_Park-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Taxi Park/Task/Taxi_Park-Task_test.iml" group="Kotlin_for_Java_Developers._Week_3/Taxi_Park-Task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Kotlin_for_Java_Developers._Week_3/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Kotlin_for_Java_Developers._Week_3/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Kotlin_for_Java_Developers._Week_3/util" />
+    </modules>
+  </component>
+</project>
