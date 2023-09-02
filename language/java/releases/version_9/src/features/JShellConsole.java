@@ -1,3 +1,5 @@
+package features;
+
 /**
  * EP 222: jshell: The Java Shell (Read-Eval-Print Loop)
  * Tools -> JShell Console...

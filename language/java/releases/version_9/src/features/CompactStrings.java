@@ -1,3 +1,5 @@
+package features;
+
 /**
  * JEP 254: Compact Strings
  * <p>

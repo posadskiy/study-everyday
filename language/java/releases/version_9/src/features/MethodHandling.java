@@ -1,3 +1,5 @@
+package features;
+
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.util.logging.Level;
@@ -15,7 +17,7 @@ public class MethodHandling {
     public static void main(String[] args) {
         try {
             // Returns array with two methods - main and firstMethod
-            MethodHandles.lookup().findClass("MethodHandling").getDeclaredMethods();
+            MethodHandles.lookup().findClass("features.MethodHandling").getDeclaredMethods();
 
             MethodHandles.dropReturn(MethodHandles.publicLookup()
                 .findVirtual(MethodHandling.class, "firstMethod", MethodType.methodType(Integer.class, Integer.class)));
