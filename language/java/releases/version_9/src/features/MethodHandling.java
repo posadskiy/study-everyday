@@ -19,8 +19,6 @@ public class MethodHandling {
             // Returns array with two methods - main and firstMethod
             MethodHandles.lookup().findClass("features.MethodHandling").getDeclaredMethods();
 
-            MethodHandles.dropReturn(MethodHandles.publicLookup()
-                .findVirtual(MethodHandling.class, "firstMethod", MethodType.methodType(Integer.class, Integer.class)));
             MethodHandles.dropArguments(MethodHandles.publicLookup()
                 .findVirtual(MethodHandling.class, "firstMethod", MethodType.methodType(Integer.class, Integer.class)), 0);
             MethodHandles.dropArguments(MethodHandles.publicLookup()
