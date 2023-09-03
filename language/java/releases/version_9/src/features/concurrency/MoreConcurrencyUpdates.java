@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 /**
  * JEP 266: More Concurrency Updates
- * 
+ * <p>
  * <a href="http://www.reactive-streams.org">Reactive streams docs</a>
  * <a href="https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.4/examples/src">Reactive streams example</a>
  */
