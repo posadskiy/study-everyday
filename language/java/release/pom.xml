@@ -4,18 +4,24 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>version_11</artifactId>
+    <artifactId>release</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>dev.posadskiy.java</groupId>
-        <artifactId>release</artifactId>
+        <artifactId>java</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <properties>
-        <maven.compiler.release>11</maven.compiler.release>
-    </properties>
+    <modules>
+        <module>version_9</module>
+        <module>version_10</module>
+        <module>version_11</module>
+        <module>version_12</module>
+        <module>version_13</module>
+        <module>version_14</module>
+    </modules>
+
 
 </project>
