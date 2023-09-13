@@ -4,7 +4,7 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.posadskiy.java</groupId>
+    <groupId>com.posadskiy</groupId>
     <artifactId>study-everyday</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -38,6 +38,7 @@
     </dependencyManagement>
 
     <modules>
+        <module>database</module>
         <module>language</module>
         <module>maven</module>
         <module>react</module>
@@ -47,8 +48,9 @@
         <module>internet</module>
         <module>webpack</module>
         <module>kata</module>
-        <module>util</module>
+        <module>swift</module>
         <module>design</module>
+        <module>life</module>
     </modules>
 
     <properties>

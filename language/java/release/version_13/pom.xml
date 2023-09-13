@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>dev.posadskiy.java</groupId>
+        <groupId>com.posadskiy</groupId>
         <artifactId>release</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
@@ -26,7 +26,7 @@
             <version>1.36</version>
         </dependency>
         <dependency>
-            <groupId>dev.posadskiy.java</groupId>
+            <groupId>com.posadskiy</groupId>
             <artifactId>kata</artifactId>
             <version>0.1-SNAPSHOT</version>
             <scope>compile</scope>

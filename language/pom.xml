@@ -9,14 +9,14 @@
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>dev.posadskiy.java</groupId>
+        <groupId>com.posadskiy</groupId>
         <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
     <modules>
         <module>java</module>
-
+        <module>kotlin</module>
         <module>english</module>
         <module>french</module>
     </modules>

@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>dev.posadskiy.java</groupId>
+        <groupId>com.posadskiy</groupId>
         <artifactId>release</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>

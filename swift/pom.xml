@@ -4,23 +4,13 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>util</artifactId>
+    <artifactId>swift</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>dev.posadskiy.java</groupId>
+        <groupId>com.posadskiy</groupId>
         <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
 </project>

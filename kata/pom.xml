@@ -8,7 +8,7 @@
     <version>0.1-SNAPSHOT</version>
 
 	<parent>
-        <groupId>dev.posadskiy.java</groupId>
+        <groupId>com.posadskiy</groupId>
         <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
