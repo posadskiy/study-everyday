@@ -48,6 +48,7 @@
         <module>webpack</module>
         <module>kata</module>
         <module>util</module>
+        <module>design</module>
     </modules>
 
     <properties>
