@@ -11,9 +11,7 @@ public class ApplicationConfiguration {
 
     @Bean
     public PayPalGiver payPalGiver() {
-        PayPalGiver giver = new PayPalGiver();
-        giver.setStorage(siteStorage());
-        return giver;
+        return new PayPalGiver(siteStorage());
     }
 
     @Bean
