@@ -51,6 +51,7 @@
         <module>swift</module>
         <module>design</module>
         <module>life</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
