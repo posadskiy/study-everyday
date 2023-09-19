@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core.concurrency;
+package core.concurrency;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

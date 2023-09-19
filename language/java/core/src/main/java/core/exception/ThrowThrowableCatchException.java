@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core.exception;
+package core.exception;
 
 public class ThrowThrowableCatchException {
 

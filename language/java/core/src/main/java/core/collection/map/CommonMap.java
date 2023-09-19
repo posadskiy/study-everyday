@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core.collection;
+package core.collection.map;
 
 import java.util.ArrayList;
 import java.util.Collection;

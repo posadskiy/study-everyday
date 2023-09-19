@@ -16,8 +16,8 @@
 ### Языки программировния
 #### [Java](language/java)
 ##### [Java Core](language/java/core)
-##### [Exception](language/java/exception)
-##### [Concurrency](language/java/concurrency)
+##### [Exception](language/java/core)
+##### [Concurrency](language/java/core)
 ##### [Spring](spring)
 ###### Spring MVC
 ###### Spring IoC
@@ -36,7 +36,7 @@
 ###### Redux Saga
 ###### Redux Router
 ##### TypeScript
-#### Database
+#### [Database](database)
 ##### SQL
 ###### MySQL
 ###### PostgreSQL

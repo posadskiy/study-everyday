@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core.concurrency;
+package core.concurrency;
 
 public class Synchronized {
     private final static Object mutex = new Object();

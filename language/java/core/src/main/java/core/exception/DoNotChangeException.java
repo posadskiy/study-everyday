@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core.exception;
+package core.exception;
 
 import java.io.EOFException;
 import java.io.IOException;
