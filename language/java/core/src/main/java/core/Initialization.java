@@ -1,4 +1,4 @@
-package com.posadskiy.language.java.core;
+package core;
 
 class Initialization {
     private String whereInit = "Field init";

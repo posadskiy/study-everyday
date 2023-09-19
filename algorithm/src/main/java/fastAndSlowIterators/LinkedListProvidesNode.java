@@ -1,4 +1,4 @@
-package fastandslowiterator;
+package fastAndSlowIterators;
 
 import core.collection.list.linkedlist.LinkedListCustom;
 import core.collection.list.linkedlist.NodeCustom;

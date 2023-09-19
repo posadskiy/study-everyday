@@ -1,4 +1,4 @@
-package fastandslowiterator;
+package fastAndSlowIterators;
 
 import java.util.stream.IntStream;
 

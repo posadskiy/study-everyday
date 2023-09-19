@@ -1,4 +1,4 @@
-package fastandslowiterator;
+package fastAndSlowIterators;
 
 import core.collection.list.linkedlist.NodeCustom;
 import org.apache.logging.log4j.LogManager;
@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Optional;
 
-import static fastandslowiterator.CycledListCreator.create;
+import static fastAndSlowIterators.CycledListCreator.create;
 
 public class CycleFinder {
     private final static Logger log = LogManager.getLogger(CycleFinder.class);
