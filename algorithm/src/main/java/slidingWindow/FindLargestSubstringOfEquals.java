@@ -2,9 +2,16 @@ package slidingWindow;
 
 public class FindLargestSubstringOfEquals {
 
+    /**
+     * Find the largest substring of size k of equals elements
+     * 
+     * @param s - incoming string
+     * @param k - sliding window size
+     * @return - largest substring of equals of the size 'k'
+     */
     public int find(String s, int k) {
         var largest = 0;
-        Character lastElement = Character.MAX_VALUE;
+        char lastElement = Character.MAX_VALUE;
         var current = 0;
         for (int i = 0; i < k; i++) {
             if (s.charAt(i) == lastElement) {
