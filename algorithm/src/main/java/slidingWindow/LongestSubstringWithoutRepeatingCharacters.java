@@ -3,6 +3,13 @@ package slidingWindow;
 import java.util.HashMap;
 
 public class LongestSubstringWithoutRepeatingCharacters {
+
+    /**
+     * Find the longest substring without repeating characters
+     * 
+     * @param s - incoming string
+     * @return longest substring of non-repeated elements
+     */
     public int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int max = 0;
