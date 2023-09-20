@@ -1,6 +1,6 @@
 package core;
 
-class Initialization {
+public class Initialization {
     private String whereInit = "Field init";
     private int value;
 
