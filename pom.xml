@@ -52,6 +52,7 @@
         <module>design</module>
         <module>life</module>
         <module>algorithm</module>
+        <module>utils</module>
     </modules>
 
     <properties>
