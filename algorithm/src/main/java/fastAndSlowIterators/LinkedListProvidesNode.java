@@ -3,7 +3,7 @@ package fastAndSlowIterators;
 import core.collection.list.linkedlist.LinkedListCustom;
 import core.collection.list.linkedlist.NodeCustom;
 
-class LinkedListProvidesNode<E> extends LinkedListCustom<E> {
+public class LinkedListProvidesNode<E> extends LinkedListCustom<E> {
     
     public NodeCustom<E> getFirstNode() {
         return first;
