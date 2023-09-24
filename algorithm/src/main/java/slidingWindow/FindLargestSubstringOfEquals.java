@@ -4,7 +4,7 @@ public class FindLargestSubstringOfEquals {
 
     /**
      * Find the largest substring of size k of equals elements
-     * 
+     *
      * @param s - incoming string
      * @param k - sliding window size
      * @return - largest substring of equals of the size 'k'

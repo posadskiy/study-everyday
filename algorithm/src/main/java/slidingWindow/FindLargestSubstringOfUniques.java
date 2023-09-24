@@ -9,7 +9,7 @@ public class FindLargestSubstringOfUniques {
 
     /**
      * Find the largest substring of size k of unique elements
-     * 
+     *
      * @param s - incoming string
      * @param k - sliding window size
      * @return - largest substring of uniques of the size 'k'

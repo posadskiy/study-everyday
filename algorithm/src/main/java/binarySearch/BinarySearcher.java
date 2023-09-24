@@ -8,13 +8,13 @@ public class BinarySearcher<T> {
         int start = 0;
         int end = values.size();
         int middle = getMiddle(start, end);
-        
+
         while (start != end) {
             final T obj = values.get(middle);
             if (value.equals(obj)) {
                 return Optional.of(middle);
             }
-            
+
             if (obj.compareTo(value) < 0) {
                 end = middle;
             } else {
@@ -23,10 +23,10 @@ public class BinarySearcher<T> {
 
             middle = getMiddle(start, end);
         }
-        
+
         return Optional.empty();
     }
-    
+
     private static int getMiddle(int start, int end) {
         return (int) Math.floor((start + (end - start)) / 2.0);
     }

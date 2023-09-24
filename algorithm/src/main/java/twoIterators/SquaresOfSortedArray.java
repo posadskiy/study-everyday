@@ -22,9 +22,9 @@ public class SquaresOfSortedArray {
         var result = new int[nums.length];
         var first = 0;
         var second = nums.length - 1;
-        
+
         var arrayIndex = second;
-        
+
         while (second >= first) {
             if (Math.abs(nums[first]) > Math.abs(nums[second])) {
                 result[arrayIndex--] = nums[first] * nums[first];
@@ -34,7 +34,7 @@ public class SquaresOfSortedArray {
                 second--;
             }
         }
-        
+
         return result;
     }
 }

@@ -6,7 +6,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     /**
      * Find the longest substring without repeating characters
-     * 
+     *
      * @param s - incoming string
      * @return longest substring of non-repeated elements
      */

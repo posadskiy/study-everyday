@@ -7,7 +7,7 @@ public class FindIntersections {
     /**
      * Find intersections for ranges.
      * Range is defined by [start, end] values
-     * 
+     *
      * @param intervals ranges for analysis
      * @return array with two elements - [start, end] of intersection
      */
@@ -19,18 +19,19 @@ public class FindIntersections {
             if (intervals[i][0] < start && intervals[i][1] > end) {
                 continue;
             }
-            
+
             start = Math.max(start, intervals[i][0]);
             end = Math.min(end, intervals[i][1]);
-            
+
         }
 
         return new int[]{start, end};
     }
+
     /**
      * Find intersections for arrays.
      * Array could include unlimited number of elements
-     * 
+     *
      * @param intervals arrays for analysis
      * @return array with two elements - [start, end] of intersection
      */
@@ -44,13 +45,13 @@ public class FindIntersections {
             if (currentStart > end || currentEnd < start) {
                 return new int[]{};
             }
-            
+
             start = Math.max(start, currentStart);
             end = Math.min(end, currentEnd);
         }
 
         return new int[]{start, end};
     }
-    
-    
+
+
 }

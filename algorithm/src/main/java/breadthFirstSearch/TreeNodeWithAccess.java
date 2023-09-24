@@ -8,16 +8,16 @@ import java.util.List;
 public class TreeNodeWithAccess<T> {
 
     @Getter
-    private T value;
+    private final T value;
 
     @Getter
-    private List<TreeNodeWithAccess<T>> children;
+    private final List<TreeNodeWithAccess<T>> children;
 
     public TreeNodeWithAccess(T value) {
         this.value = value;
         this.children = new ArrayList<>();
     }
-    
+
     public TreeNodeWithAccess<T> of(T value) {
         return new TreeNodeWithAccess<>(value);
     }

@@ -18,7 +18,7 @@ public class LinkedListReversal {
             current = next;
             previous.previous = current;
         }
-        
+
         current.previous = null;
         current.next = previous;
 
