@@ -6,48 +6,47 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class TheLargestElementsFinderTest {
-    
+public class TheLowestElementsFinderTest {
+
     @Test
     public void test() {
         final List<Integer> values = ListGenerator.generate();
         var size = 3;
-        var expected = List.of(44, 34, 22);
+        var expected = List.of(-17, -11, -2);
 
-        final List<Integer> result = TheLargestElementsFinder.finder(values, size);
-        
+        final List<Integer> result = TheLowestElementsFinder.finder(values, size);
+
         assertEquals(size, result.size());
         for (Integer value : expected) {
             assertTrue(result.contains(value));
         }
     }
-    
+
     @Test
     public void testOne() {
         final List<Integer> values = ListGenerator.generate();
         var size = 5;
-        var expected = List.of(44, 34, 22, 7, 7);
+        var expected = List.of(-17, -11, -2, -2, 2);
 
-        final List<Integer> result = TheLargestElementsFinder.finder(values, size);
-        
+        final List<Integer> result = TheLowestElementsFinder.finder(values, size);
+
         assertEquals(size, result.size());
         for (Integer value : expected) {
             assertTrue(result.contains(value));
         }
     }
-    
+
     @Test
     public void testTwo() {
         final List<Integer> values = ListGenerator.generate();
         var size = 2;
-        var expected = List.of(44, 34);
+        var expected = List.of(-17, -11);
 
-        final List<Integer> result = TheLargestElementsFinder.finder(values, size);
-        
+        final List<Integer> result = TheLowestElementsFinder.finder(values, size);
+
         assertEquals(size, result.size());
         for (Integer value : expected) {
             assertTrue(result.contains(value));
         }
     }
-
 }
