@@ -8,11 +8,11 @@ public class SubsetCreator {
         Set<List<Integer>> results = new HashSet<>();
         results.add(new ArrayList<>());
 
-        for (int i = 0; i < nums.length; ++i) {
+        for (int num : nums) {
             Set<List<Integer>> temp = new HashSet<>();
             for (var value : results) {
                 var tempList = new ArrayList<>(value);
-                tempList.add(nums[i]);
+                tempList.add(num);
                 temp.add(tempList);
             }
             results.addAll(temp);
