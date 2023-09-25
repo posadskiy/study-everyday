@@ -16,7 +16,7 @@ Heap space is used for dynamic memory allocation of Java object and JRE classes 
 
 - Young generation - new objects, GC runs when full
 - Old generation - long living objects storage, moves here when live more than threshold time.
-- Permament generation - JVM metadata
+- Permanent generation - JVM metadata
 
 Cons:
-Dealocation via GC, no thread-safe, slower access.
+Deallocation via GC, no thread-safe, slower access.
