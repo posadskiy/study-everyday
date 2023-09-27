@@ -8,14 +8,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class StarterTest {
+public class DiStarterTest {
     
-    private final Starter starter;
-
     @Autowired
-    public StarterTest(Starter starter) {
-        this.starter = starter;
-    }
+    private DiStarter starter;
 
     @Test
     public void start() {

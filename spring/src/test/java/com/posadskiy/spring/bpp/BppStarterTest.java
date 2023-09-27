@@ -8,12 +8,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class RunnerTest {
+class BppStarterTest {
 
-    private final Runner runner;
+    private final BppStarter runner;
 
     @Autowired
-    RunnerTest(Runner runner) {
+    BppStarterTest(BppStarter runner) {
         this.runner = runner;
     }
 

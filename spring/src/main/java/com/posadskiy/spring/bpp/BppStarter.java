@@ -5,12 +5,12 @@ import com.posadskiy.spring.bpp.storage.Storage;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Runner {
+public class BppStarter {
     private static final String STORAGE_NAME = "storage.LocalStorage";
 
     private final Storage storage;
 
-    public Runner(Storage storage) {
+    public BppStarter(Storage storage) {
         this.storage = storage;
     }
 
