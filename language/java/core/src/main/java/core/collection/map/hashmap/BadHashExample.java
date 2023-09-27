@@ -1,4 +1,4 @@
-package core.collection.map;
+package core.collection.map.hashmap;
 
 public class BadHashExample {
     @Override

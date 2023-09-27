@@ -1,4 +1,4 @@
-package core.collection.map;
+package core.collection.map.hashmap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

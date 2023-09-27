@@ -1,5 +1,6 @@
-package core.collection.map;
+package core.collection.map.hashtable;
 
+import core.collection.map.hashmap.BadHashExample;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

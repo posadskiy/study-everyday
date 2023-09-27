@@ -1,7 +1,5 @@
-package com.posadskiy.language.java.core;
+package core;
 
-
-import core.Initialization;
 import org.junit.Test;
 
 public class InitializationTest {
