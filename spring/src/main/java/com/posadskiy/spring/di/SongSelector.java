@@ -1,4 +1,4 @@
-package dev.posadskiy.springdi;
+package com.posadskiy.spring.di;
 
 public class SongSelector {
 

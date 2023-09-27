@@ -1,4 +1,4 @@
-package dev.posadskiy.springdi.poems;
+package com.posadskiy.spring.di.poem;
 
 public interface Poem {
 

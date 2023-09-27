@@ -1,4 +1,4 @@
-package dev.posadskiy.springdi.performers;
+package com.posadskiy.spring.di.performer;
 
 public interface Performer {
 

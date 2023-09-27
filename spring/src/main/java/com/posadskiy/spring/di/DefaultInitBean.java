@@ -1,4 +1,4 @@
-package dev.posadskiy.springdi;
+package com.posadskiy.spring.di;
 
 import org.springframework.beans.factory.InitializingBean;
 

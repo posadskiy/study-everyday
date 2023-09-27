@@ -1,17 +1,16 @@
-package dev.posadskiy.springdi.performers;
+package com.posadskiy.spring.di.performer;
 
-import dev.posadskiy.springdi.poems.Poem;
+import com.posadskiy.spring.di.poem.Poem;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
+@Qualifier("poeticJuggler")
 public class PoeticJuggler extends Juggler {
-    private Poem poem;
+
+    private final Poem poem;
 
     public PoeticJuggler(Poem poem) {
-        super();
-        this.poem = poem;
-    }
-
-    public PoeticJuggler(int beanBags, Poem poem) {
-        super(beanBags);
         this.poem = poem;
     }
 
