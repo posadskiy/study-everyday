@@ -20,11 +20,11 @@ public class JpaStarterTest {
 
     @Test
     public void start() {
-        repository.save(new Sensor(27.0, 50.0));
-        repository.save(new Sensor(23.0, 45.0));
-        repository.save(new Sensor(25.0, 35.0));
-        repository.save(new Sensor(24.0, 65.0));
-        repository.save(new Sensor(26.0, 55.0));
+        repository.save(new Sensor("Sensor #1", 27.0, 50.0));
+        repository.save(new Sensor("Sensor #2", 23.0, 45.0));
+        repository.save(new Sensor("Sensor #3", 25.0, 35.0));
+        repository.save(new Sensor("Sensor #4", 24.0, 65.0));
+        repository.save(new Sensor("Sensor #5", 26.0, 55.0));
 
         final Iterable<Sensor> all = repository.findAll();
         for (Sensor sensor : all) {
