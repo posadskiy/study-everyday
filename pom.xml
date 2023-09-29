@@ -53,6 +53,7 @@
         <module>life</module>
         <module>algorithm</module>
         <module>utils</module>
+        <module>kafka</module>
     </modules>
 
     <properties>
