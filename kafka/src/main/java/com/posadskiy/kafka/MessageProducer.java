@@ -15,13 +15,6 @@ public class MessageProducer {
     }
 
     public void sendMessage(String msg) {
-        while (true) {
-            kafkaTemplate.send("quickstart-events", msg);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        kafkaTemplate.send("quickstart-events", msg);
     }
 }
