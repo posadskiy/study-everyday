@@ -5,21 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>study-everyday</artifactId>
+        <artifactId>database</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>database</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>index</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
-    <modules>
-        <module>index</module>
-    </modules>
 
 </project>

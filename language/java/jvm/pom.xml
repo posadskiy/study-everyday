@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>language</artifactId>
+        <artifactId>java</artifactId>
         <version>0.1-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <groupId>dev.posadskiy.java</groupId>

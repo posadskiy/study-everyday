@@ -54,6 +54,7 @@
         <module>algorithm</module>
         <module>utils</module>
         <module>kafka</module>
+        <module>database/index</module>
     </modules>
 
     <properties>
