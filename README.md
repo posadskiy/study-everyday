@@ -1,75 +1,73 @@
-### Навыки
+# Knowledge
 
-#### Аналитика
+## Design
+### Application design
+### Computer architecture
+### Operating systems
+#### Linux
+#### MacOS
+#### Windows
 
-##### Системный анализ
+## Programming languages
+### [Java](language/java)
+#### [Core](language/java/core)
+#### [Exception](language/java/core)
+#### [Concurrency](language/java/core)
 
-###### UML 
+### [Spring](spring)
+#### Spring MVC
+#### Spring IoC
+#### Spring Data
+#### Spring AOP
 
-##### Бизнес анализ
+### [Maven](maven)
 
-#### Архитектура
-##### Архитектура приложений
+### JavaScript
+#### [React](react)
+#### [React Native](react-native)
+#### [Webpack](webpack)
+#### Babel
+#### Jest
+#### Linter
+#### Redux
+##### Redux Thunk
+##### Redux Saga
+##### Redux Router
+### TypeScript
 
-##### Архитектура компьютера
+## [Database](database)
+### SQL
+#### MySQL
+#### PostgreSQL
+#### Oracle DB
+### NoSQL
+#### MongoDb
+### In memory DB
+#### Redis
 
-### Языки программировния
-#### [Java](language/java)
-##### [Java Core](language/java/core)
-##### [Exception](language/java/core)
-##### [Concurrency](language/java/core)
-##### [Spring](spring)
-###### Spring MVC
-###### Spring IoC
-###### Spring Data
-###### Spring AOP
-##### [Maven](maven)
-#### JavaScript
-##### [React](react)
-##### [React Native](react-native)
-##### Redux
-##### [Webpack](webpack)
-##### Babel
-##### Jest
-##### Linter
-###### Redux Thunk
-###### Redux Saga
-###### Redux Router
-##### TypeScript
-#### [Database](database)
-##### SQL
-###### MySQL
-###### PostgreSQL
-###### Oracle DB
-##### NoSQL
-###### MongoDb
-##### Python
-##### C++
-##### C
 
-#### [Интернет](internet)
-##### [HTTP](internet/http)
-##### HTTPS
-##### SSL
-##### CORS
-##### Nginx
+### Python
+### C++
+### C
 
-#### [Git](git)
+## [Internet](internet)
+### [HTTP](internet/http)
+### HTTPS
+### SSL
+### CORS
+### Nginx
 
-##### Операционные системы
-##### Linux
-##### MacOS
-##### Windows
+## [Git](git)
 
-#### Контейнерезация
-##### Docker
-##### Kubernetes
+## Container
+### Docker
+### Kubernetes
 
-#### Big Data
-#### Machine learning
-#### Blockchain
+## Big Data
+## Machine learning
+## Blockchain
 
-#### Языки народов
-##### Русский
-##### [Английский](language/english)
-##### [Французский](language/french)
+## Languages
+### Russian
+### [English](language/english)
+### [French](language/french)
