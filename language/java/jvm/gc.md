@@ -27,14 +27,29 @@ Maximum pause could be controlled with MaxGCPauseMillis parameter.
 #### Garbage First G1 GC
 
 Parallel GC, default for Java from 9 to 21.
-GC split heap into equal-size regions. After performing Mark phase, it determines which regions are mostly empty and runs
+GC split heap into equal-size regions. After performing Mark phase, it determines which regions are mostly empty and
+runs
 Sweep there. As a result - more free space easily.
 
 #### Z GC (low latency)
 
-Z takes all from parallel GC, but doesn't stop application more than 10ms. It uses load barriers with colored pointers to
+Z takes all from parallel GC, but doesn't stop application more than 10ms. It uses load barriers with colored pointers
+to
 perform concurrent operations. Color pointer - additional metadata for link to object to highlight its state.
-From Java 15.
+From Java 15. From Java 21 supports separate generations of young objects which allow to collect them more frequently.
+
+* Pause times should not exceed 1 millisecond,
+* Heap sizes from a few hundred megabytes up to many terabytes should be supported, and
+* Minimal manual configuration should be needed.
+
+As examples of the last point, there should be no need to manually configure
+
+* The size of the generations,
+* The number of threads used by the garbage collector, or
+* For how long objects should reside in the young generation.
+
+Finally, Generational ZGC should be a better solution for most use cases than non-generational ZGC. We should eventually
+be able to replace the latter with the former in order to reduce long-term maintenance costs.
 
 #### Shenandoah GC
 
