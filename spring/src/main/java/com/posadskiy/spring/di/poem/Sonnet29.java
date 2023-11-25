@@ -1,7 +1,9 @@
 package com.posadskiy.spring.di.poem;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+@Log4j2
 @Service
 public class Sonnet29 implements Poem {
     private static final String[] LINES = {
@@ -16,7 +18,7 @@ public class Sonnet29 implements Poem {
 
     public void recite() {
         for (String line : LINES) {
-            System.out.println(line);
+            log.info(line);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.posadskiy.spring.bpp.utils.annotation.bpp;
 
 import com.posadskiy.spring.bpp.utils.annotation.Profiling;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 
+@Log4j2
 @Service
 public class ProfilingAnnotationBeanPostProcessor implements BeanPostProcessor {
 
@@ -33,7 +35,7 @@ public class ProfilingAnnotationBeanPostProcessor implements BeanPostProcessor {
                 Long start = System.nanoTime();
                 Object retVal = method.invoke(bean, args);
                 Long finish = System.nanoTime();
-                System.out.println("TIME: ".concat(String.valueOf(finish - start)));
+                log.info("TIME: ".concat(String.valueOf(finish - start)));
                 return retVal;
             });
         }

@@ -54,7 +54,7 @@ public class DoubleThrow {
         } catch (NullPointerException e) {
             throw e;
         } catch (Exception e) { // Здесь NPE не перехватится, хотя является наследником Exception
-            System.out.println(e.getMessage());
+            log.info(e.getMessage());
         }
     }
 }
@@ -123,7 +123,7 @@ public class DoNotChangeException {
 ```java
 public class Start {
     public static void main(String[] args) {
-        System.out.println("Message");
+        log.info("Message");
         throw new Error("Error");
     }
 }

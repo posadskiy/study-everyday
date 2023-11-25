@@ -51,7 +51,7 @@ public class FourSquares {
         BigInteger sum = largestSquare(num);
 
         this.terms[count - (maxTerms)] = sum;
-        // System.out.println("" + Arrays.toString(this.terms));
+        // log.info("" + Arrays.toString(this.terms));
 
         num = num.subtract(this.terms[count - (maxTerms)]);
         if (this.findSumRB((num), --maxTerms)) { // recursive call (backtrack)
@@ -75,7 +75,7 @@ public class FourSquares {
 
     public boolean calculateSq(BigInteger sum, int maxTerms) {
         this.terms[count - (maxTerms) - 1] = sum;
-        // System.out.println("" + Arrays.toString(this.terms));
+        // log.info("" + Arrays.toString(this.terms));
         BigInteger num1 = BigInteger.ZERO;
         for (int i = 0; i < (count - maxTerms); i++) {
             num1 = num1.add(this.terms[i]);

@@ -1,16 +1,19 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
+
 import java.util.Arrays;
 
 /**
  * You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
- *
+ * <p>
  * #Example: longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
- *
+ * <p>
  * n being the length of the string array, if n = 0 or k > n or k <= 0 return "".
  */
+@Log4j2
 class LongestConsec {
 
     static String longestConsec(String[] arr, int k) {
@@ -22,7 +25,7 @@ class LongestConsec {
         for (int i = 0; i < arr.length - k + 1; ++i) {
             int length = 0;
             for (int j = 0; j < k; j++) {
-                length += arr[i+j].length();
+                length += arr[i + j].length();
             }
             if (length > maxLength) {
                 maxLength = length;
@@ -30,7 +33,7 @@ class LongestConsec {
             }
         }
 
-        return StringUtils.join(Arrays.copyOfRange(arr, maxIndex, maxIndex+k), "");
+        return StringUtils.join(Arrays.copyOfRange(arr, maxIndex, maxIndex + k), "");
 
     }
 
@@ -77,7 +80,7 @@ class LongestConsec {
         }
         finish = System.nanoTime();
         long my = finish - start;
-        System.out.println("TIME MY: " + my);
+        log.info("TIME MY: " + my);
 
         start = System.nanoTime();
         i = 0;
@@ -87,9 +90,9 @@ class LongestConsec {
         }
         finish = System.nanoTime();
         long best = finish - start;
-        System.out.println("TIME BEST: " + best);
+        log.info("TIME BEST: " + best);
 
-        System.out.println("DIFFERENT: " + (best/(my + 0.0)));
+        log.info("DIFFERENT: " + (best / (my + 0.0)));
 
     }
 }

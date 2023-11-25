@@ -7,7 +7,7 @@ package com.posadskiy.java.release.v18;
  * Code snipped is below
  * {@snippet :
  * if (value == null) {
- *     System.out.println("Provided value is null"); // @highlight substring="println"
+ *     log.info("Provided value is null"); // @highlight substring="println"
  * }
  *}
  * <p>

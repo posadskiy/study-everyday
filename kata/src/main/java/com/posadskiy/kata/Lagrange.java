@@ -1,7 +1,10 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.util.Scanner;
 
+@Log4j2
 public class Lagrange {
     private int number; // the number we are trying to break up
     private int[] terms;
@@ -27,14 +30,14 @@ public class Lagrange {
      * printSolution - print the solution to the problem
      */
     public void printSolution() {
-        System.out.print(this.number + " = ");
+        log.info(this.number + " = ");
 
         for (int i = 0; i < terms.length; i++) {
             if (terms[i] != 0) {
                 if(i!=0) {
-                    System.out.print(" + ");
+                    log.info(" + ");
                 }
-                System.out.print(terms[i]);
+                log.info(terms[i]);
             }
 
         }
@@ -68,7 +71,7 @@ public class Lagrange {
         int sum = largestSquare(num);
 
         this.terms[4 - (maxTerms)] = sum;
-        // System.out.println("" + Arrays.toString(this.terms));
+        // log.info("" + Arrays.toString(this.terms));
 
         num = num - this.terms[4 - (maxTerms)];
         if (this.findSumRB((num), --maxTerms)) { // recursive call (backtrack)
@@ -79,7 +82,7 @@ public class Lagrange {
                 return false;
             } else {
                 this.terms[4 - (maxTerms) - 1] = sum;
-                // System.out.println("" + Arrays.toString(this.terms));
+                // log.info("" + Arrays.toString(this.terms));
                 int num1 = 0;
                 for (int i = 0; i < (4 - maxTerms); i++) {
                     num1 = num1 + this.terms[i];
@@ -94,12 +97,12 @@ public class Lagrange {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         while (true) {
-            System.out.print("Enter a positive integer (-1 to quit): ");
+            log.info("Enter a positive integer (-1 to quit): ");
             int n = console.nextInt();
             console.nextLine();
 
             if (n == -1) {
-                System.out.println("Goodbye!");
+                log.info("Goodbye!");
                 return;
             } else if (n <= 0) {
                 continue;
@@ -110,10 +113,8 @@ public class Lagrange {
             if (problem.findSum(n)) {
                 problem.printSolution();
             } else {
-                System.out.println("could not find a sum for " + n);
-                System.out.println();
+                log.info("could not find a sum for " + n);
             }
-            System.out.println();
         }
     }
 }

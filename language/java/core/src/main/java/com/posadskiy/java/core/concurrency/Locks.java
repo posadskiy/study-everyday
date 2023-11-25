@@ -1,8 +1,11 @@
 package com.posadskiy.java.core.concurrency;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+@Log4j2
 public class Locks {
 
     private static final Lock lock = new ReentrantLock();
@@ -10,30 +13,30 @@ public class Locks {
     public static void main(String[] args) {
 
         Runnable runnableOne = () -> {
-            System.out.println("[1] started");
+            log.info("[1] started");
             lock.lock();
-            System.out.println("[1] Want to sleep...");
+            log.info("[1] Want to sleep...");
             try {
                 Thread.sleep(10000000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("[1] Wake up!");
+            log.info("[1] Wake up!");
             lock.unlock();
-            System.out.println("[1] Ended");
+            log.info("[1] Ended");
         };
         Runnable runnableTwo = () -> {
-            System.out.println("[2] started");
+            log.info("[2] started");
             lock.lock();
-            System.out.println("[2] Want to sleep...");
+            log.info("[2] Want to sleep...");
             try {
                 Thread.sleep(10000000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("[2] Wake up!");
+            log.info("[2] Wake up!");
             lock.unlock();
-            System.out.println("[2] Ended");
+            log.info("[2] Ended");
         };
 
         Thread threadOne = new Thread(runnableOne);

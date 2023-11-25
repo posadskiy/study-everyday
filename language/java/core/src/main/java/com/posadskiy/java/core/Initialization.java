@@ -1,14 +1,17 @@
 package com.posadskiy.java.core;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class Initialization {
     private String whereInit = "Field init";
     private int value;
 
     {
-        System.out.println("Block initialization");
-        System.out.println(whereInit);
+        log.info("Block initialization");
+        log.info(whereInit);
         this.whereInit = "Block init";
-        System.out.println(whereInit);
+        log.info(whereInit);
     }
 
     public static void main(String[] args) {
@@ -16,16 +19,16 @@ public class Initialization {
     }
 
     public void Initialization() {
-        System.out.println("Constructor initialization");
-        System.out.println(whereInit);
+        log.info("Constructor initialization");
+        log.info(whereInit);
         this.whereInit = "Constructor init";
-        System.out.println(whereInit);
+        log.info(whereInit);
     }
 
     public void checkValue() {
-        System.out.println(value);
+        log.info(value);
 
         int localValue;
-        // System.out.println(localValue); NOT COMPILE
+        // log.info(localValue); NOT COMPILE
     }
 }

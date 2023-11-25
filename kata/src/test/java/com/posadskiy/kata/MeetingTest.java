@@ -1,5 +1,6 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.Assert.*;
 
+@Log4j2
 public class MeetingTest {
 
 	@Test
@@ -55,8 +57,8 @@ public class MeetingTest {
 		finishTest = System.nanoTime();
 		long secondResult = finishTest - startTest;
 
-		System.out.println(firstResult);
-		System.out.println(secondResult);
+		log.info(firstResult);
+		log.info(secondResult);
 	}
 
 	private String createRandomString() {

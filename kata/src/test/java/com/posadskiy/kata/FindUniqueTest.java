@@ -1,5 +1,6 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
+@Log4j2
 public class FindUniqueTest {
     public static final int LOOP_COUNT = 100_000;
     public static final int ARRAY_LENGTH = 100_000;
@@ -26,7 +28,7 @@ public class FindUniqueTest {
             assertEquals(ARRAY_UNIQUE_VALUE, FindUnique.bestOne(array));
         }
         watch.stop();
-        System.out.println("Time Elapsed: " + watch.getTime());
+        log.info("Time Elapsed: " + watch.getTime());
     }
 
     @Test
@@ -41,7 +43,7 @@ public class FindUniqueTest {
             assertEquals(ARRAY_UNIQUE_VALUE, FindUnique.strayAnotherWay(array));
         }
         watch.stop();
-        System.out.println("Time Elapsed: " + watch.getTime());
+        log.info("Time Elapsed: " + watch.getTime());
     }
 
     @Test
@@ -56,7 +58,7 @@ public class FindUniqueTest {
             assertEquals(ARRAY_UNIQUE_VALUE, FindUnique.stray(array));
         }
         watch.stop();
-        System.out.println("Time Elapsed: " + watch.getTime());
+        log.info("Time Elapsed: " + watch.getTime());
     }
 
 }

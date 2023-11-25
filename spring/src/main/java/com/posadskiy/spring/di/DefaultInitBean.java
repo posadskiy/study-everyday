@@ -1,10 +1,12 @@
 package com.posadskiy.spring.di;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.InitializingBean;
 
+@Log4j2
 public class DefaultInitBean implements InitializingBean {
 
     public void afterPropertiesSet() throws Exception {
-        System.out.println("DEFAULT INIT BEAN");
+        log.info("DEFAULT INIT BEAN");
     }
 }

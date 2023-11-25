@@ -1,5 +1,6 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ import java.util.Arrays;
 
 import static java.util.stream.Collectors.joining;
 
+@Log4j2
 public class SnailTest {
     @Test
     public void SnailTest1() {
@@ -33,7 +35,7 @@ public class SnailTest {
 
     public void test(int[][] array, int[] result) {
         String text = int2dToString(array) + " should be sorted to " + Arrays.toString(result);
-        System.out.println(text);
+        log.info(text);
         Assert.assertArrayEquals(result, Snail.snail(array));
     }
 }

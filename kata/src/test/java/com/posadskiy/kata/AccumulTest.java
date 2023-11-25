@@ -2,9 +2,10 @@ package com.posadskiy.kata;
 
 import static org.junit.Assert.*;
 
+import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 
-
+@Log4j2
 public class AccumulTest {
 
     private static void testing(String actual, String expected) {
@@ -12,7 +13,7 @@ public class AccumulTest {
     }
     @Test
     public void test() {
-        System.out.println("Fixed Tests accum");
+        log.info("Fixed Tests accum");
         testing(Accumul.accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
         testing(Accumul.accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb");
         testing(Accumul.accum("MjtkuBovqrU"), "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu");

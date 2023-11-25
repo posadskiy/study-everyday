@@ -1,5 +1,8 @@
 package com.posadskiy.java.core.concurrency;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class Synchronized {
     private final static Object mutex = new Object();
 
@@ -13,7 +16,7 @@ public class Synchronized {
     private static void printValue(String value) {
         synchronized (mutex) {
             for (int i = 0; i < 10; ++i) {
-                System.out.println(value);
+                log.info(value);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -26,7 +29,7 @@ public class Synchronized {
     private synchronized static void printOneValue(int value) {
         if (value == 10) return;
 
-        System.out.println(value);
+        log.info(value);
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {

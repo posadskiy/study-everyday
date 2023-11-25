@@ -1,11 +1,13 @@
 package com.posadskiy.kata;
 
+import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.testng.Assert.*;
 
+@Log4j2
 public class BubbleSortTest {
 
     @Test
@@ -14,7 +16,7 @@ public class BubbleSortTest {
 
         int[] result = BubbleSort.sort(arr);
 
-        System.out.println(Arrays.toString(arr));
+        log.info(Arrays.toString(arr));
 
         assertEquals(result[0], 2);
         assertEquals(result[1], 2);
