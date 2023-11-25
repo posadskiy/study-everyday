@@ -1,6 +1,7 @@
 package com.posadskiy.java.release.v21.pattern;
 
 import com.posadskiy.java.release.v21.pattern.records.*;
+import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
 
@@ -11,8 +12,8 @@ import java.util.List;
  * Enhance the Java programming language with record patterns to deconstruct record values. Record patterns and type 
  * patterns can be nested to enable a powerful, declarative, and composable form of data navigation and processing.
  */
+@Log4j2
 public class SystemRunner {
-    private final static System.Logger log = System.getLogger("default");
 
     public static void main(String[] args) {
         final SystemRunner systemRunner = new SystemRunner();
@@ -27,14 +28,14 @@ public class SystemRunner {
     }
 
     private void processHotel(Hotel hotel) {
-        log.log(System.Logger.Level.INFO, hotel);
+        log.info(hotel);
     }
 
     private void processHotelViaPattern(Hotel hotel) {
         if (hotel instanceof Hotel(List<Sensor> sensors, Location(String name, GeoPoint geoPoint))) {
-            log.log(System.Logger.Level.INFO, sensors);
-            log.log(System.Logger.Level.INFO, name);
-            log.log(System.Logger.Level.INFO, geoPoint);
+            log.info(sensors);
+            log.info(name);
+            log.info(geoPoint);
         }
     }
 }

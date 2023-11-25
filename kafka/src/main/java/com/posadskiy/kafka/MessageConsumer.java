@@ -1,10 +1,10 @@
 package com.posadskiy.kafka;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-@Slf4j
+@Log4j2
 @Service
 public class MessageConsumer {
 

@@ -1,13 +1,15 @@
 package com.posadskiy.java.release.v17;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.io.*;
 
 /**
  * JEP 415: Context-Specific Deserialization Filters
  * <a href="https://openjdk.org/jeps/415">Docs</a>
  */
+@Log4j2
 public class ContextSpecificDeserializationFilters {
-    private final static System.Logger log = System.getLogger("default");
 
     public static void main(String[] args) {
 
@@ -36,7 +38,7 @@ public class ContextSpecificDeserializationFilters {
             ObjectInputFilter intFilter = ObjectInputFilter.rejectFilter(cl -> !cl.equals(Example.class), ObjectInputFilter.Status.UNDECIDED);
             stream.setObjectInputFilter(intFilter);
 
-            log.log(System.Logger.Level.INFO, stream.readObject());
+            log.info(stream.readObject());
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

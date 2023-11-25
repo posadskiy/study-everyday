@@ -15,7 +15,8 @@
     </parent>
 
     <properties>
-        <maven.compiler.release>15</maven.compiler.release>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
     </properties>
 
 </project>

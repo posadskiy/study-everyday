@@ -4,14 +4,14 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>git</artifactId>
-    <version>0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
     <parent>
         <groupId>com.posadskiy</groupId>
         <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
+
+    <artifactId>git</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 </project>

@@ -1,5 +1,7 @@
 package com.posadskiy.java.release.v21.pattern;
 
+import lombok.extern.log4j.Log4j2;
+
 /**
  * JEP 441: Pattern Matching for switch
  * <a href="https://openjdk.org/jeps/441">Docs</a>
@@ -8,8 +10,8 @@ package com.posadskiy.java.release.v21.pattern;
  * matching to switch allows an expression to be tested against a number of patterns, each with a specific action, so
  * that complex data-oriented queries can be expressed concisely and safely.
  */
+@Log4j2
 public class SwitchPattern {
-    private final static System.Logger log = System.getLogger("default");
 
     public static void main(String[] args) {
         final SwitchPattern switchPattern = new SwitchPattern();
@@ -33,6 +35,6 @@ public class SwitchPattern {
             case null, default -> "Unexpected expression";
         };
 
-        log.log(System.Logger.Level.INFO, formatterValue);
+        log.info(formatterValue);
     }
 }

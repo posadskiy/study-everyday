@@ -39,11 +39,6 @@
         </developer>
     </developers>
 
-    <properties>
-        <maven.compiler.source>9</maven.compiler.source>
-        <maven.compiler.target>9</maven.compiler.target>
-    </properties>
-
     <build>
         <outputDirectory>target</outputDirectory>
         <sourceDirectory>src/main/java</sourceDirectory>
@@ -109,7 +104,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>Start</mainClass>
+                    <mainClass>com.posadskiy.maven.Start</mainClass>
                 </configuration>
                 <executions>
                     <execution>
@@ -140,7 +135,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

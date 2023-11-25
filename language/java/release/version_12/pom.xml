@@ -6,13 +6,18 @@
 
     <artifactId>version_12</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>com.posadskiy</groupId>
         <artifactId>release</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
+
+    <properties>
+        <maven.compiler.source>12</maven.compiler.source>
+        <maven.compiler.target>12</maven.compiler.target>
+    </properties>
     
     <dependencies>
         <dependency>

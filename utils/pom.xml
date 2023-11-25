@@ -10,11 +10,7 @@
     </parent>
 
     <artifactId>utils</artifactId>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
 </project>

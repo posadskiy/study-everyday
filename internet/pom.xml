@@ -4,15 +4,15 @@
                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>internet</artifactId>
-    <version>0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
     <parent>
         <groupId>com.posadskiy</groupId>
         <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
+
+    <artifactId>internet</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <modules>
         <module>http</module>

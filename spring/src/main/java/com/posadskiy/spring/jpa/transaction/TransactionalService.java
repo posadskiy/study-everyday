@@ -2,14 +2,14 @@ package com.posadskiy.spring.jpa.transaction;
 
 import com.posadskiy.spring.jpa.model.Sensor;
 import com.posadskiy.spring.jpa.repository.SensorRepository;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.collections4.IteratorUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Slf4j
+@Log4j2
 @Service
 @Transactional
 public class TransactionalService {

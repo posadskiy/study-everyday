@@ -1,12 +1,13 @@
 package com.posadskiy.java.release.v18;
 
+import lombok.extern.log4j.Log4j2;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 
+@Log4j2
 public class InetAddressResolving {
-
-    private final static System.Logger log = System.getLogger("default");
 
     public static void main(String[] args) {
         final InetAddress[] allByName;
@@ -16,7 +17,7 @@ public class InetAddressResolving {
             throw new RuntimeException(e);
         }
         Arrays.stream(allByName).forEach(value -> {
-            log.log(System.Logger.Level.INFO, "Address: " + value.getHostAddress() + ", hostname: " + value.getHostName() + ", canonical hostname: " + value.getCanonicalHostName());
+            log.info("Address: " + value.getHostAddress() + ", hostname: " + value.getHostName() + ", canonical hostname: " + value.getCanonicalHostName());
         });
     }
 }
