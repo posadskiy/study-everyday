@@ -1,6 +1,6 @@
 # Knowledge
 
-## Design
+## [Design](design)
 ### Application design
 ### Computer architecture
 ### Operating systems
@@ -38,14 +38,10 @@
 ### JavaScript
 #### [React](react)
 #### [React Native](react-native)
+##### [ESLint](react-native/eslint)
+##### [Jest](react-native/jest)
 #### [Webpack](webpack)
 #### Babel
-#### Jest
-#### Linter
-#### Redux
-##### Redux Thunk
-##### Redux Saga
-##### Redux Router
 ### TypeScript
 
 ## [Database](database)
@@ -79,8 +75,8 @@
 
 ## [Git](git)
 
-## Container
-### Docker
+## [Deployment](deployment)
+### [Docker](deployment/docker)
 ### Kubernetes
 
 ## Big Data

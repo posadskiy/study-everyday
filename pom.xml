@@ -103,6 +103,7 @@
         <module>utils</module>
         <module>kafka</module>
         <module>config</module>
+        <module>deployment</module>
     </modules>
 
     <properties>
