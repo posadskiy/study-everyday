@@ -11,9 +11,5 @@
 
     <artifactId>database</artifactId>
     <packaging>pom</packaging>
-    
-    <modules>
-        <module>indexes</module>
-    </modules>
 
 </project>

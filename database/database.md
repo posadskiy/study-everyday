@@ -88,29 +88,6 @@ the same data in a different order. When this happens, one transaction may hold 
 transaction needs, while the second transaction may hold a lock on a resource that the first transaction needs. Both
 transactions are then blocked, waiting for the other to release the resource they need.
 
-#### Index
-
-A database index is a data structure that improves the speed of data retrieval operations on a database table at the
-cost of additional writes and storage space to maintain the index data structure.
-
-- fast lookup
-- policing the database constraints
-
-Types:
-
-- В-tree
-- Hash
-- GiST
-- SP-GiST
-- GIN
-- BRIN
-
-- One column index
-- Two or more column index
-- Unique index
-- Statement-based index - `(lower(full_name))`
-- Partly index - `where id > 10000`
-
 #### Query optimization
 
 - Modify query code
