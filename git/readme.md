@@ -5,10 +5,10 @@
 ## commit
 Внутри коммита содержится следующее дерево:
 
-![Коммит](https://raw.githubusercontent.com/DmitryPosadskiy/StudyEveryday/develop/git/src/resources/img/commit.png)
+![Коммит](img/commit.png)
 
 Каждый коммит имеет ссылку на предшествующий. История коммитов - **односвязный список**.
-![Коммит](https://raw.githubusercontent.com/DmitryPosadskiy/StudyEveryday/develop/git/src/resources/img/commit-history.png)
+![Коммит](img/commit-history.png)
 
 ## Branch
 Ветка - это указатель на коммит. Это файл, содержащий 40 символов контрольной суммы SHA-1 того коммита, на который он

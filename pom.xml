@@ -98,12 +98,13 @@
         <module>kata</module>
         <module>swift</module>
         <module>design</module>
-        <module>life</module>
         <module>algorithm</module>
         <module>utils</module>
         <module>kafka</module>
         <module>config</module>
         <module>deployment</module>
+        <module>language/java/aspect</module>
+        <module>architecture</module>
     </modules>
 
     <properties>

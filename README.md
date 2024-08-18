@@ -12,6 +12,7 @@
 
 ## Programming languages
 ### [Java](language/java) [80%]
+#### [Aspect]() [-]
 #### [Core](language/java/core) [80%]
 #### [JVM](language/java/jvm) [60%]
 #### [Releases](language/java/release) [95%]
@@ -32,6 +33,10 @@
 #### Spring IoC
 #### Spring Data
 #### Spring AOP
+
+### [Hibernate] -
+
+### [Kafka](kafka) [10%]
 
 ### [Maven](maven)
 
