@@ -3,7 +3,7 @@
 #### Reliability
 
 The system should continue to work correctly (performing the correct function at the desired level of performance) even
-in the face of adversity (hardware or soft‐ ware faults, and even human error).
+in the face of adversity (hardware or software faults, and even human error).
 
 * The application performs the function that the user expected.
 * It can tolerate the user making mistakes or using the software in unexpected ways.
