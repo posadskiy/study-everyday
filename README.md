@@ -1,6 +1,3 @@
-* TOC
-{:toc}
-
 # Knowledge
 
 ## [Design](design)
