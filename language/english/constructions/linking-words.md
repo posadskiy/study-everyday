@@ -1,28 +1,71 @@
-- but between sentences
-- although at the beginning or the end
-- however is more formal
-- though is informal
+### addition
 
+Adding more information or ideas.
 
-  We use despite in exactly the same way as in spite of and with the same meaning.
-  She wanted to go despite the danger. He went on working despite feeling unwell.
+`and, also, furthermore, moreover, in addition, besides`
 
+_She loves to read novels, and she also enjoys writing short stories._
 
-Whereas, while and on the other hand
-We use these words to express a comparison between two ideas.
-United are top of the league, whereas City are bottom.
-Yesterday it was freezing cold, while today it's quite warm.
-The flat is conveniently located. On the other hand, there's a lot of noise from the traffic./There is,
-on the other hand, a lot of noise from the traffic.
+### contrast
 
+Showing a difference between ideas or events.
 
-In order to and so as to are more formal than to.
-The government took these measures in order to reduce crime.
-The staff are working at weekends so as to complete the project in time.
+`but, however, on the other hand, although, though, whereas, nevertheless, yet`
 
+_She loves hiking, but she hates camping._
 
-We can use the negative in order not to or so as not to.
-Melanie was hurrying in order not to miss her bus.
-The staff are working at weekends so as not to delay the project any further.
-We cannot use not to on its own.
-She was hurrying to catch her bus. not She was hurrying not to miss her bus.
+### cause and effect
+
+Showing a reason or result.
+
+`because, as, since, so, therefore, thus, consequently, as a result`
+
+_He didn’t study for the test, so he failed._
+
+### comparison
+
+Showing similarities between ideas or things.
+
+`similarly, likewise, in the same way, as`
+
+_He enjoys swimming; similarly, his sister loves water sports._
+
+### time/sequence
+
+Indicating the order of events or actions.
+
+`first, next, then, finally, after that, meanwhile, before, during, after, eventually`
+
+_First, we visited the museum, and then we went to the park._
+
+### purpose
+
+Showing why something is done.
+
+`so that, in order to, for the purpose of`
+
+_She brought her laptop so that she could finish her work during the trip._
+
+### condition
+
+Introducing a conditional situation.
+
+`if, unless, as long as, provided that, even if`
+
+_If it rains, we will cancel the picnic._
+
+### clarification
+
+Making something clearer or provide more detail.
+
+`in other words, that is, to clarify, for example, for instance`
+
+_He’s a polyglot; in other words, he speaks several languages fluently._
+
+### conclusion/summary
+
+Summing up or conclude your ideas.
+
+`in conclusion, to sum up, in summary, overall, to conclude, finally, in brief`
+
+_In conclusion, regular exercise is essential for maintaining good health._
