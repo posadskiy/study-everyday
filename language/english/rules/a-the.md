@@ -31,4 +31,24 @@ _The electron is a part of every atom._
 Do not leave out the before other nouns for buildings, e g. the cinema, the factory, the house, the library, the office,
 the pub, the shop, the station.
 
+### a
 
+We do not use a/an with an uncountable noun.  
+~~a water~~  
+~~a music~~
+
+uncountable nouns without -s form:
+`accommodation, baggage, behaviour, equipment, fun, furniture, homework, housework, litter, luck, luggage, progress,
+rubbish, scenery, traffic, travel, weather, work`
+
+_There is a hair on your shirt._  
+_I must brush my hair_ ~~hairs~~
+
+### amount
+
+After an amount of money, a distance, a weight or a length of time, we normally use a singular verb.
+
+_£78 seems a fair price._
+_100 metres isn't far to swim._
+
+We are talking about the amount as a whole, not the individual pounds or metres.
