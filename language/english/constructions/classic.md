@@ -1,39 +1,39 @@
 ### seem (= looks like)
 
-*He seems to be quite annoyed.*  
-*I just checked my bank account and that seems to have been activated.*
+_He seems to be quite annoyed._  
+_I just checked my bank account and that seems to have been activated._
 
 ### appear
 
-*The software appears to have a bug in it.*  
-*David appeared to have hurt himself.*
+_The software appears to have a bug in it._  
+_David appeared to have hurt himself._
 
 ### tend (= usually)
 
 We use **tend to** for things that usually happen.
 
-*We tend to get up later at weekends.* (= We usually get up later at weekends.)
+_We tend to get up later at weekends._ (= We usually get up later at weekends.)
 
 ### manage
 
 We use **manage to** for being able to do something.
 
-*Luckily I managed to find my way here all right.* (= I was able to find my way.)
+_Luckily I managed to find my way here all right._ (= I was able to find my way.)
 
 ### fail
 
 We use fail to for things that don't happen.
 
-*David failed to pay his electricity bill.* (= David didn't pay his electricity bill.)
+_David failed to pay his electricity bill._ (= David didn't pay his electricity bill.)
 
 ### mind + V-ing
 
 When you ask if someone "minds" something, you are asking if they are okay with it or if it bothers them.
 
-*Do you mind closing the door?*  
-*I don't mind waiting.* (I am okay with waiting.)  
-*She minds people smoking near her.* (She is bothered by people smoking near her.)
-*Would you mind not talking so loudly?* (Politely asking someone to stop talking loudly.)
+_Do you mind closing the door?_  
+_I don't mind waiting._ (I am okay with waiting.)  
+_She minds people smoking near her._ (She is bothered by people smoking near her.)
+_Would you mind not talking so loudly?_ (Politely asking someone to stop talking loudly.)
 
 ### keep (on) and carry on
 
