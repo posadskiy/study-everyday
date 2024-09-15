@@ -5,9 +5,9 @@ form with "to" in front of it. The to-infinitive form is "to + base verb" (e.g.,
 structure is common in English and is used for various purposes, such as expressing intentions, desires, or actions.
 
 #### verb + to-infinitive:
-*Sarah promised to go shopping. But then she arranged to play golf.*
+_Sarah promised to go shopping. But then she arranged to play golf._
 
 #### noun + to-infinitive:
-*Sarah forgot about her promise to go shopping.*  
-*Mark found out about her arrangement to play golf.*
+_Sarah forgot about her promise to go shopping._  
+_Mark found out about her arrangement to play golf._
 
