@@ -86,25 +86,18 @@
     </dependencies>
 
     <modules>
-        <module>database</module>
-        <module>language</module>
-        <module>maven</module>
-        <module>react</module>
-        <module>react-native</module>
-        <module>spring</module>
-        <module>git</module>
-        <module>internet</module>
-        <module>webpack</module>
-        <module>kata</module>
-        <module>swift</module>
-        <module>design</module>
         <module>algorithm</module>
-        <module>utils</module>
-        <module>kafka</module>
-        <module>config</module>
-        <module>deployment</module>
-        <module>language/java/aspect</module>
         <module>architecture</module>
+        <module>build</module>
+        <module>config</module>
+        <module>database</module>
+        <module>deployment</module>
+        <module>design</module>
+        <module>framework</module>
+        <module>git</module>
+        <module>language</module>
+        <module>protocol</module>
+        <module>utils</module>
     </modules>
 
     <properties>

@@ -2,7 +2,9 @@ package com.posadskiy.java.core.collection.map.hashmap;
 
 import lombok.extern.log4j.Log4j2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -29,11 +31,16 @@ public class HashMapTesting {
             .collect(Collectors.toMap(value -> new BadHashExample(), String::valueOf));
 
 
-        // All values are written into the same backet, last one has link on previous one.
+        // All values are written into the same bucket, last one has link on previous one.
         // Summary, it looks like 5 -> 3 -> 1
         // "Third" Entry has link to "Second" entry via .next field, and then "Second" on "First".
         // If more than TREEIFY_THRESHOLD - 1 (== 7 java17) values in the linked chain, this chain
         // will be converted into TreeMap for better performance
         log.info(keys);
+    }
+    
+    private static void addToMapIfComplexly() {
+        final Map<String, List<Integer>> map = new HashMap<>();
+        map.computeIfAbsent("value", (s) -> new ArrayList<>()).add(1);
     }
 }

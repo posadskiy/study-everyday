@@ -1,0 +1,16 @@
+FROM openjdk:8-alpine
+
+WORKDIR /app/oak-server
+ENV PATH "$PATH:/usr/local/sbt/bin"
+ENV SCALA_VERSION=2.11.12
+ENV SBT_VERSION=0.13.18
+
+ADD https://downloads.typesafe.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.tgz .
+ADD https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz .
+
+RUN apk add --no-cache bash && \
+    tar xzf "scala-${SCALA_VERSION}.tgz" && \
+    rm -rf scala-${SCALA_VERSION}.tgz && \
+    mkdir -p "/usr/local/sbt" && \
+    tar xzf "sbt-${SBT_VERSION}.tgz" -C /usr/local && \
+    rm -rf sbt-${SBT_VERSION}.tgz

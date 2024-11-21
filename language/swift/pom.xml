@@ -10,8 +10,7 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kotlin</artifactId>
+    <artifactId>swift</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
 </project>

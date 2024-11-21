@@ -17,6 +17,7 @@
     <modules>
         <module>java</module>
         <module>kotlin</module>
+        <module>swift</module>
         <module>english</module>
         <module>french</module>
     </modules>

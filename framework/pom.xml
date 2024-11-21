@@ -9,16 +9,12 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>architecture</artifactId>
+    <artifactId>framework</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>nginx</module>
-        <module>kafka</module>
-        <module>api-gateway</module>
-        <module>load-balancer</module>
-        <module>cdn</module>
-        <module>tracing</module>
+        <module>backend</module>
+        <module>frontend</module>
     </modules>
 
 </project>

@@ -1,94 +1,82 @@
 # Knowledge
 
-## [Design](design)
-### Application design
-### Computer architecture
-### Operating systems
-#### Linux
-#### MacOS
-#### Windows
+Content:
+- [Algorithms](#algorithms)
+- [Architecture](#architecture)
+- [Build](#build)
+- [Database](#database)
+- [Deployment](#deployment)
+- [Design](#design)
+- [Framework](#framework)
+- [Git](#git)
+- [Language](#language)
+- [Protocol](#protocol)
 
 ## [Algorithms](algorithm)
+### [Algorithms implementation](algorithm/algorithm-implementation)
+### [Kata](algorithm/kata)
 
-## Programming languages
-### [Java](language/java) [80%]
-#### [Aspect]() [-]
-#### [Core](language/java/core) [80%]
-#### [JVM](language/java/jvm) [60%]
-#### [Releases](language/java/release) [95%]
-##### [v9](language/java/release/version_9) [100%]
-##### [v10](language/java/release/version_10) [100%]
-##### [v11](language/java/release/version_11) [100%]
-##### [v12](language/java/release/version_12) [100%]
-##### [v14](language/java/release/version_14) [100%]
-##### [v15](language/java/release/version_15) [100%]
-##### [v16](language/java/release/version_16) [100%]
-##### [v17](language/java/release/version_17) [100%]
-##### [v18](language/java/release/version_18) [100%]
-##### [v21](language/java/release/version_21) [70%]
-### [Kotlin](language/kotlin) [40%]
+## [Architecture](architecture)
+### [Kafka](architecture/kafka)
+### [Nginx](architecture/nginx)
 
-### [Spring](spring)
-#### Spring MVC
-#### Spring IoC
-#### Spring Data
-#### Spring AOP
-
-### [Hibernate] -
-
-### [Kafka](kafka) [10%]
-
-### [Maven](maven)
-
-### JavaScript
-#### [React](react)
-#### [React Native](react-native)
-##### [ESLint](react-native/eslint)
-##### [Jest](react-native/jest)
-#### [Webpack](webpack)
-#### Babel
-### TypeScript
+## [Build](build)
+### [Maven](build/maven)
+### [Webpack](build/webpack)
 
 ## [Database](database)
-### [Index](database/indexes)
+### [Index](database/index)
 ### SQL
-#### MySQL
-#### PostgreSQL
-#### Oracle DB
+#### Postgres
 ### NoSQL
 #### MongoDb
 ### In memory DB
 #### Redis
 
-## Front-end
-### [React](react)
-#### [New features](react/new-feature)
-### [ReactNative](react-native)
-### [Swift](swift)
-### [Webpack](webpack)
+## [Deployment](deployment)
+### [Docker](deployment/docker)
+### [Kubernetes](deployment/kubernetes)
 
-### Python
-### C++
-### C
+## [Design](design)
+### Patterns
+### SOLID
 
-## [Internet](internet)
-### [HTTP](internet/http)
-### HTTPS
-### SSL
-### CORS
-### [Nginx](internet/nginx)
+## [Framework](framework)
+### [Backend](framework/backend)
+#### [Spring](framework/backend/spring)
+##### [Bean Post Processing](framework/backend/spring/src/main/java/com/posadskiy/spring/bpp)
+##### [Core (Scope only)](framework/backend/spring/src/main/java/com/posadskiy/spring/core)
+##### [Dependency injection](framework/backend/spring/src/main/java/com/posadskiy/spring/di)
+##### [JPA (Transaction only)](framework/backend/spring/src/main/java/com/posadskiy/spring/jpa)
+### [Frontend](framework/frontend)
+#### [React](framework/frontend/react)
+##### [Release 16](framework/frontend/react/release_16)
+#### [React Native](framework/frontend/react-native)
+##### [EsLint](framework/frontend/react-native/eslint)
+##### [Jest](framework/frontend/react-native/jest)
 
 ## [Git](git)
 
-## [Deployment](deployment)
-### [Docker](deployment/docker)
-### Kubernetes
+## [Language](language)
+### [Java](language/java)
+#### [Aspect](language/java/aspect)
+#### [Core](language/java/core)
+#### [JVM](language/java/jvm)
+#### [Releases](language/java/release)
+##### [v9](language/java/release/version_9) 
+##### [v10](language/java/release/version_10)
+##### [v11](language/java/release/version_11)
+##### [v12](language/java/release/version_12)
+##### [v14](language/java/release/version_14)
+##### [v15](language/java/release/version_15)
+##### [v16](language/java/release/version_16)
+##### [v17](language/java/release/version_17)
+##### [v18](language/java/release/version_18)
+##### [v21](language/java/release/version_21)
+### [Kotlin](language/kotlin)
+### [Swift](language/swift)
+### [English](language/english)
+### [French](language/french)
 
-## Big Data
-## Machine learning
-## Blockchain
-
-## Languages
-### Russian
-### [English](language/english) [1%]
-### [French](language/french) [1%]
+## [Protocol](protocol)
+### [HTTP](protocol/http)

@@ -5,20 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>study-everyday</artifactId>
+        <artifactId>framework</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>architecture</artifactId>
+    <artifactId>backend</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>nginx</module>
-        <module>kafka</module>
-        <module>api-gateway</module>
-        <module>load-balancer</module>
-        <module>cdn</module>
-        <module>tracing</module>
+        <module>spring</module>
     </modules>
-
 </project>

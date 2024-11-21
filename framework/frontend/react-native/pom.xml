@@ -6,12 +6,17 @@
 
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>language</artifactId>
+        <artifactId>frontend</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kotlin</artifactId>
+    <artifactId>react-native</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>eslint</module>
+        <module>jest</module>
+    </modules>
 
 </project>

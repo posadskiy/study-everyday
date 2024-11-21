@@ -6,11 +6,11 @@
 
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>language</artifactId>
+        <artifactId>architecture</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kotlin</artifactId>
+    <artifactId>nginx</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
