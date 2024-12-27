@@ -31,3 +31,10 @@ behavior and adapting the system to new use cases), and they should all be able 
   the system. (Note this is not the same as simplicity of the user interface.)
 * Evolvability - Make it easy for engineers to make changes to the system in the future, adapting it for unanticipated
   use cases as requirements change. Also known as extensibility, modifiability, or plasticity.
+
+#### Consistence
+
+If R = 1 and W = N, the system is optimized for a fast read.
+If W = 1 and R = N, the system is optimized for a fast write.
+If W + R > N, strong consistency is guaranteed (Usually N = 3, W = R = 2).
+If W + R <= N, strong consistency is not guaranteed.
