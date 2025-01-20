@@ -25,6 +25,8 @@
         <module>version_17</module>
         <module>version_18</module>
         <module>version_21</module>
+        <module>version_22</module>
+        <module>version_23</module>
     </modules>
 
 
