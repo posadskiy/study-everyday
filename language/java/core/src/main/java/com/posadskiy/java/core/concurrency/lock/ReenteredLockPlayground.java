@@ -12,7 +12,7 @@ public class ReenteredLockPlayground {
     public static void main(String[] args) {
         ReenteredLockPlayground playground = new ReenteredLockPlayground();
         
-        var features = IntStream.range(0, 5).mapToObj((i) -> Thread.ofPlatform().daemon().start(playground::doingSomething)).toList();
+        var features = IntStream.range(0, 5).mapToObj((i) -> Thread.ofPlatform().daemon().start(() -> playground.doingSomething(i))).toList();
         features.forEach((feature) -> {
             try {
                 feature.join();
@@ -22,11 +22,11 @@ public class ReenteredLockPlayground {
         });
     }
     
-    private void doingSomething() {
+    private void doingSomething(int i) {
         lock.lock();
         
         try {
-            log.info("doing something");
+            log.info("doing something {}", i);
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             log.error("doing something interrupted", e);
