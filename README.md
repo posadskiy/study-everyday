@@ -4,6 +4,7 @@ Content:
 - [Algorithms](#algorithms)
 - [Architecture](#architecture)
 - [Build](#build)
+- [Config](#config)
 - [Database](#database)
 - [Deployment](#deployment)
 - [Design](#design)
@@ -11,27 +12,30 @@ Content:
 - [Git](#git)
 - [Language](#language)
 - [Protocol](#protocol)
+- [Utils](#utils)
 
 ## [Algorithms](algorithm)
 ### [Algorithms implementation](algorithm/algorithm-implementation)
 ### [Kata](algorithm/kata)
 
 ## [Architecture](architecture)
+### [API Gateway](architecture/api-gateway)
+### [CDN](architecture/cdn)
 ### [Kafka](architecture/kafka)
+### [Load Balancer](architecture/load-balancer)
 ### [Nginx](architecture/nginx)
+### [Rate Limiter](architecture/rate-limiter)
+### [Tracing](architecture/tracing)
 
 ## [Build](build)
 ### [Maven](build/maven)
 ### [Webpack](build/webpack)
 
+## [Config](config)
+
 ## [Database](database)
 ### [Index](database/index)
-### SQL
-#### Postgres
-### NoSQL
-#### MongoDb
-### In memory DB
-#### Redis
+#### [Hash Index](database/index/hash)
 
 ## [Deployment](deployment)
 ### [Docker](deployment/docker)
@@ -73,6 +77,9 @@ Content:
 ##### [v17](language/java/release/version_17)
 ##### [v18](language/java/release/version_18)
 ##### [v21](language/java/release/version_21)
+##### [v22](language/java/release/version_22)
+##### [v23](language/java/release/version_23)
+##### [v24](language/java/release/version_24)
 ### [Kotlin](language/kotlin)
 ### [Swift](language/swift)
 ### [English](language/english)
@@ -80,3 +87,5 @@ Content:
 
 ## [Protocol](protocol)
 ### [HTTP](protocol/http)
+
+## [Utils](utils)
