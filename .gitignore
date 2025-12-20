@@ -1,7 +1,28 @@
-.idea/*
-.target/*
-**/.target/*
-**/.gradle/*
-**/.idea/*
+.idea/
+.target/
+**/.target/
+**/.gradle/
+**/.idea/
+**/.vscode/
+**/target/
+**/bin/
 
+# macOS
+**/.DS_Store
+*.plist
+*.xcssheme
+
+# IDE project files
 *.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+
+# OS / misc
+*.dmg
+
+# Note: do NOT ignore `.mvn/` so Maven Wrapper can be committed at repo root.

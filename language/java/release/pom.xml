@@ -14,6 +14,39 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
+    <!--
+      Release playground: each version_* module must declare its own intended Java level via:
+        <maven.compiler.release>..</maven.compiler.release>
+
+      We intentionally override the root maven-compiler-plugin configuration here so release modules
+      do NOT inherit Java 25 defaults (including compiler args / processor-path wiring).
+    -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration combine.self="override">
+                        <release>${maven.compiler.release}</release>
+                        <fork>true</fork>
+                        <compilerArgs>
+                            <arg>-parameters</arg>
+                        </compilerArgs>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <modules>
         <module>version_9</module>
         <module>version_10</module>
@@ -27,6 +60,7 @@
         <module>version_21</module>
         <module>version_22</module>
         <module>version_23</module>
+        <module>version_24</module>
     </modules>
 
 
