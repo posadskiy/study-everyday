@@ -1,38 +1,11 @@
-### Start application
+# Kotlin
 
-Main function - *fun main()*. Use parameters for this function when it necessary.
+This module contains Kotlin programming language examples and syntax documentation.
 
+## Contents
 
-### Variable
+- **Basics**: Variable declarations (`val`, `var`), string templates, method calls with named parameters
+- **Default Values**: Function parameters with default values
+- **Course Materials**: Kotlin for Java Developers course exercises (Week 3 and Week 4)
 
-* val (value) - **read-only** variables
-* var (variable) - **mutable** variables
-
-
-### String
-
-
-There are String templates:
-```kotlin
-val name = "Your name"
-"Hello, $name"
-```
-
-### Method
-
-Call methods with parameter names.
-```kotlin
-fun name(first: Int, second: Int, third: Int) = first + second + third
-
-name(third = 3, second = 2, first = 1)
-name(second = 2, third = 3, first = 1)
-```
-
-Default values
-```kotlin
-fun name(age: Int = 31, name: String = "Robby") = println(age + name)
-
-name() // 31Robby
-name(20) // 20Robby
-
-```
+Kotlin is a modern programming language that runs on the JVM and provides concise syntax, null safety, and interoperability with Java.
