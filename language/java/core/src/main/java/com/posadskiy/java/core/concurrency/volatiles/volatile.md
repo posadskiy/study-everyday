@@ -12,3 +12,9 @@ threads see the same value for the volatile variable.
 
 The volatile keyword is often used with flags that indicate that a thread needs to stop running.
 
+Technically, any write to a volatile field happens-before every subsequent
+read of the same field.
+
+Because of the strength of the happens-before memory ordering,
+sometimes we can piggyback on the visibility properties of another
+volatile variable.

@@ -5,13 +5,15 @@
 Anonymous Inner Class provides class defenition and and instance at the same time
 
 ```java
-Thread t1=new Thread(new Runnable(){
-@Override
-public void run(){
-    // something
+Thread t1 = new Thread(new Runnable() {
+    @Override
+    public void run() {
+        // something
     }
-    });
-    t1.start();
+});
+    t1.
+
+start();
 ```
 
 ###### this
@@ -30,4 +32,13 @@ the functional interface method.
 
 ###### Performance
 
-Better for lambda - no new class creationg.
+Better for lambda - no new class creation.
+
+#### Instructions reordering
+
+Reordering is an optimization technique for performance improvements.
+Interestingly, different components may apply this optimization:
+
+- The processor may flush its write buffer in an order other than the program order.
+- The processor may apply an out-of-order execution technique.
+- The JIT compiler may optimize via reordering.

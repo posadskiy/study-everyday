@@ -9,10 +9,19 @@ import java.util.stream.IntStream;
 public class ReenteredLockPlayground {
     private final ReentrantLock lock = new ReentrantLock();
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         ReenteredLockPlayground playground = new ReenteredLockPlayground();
-        
-        var features = IntStream.range(0, 5).mapToObj((i) -> Thread.ofPlatform().daemon().start(() -> playground.doingSomething(i))).toList();
+        playground.imitateConcurrentAccess();
+    }
+
+    public void imitateConcurrentAccess() {
+        var features = IntStream.range(0, 5)
+            .mapToObj((i) ->
+                Thread.ofPlatform()
+                    .daemon()
+                    .start(() -> doingSomething(i)))
+            .toList();
+
         features.forEach((feature) -> {
             try {
                 feature.join();
@@ -21,10 +30,10 @@ public class ReenteredLockPlayground {
             }
         });
     }
-    
+
     private void doingSomething(int i) {
+
         lock.lock();
-        
         try {
             log.info("doing something {}", i);
             Thread.sleep(1000);
@@ -34,6 +43,5 @@ public class ReenteredLockPlayground {
             lock.unlock();
         }
     }
-    
-    
+
 }
