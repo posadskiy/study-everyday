@@ -1,13 +1,12 @@
 package com.posadskiy.spring.jpa.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 
 @Entity
 @Getter
