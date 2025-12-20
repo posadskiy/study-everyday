@@ -16,6 +16,23 @@
     <properties>
         <maven.compiler.release>18</maven.compiler.release>
     </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.12.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.21.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
     
     <dependencies>
         <dependency>
@@ -38,19 +55,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.2</version>
             </plugin>
         </plugins>
     </reporting>
     
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.12.1</version>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

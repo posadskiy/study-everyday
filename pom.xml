@@ -17,6 +17,35 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>com.posadskiy</groupId>
+                <artifactId>utils</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.posadskiy</groupId>
+                <artifactId>kata</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.posadskiy</groupId>
+                <artifactId>core</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>4.5.0</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>7.0.2</version>
@@ -29,7 +58,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.24.2</version>
+                <version>3.27.6</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -46,7 +75,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.19.0</version>
+                <version>3.20.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
@@ -81,16 +110,17 @@
         <!-- Main build defaults (keep Java 25). Release sandbox overrides per-module. -->
         <maven.compiler.release>25</maven.compiler.release>
         <java.version>25</java.version>
+        <spring-boot.version>4.0.1</spring-boot.version>
 
         <!-- Shared versions (avoid drift across modules) -->
         <lombok.version>1.18.42</lombok.version>
         <junit4.version>4.13.2</junit4.version>
-        <log4j2.version>2.20.0</log4j2.version>
+        <log4j2.version>2.25.3</log4j2.version>
 
-        <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
-        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
-        <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
-        <maven.enforcer.plugin.version>3.5.0</maven.enforcer.plugin.version>
+        <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.5.4</maven.surefire.plugin.version>
+        <maven.resources.plugin.version>3.4.0</maven.resources.plugin.version>
+        <maven.enforcer.plugin.version>3.6.2</maven.enforcer.plugin.version>
 
         <enforcer.skip>false</enforcer.skip>
     </properties>
@@ -162,6 +192,12 @@
                     <configuration>
                         <skip>${enforcer.skip}</skip>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
