@@ -1,91 +1,128 @@
 # Knowledge
 
-Content:
-- [Algorithms](#algorithms)
-- [Architecture](#architecture)
-- [Build](#build)
-- [Config](#config)
-- [Database](#database)
-- [Deployment](#deployment)
-- [Design](#design)
-- [Framework](#framework)
-- [Git](#git)
-- [Language](#language)
-- [Protocol](#protocol)
-- [Utils](#utils)
+<details>
+<summary><b>📚 Algorithms</b></summary>
 
-## [Algorithms](algorithm)
-### [Algorithms implementation](algorithm/algorithm-implementation)
-### [Kata](algorithm/kata)
+- [Algorithms implementation](algorithm/algorithm-implementation)
+- [Kata](algorithm/kata)
 
-## [Architecture](architecture)
-### [API Gateway](architecture/api-gateway)
-### [CDN](architecture/cdn)
-### [Kafka](architecture/kafka)
-### [Load Balancer](architecture/load-balancer)
-### [Nginx](architecture/nginx)
-### [Rate Limiter](architecture/rate-limiter)
-### [Tracing](architecture/tracing)
+</details>
 
-## [Build](build)
-### [Maven](build/maven)
-### [Webpack](build/webpack)
+<details>
+<summary><b>🏗️ Architecture</b></summary>
 
-## [Config](config)
+- [API Gateway](architecture/api-gateway)
+- [CDN](architecture/cdn)
+- [Kafka](architecture/kafka)
+- [Load Balancer](architecture/load-balancer)
+- [Nginx](architecture/nginx)
+- [Rate Limiter](architecture/rate-limiter)
+- [Tracing](architecture/tracing)
 
-## [Database](database)
-### [Index](database/index)
-#### [Hash Index](database/index/hash)
+</details>
 
-## [Deployment](deployment)
-### [Docker](deployment/docker)
-### [Kubernetes](deployment/kubernetes)
+<details>
+<summary><b>🔨 Build</b></summary>
 
-## [Design](design)
-### Patterns
-### SOLID
+- [Maven](build/maven)
+- [Webpack](build/webpack)
 
-## [Framework](framework)
-### [Backend](framework/backend)
-#### [Spring](framework/backend/spring)
-##### [Bean Post Processing](framework/backend/spring/src/main/java/com/posadskiy/spring/bpp)
-##### [Core (Scope only)](framework/backend/spring/src/main/java/com/posadskiy/spring/core)
-##### [Dependency injection](framework/backend/spring/src/main/java/com/posadskiy/spring/di)
-##### [JPA (Transaction only)](framework/backend/spring/src/main/java/com/posadskiy/spring/jpa)
-### [Frontend](framework/frontend)
-#### [React](framework/frontend/react)
-##### [Release 16](framework/frontend/react/release_16)
-#### [React Native](framework/frontend/react-native)
-##### [EsLint](framework/frontend/react-native/eslint)
-##### [Jest](framework/frontend/react-native/jest)
+</details>
 
-## [Git](git)
+<details>
+<summary><b>⚙️ Config</b></summary>
 
-## [Language](language)
-### [Java](language/java)
-#### [Aspect](language/java/aspect)
-#### [Core](language/java/core)
-#### [JVM](language/java/jvm)
-#### [Releases](language/java/release)
-##### [v9](language/java/release/version_9) 
-##### [v10](language/java/release/version_10)
-##### [v11](language/java/release/version_11)
-##### [v12](language/java/release/version_12)
-##### [v14](language/java/release/version_14)
-##### [v15](language/java/release/version_15)
-##### [v16](language/java/release/version_16)
-##### [v17](language/java/release/version_17)
-##### [v18](language/java/release/version_18)
-##### [v21](language/java/release/version_21)
-##### [v22](language/java/release/version_22)
-##### [v23](language/java/release/version_23)
-##### [v24](language/java/release/version_24)
-### [Kotlin](language/kotlin)
-### [Swift](language/swift)
-### [English](language/english)
-### [French](language/french)
+- [Config](config)
 
-## [Protocol](protocol)
-### [HTTP](protocol/http)
+</details>
 
-## [Utils](utils)
+<details>
+<summary><b>💾 Database</b></summary>
+
+- [Index](database/index)
+  - [Hash Index](database/index/hash)
+
+</details>
+
+<details>
+<summary><b>🚀 Deployment</b></summary>
+
+- [Docker](deployment/docker)
+- [Kubernetes](deployment/kubernetes)
+
+</details>
+
+<details>
+<summary><b>🎨 Design</b></summary>
+
+- Patterns
+- SOLID
+
+</details>
+
+<details>
+<summary><b>🛠️ Framework</b></summary>
+
+- [Backend](framework/backend)
+  - [Spring](framework/backend/spring)
+    - [Bean Post Processing](framework/backend/spring/src/main/java/com/posadskiy/spring/bpp)
+    - [Core (Scope only)](framework/backend/spring/src/main/java/com/posadskiy/spring/core)
+    - [Dependency injection](framework/backend/spring/src/main/java/com/posadskiy/spring/di)
+    - [JPA (Transaction only)](framework/backend/spring/src/main/java/com/posadskiy/spring/jpa)
+- [Frontend](framework/frontend)
+  - [React](framework/frontend/react)
+    - [Release 16](framework/frontend/react/release_16)
+  - [React Native](framework/frontend/react-native)
+    - [EsLint](framework/frontend/react-native/eslint)
+    - [Jest](framework/frontend/react-native/jest)
+
+</details>
+
+<details>
+<summary><b>📝 Git</b></summary>
+
+- [Git](git)
+
+</details>
+
+<details>
+<summary><b>💻 Language</b></summary>
+
+- [Java](language/java)
+  - [Aspect](language/java/aspect)
+  - [Core](language/java/core)
+  - [JVM](language/java/jvm)
+  - [Releases](language/java/release)
+    - [v9](language/java/release/version_9)
+    - [v10](language/java/release/version_10)
+    - [v11](language/java/release/version_11)
+    - [v12](language/java/release/version_12)
+    - [v14](language/java/release/version_14)
+    - [v15](language/java/release/version_15)
+    - [v16](language/java/release/version_16)
+    - [v17](language/java/release/version_17)
+    - [v18](language/java/release/version_18)
+    - [v21](language/java/release/version_21)
+    - [v22](language/java/release/version_22)
+    - [v23](language/java/release/version_23)
+    - [v24](language/java/release/version_24)
+- [Kotlin](language/kotlin)
+- [Swift](language/swift)
+- [English](language/english)
+- [French](language/french)
+
+</details>
+
+<details>
+<summary><b>🌐 Protocol</b></summary>
+
+- [HTTP](protocol/http)
+
+</details>
+
+<details>
+<summary><b>🔧 Utils</b></summary>
+
+- [Utils](utils)
+
+</details>
