@@ -19,7 +19,7 @@ public class ProfilingAnnotationBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
-        // TODO: Попробовать методы beanClass
+        // TODO: Try beanClass methods
         if (beanClass.isAnnotationPresent(Profiling.class)) {
             beans.put(beanName, beanClass);
         }

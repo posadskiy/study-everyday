@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class Sonnet29 implements Poem {
     private static final String[] LINES = {
-        "Стихи мои вам слышатся теперь",
-        "Когда береза ели закрывает",
-        "И можем мы увидеть без потерь",
-        "Как сердце еле слышно трепетает"
+        "My poems can be heard by you now," +
+            "When the birch closes the firs," +
+            "And we can see, without loss," +
+            "How the heart trembles, barely audible."
     };
 
     public Sonnet29() {

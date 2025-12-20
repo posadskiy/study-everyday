@@ -1,160 +1,202 @@
 # Git
 
-Система контроля версий. Файлы находятся в трех состояниях - _зафиксированном_, _измененном_ и _подготовленном_.
+Version control system. Files exist in three states: _committed_, _modified_, and _staged_.
 
-## commit
-Внутри коммита содержится следующее дерево:
+## Commit
 
-![Коммит](img/commit.png)
+Inside a commit there is the following tree:
 
-Каждый коммит имеет ссылку на предшествующий. История коммитов - **односвязный список**.
-![Коммит](img/commit-history.png)
+![Commit](img/commit.png)
+
+Each commit has a reference to the previous one. Commit history is a **singly linked list**.
+
+![Commit history](img/commit-history.png)
 
 ## Branch
-Ветка - это указатель на коммит. Это файл, содержащий 40 символов контрольной суммы SHA-1 того коммита, на который он
-указывает. Создание новой ветки - это запись 41 байта в файл (40 знаков и перевод строки).
+
+A branch is a pointer to a commit. It is a file containing the 40-character SHA-1 checksum of the commit it points to.
+Creating a new branch is writing 41 bytes to a file (40 characters + newline).
 
 ### HEAD
-Git хранит указатель HEAD на коммит, на котором находится пользователь. Если в текущую ветку ветку добавляется новый
-коммит, HEAD сдвигается на него вместе с указателем ветки. Комманда `checkout` переводит HEAD на другой коммит.
 
-### .gitignore
-Файл с описанием игнорируемых частей репозитория. Можно использовать `glob` шаблоны.
+Git stores a `HEAD` pointer to the commit the user is currently on. If a new commit is added to the current branch, `HEAD`
+moves to it together with the branch pointer. The `checkout` command moves `HEAD` to another commit.
 
-## Команды
+### `.gitignore`
 
-Команды git бывают двух видов. _Git pull_, _git rebase_ и _git clone_ используются постоянно. Другие - реже. О них ниже.
+A file describing which parts of the repository to ignore. You can use `glob` patterns.
 
-#### git diff
-Позволяет просмотреть непроиндексированные изменения.
+## Commands
 
-##### git diff --staged [--cached]
-То, что войдет в следующий коммит.
+Git commands fall into two types. _git pull_, _git rebase_, and _git clone_ are used frequently; others less often.
 
-### log
-Информация о коммитах, датах и авторах.
- 
-#### git log
-История коммитов, начиная с самого свежего.
+### `git diff`
 
-##### git log -p -n
-Показывает изменения последних коммитов. Здесь n - число коммитов.
+Shows unstaged changes.
 
-##### git log --stat
-Статистика изменений файлов последних коммитов. Показывает, сколько строк было доавлено и удалено.
+#### `git diff --staged` (`--cached`)
 
-##### git log <branch1>..<branch2>
-Показывает, какие коммиты есть в branch2, но не в branch1. Удобно смотреть, какие коммиты еще не смержены из
-тематической ветки в основную. 
+Shows what will go into the next commit.
 
-###### git log origin/develop HEAD
-Показывает, какие коммиты будут отправлены в удаленный репозиторий при следующем `git push`
+### `git log`
 
-### reflog
-"Журнал" ссылок. История, куда указывали HEAD и ветки.
+Information about commits, dates, and authors.
 
-#### git reflog
-Показывает историю перемещений указателя HEAD. Включает ребейзы, мержи.
+#### `git log`
 
-### checkout
-Позволяет переместить указатель HEAD на ветку, коммит или действие.
+Commit history, starting from the newest.
 
-#### git checkout HEAD@{<number>}
-Перемещает HEAD на локальное действие под номером number из локального "журнала". См. [Reflog](#git-reflog)
+##### `git log -p -n`
 
-### remote
-Операции с ветками в удаленном репозитории
+Shows changes from the last `n` commits.
 
-##### git remote show
-Показывает список удаленных репозиториев. Затем по каждому из них можно увидеть данные: какие ветки есть на сервере
-и локально, какая разница в коммитах между ними.
+##### `git log --stat`
 
-### tag
-Теги бывают **легковесные** и **аннотированные**. Вторые содержат информацию об авторе тега, дате и сообщение.
+Shows file change statistics for the last commits (how many lines were added/removed).
 
-#### git tag
-Показывает все доступные метки. Можно фильтровать.
+##### `git log <branch1>..<branch2>`
 
-##### git tag <name>
-Создание легковесной метки.
+Shows commits that are in `branch2` but not in `branch1`. Convenient for seeing what hasn’t yet been merged from a feature
+branch into the main branch.
 
-##### git tag -a <name> -m <"Message">
-Создание аннотированной метки.
+###### `git log origin/develop HEAD`
 
-##### git push origin <name>
-Отправить метку на сервер.
+Shows which commits will be pushed to the remote repository on the next `git push`.
 
-### alias
-Для часто выполняемых команд можно назначать сокращения - алиасы.
+### `git reflog`
 
-##### git config --global alias.<short-name> <default-name>
-Например, `git config --global alias.cm commit`. Если заменяемых комманд несколько, их нужно взять в одинарные ковычки.
+Reference “log”: history of where `HEAD` and branches pointed.
 
-### merge
-Merge выполянется по-разному в двух ситуациях: 
-* История линейна. Нужно выполнить merge с текущего указателя до последнего коммита в ветке. Тогда автоматически
-используется флаг `--fast-forwarding` и текущий указатель перематывается до конца ветки.
-* История разветвленная. В этом случае git производит трехстороннее слияние, самостоятельно выбирая общего предка.
-Изменения с двух веток добавляются в новый коммит - _коммит слияния_.
+#### `git reflog`
 
-##### merge conflict
-Когда два в сливаемых ветках изменены одинаковые части одного и того же кода, необходимо вручную решать конфликты.
+Shows the history of `HEAD` moves. Includes rebases and merges.
+
+### `git checkout`
+
+Moves `HEAD` to a branch, commit, or action.
+
+#### `git checkout HEAD@{<number>}`
+
+Moves `HEAD` to the local action with the given `number` from the local “log”. See [Reflog](#git-reflog).
+
+### Remote branches
+
+Operations with branches in a remote repository.
+
+#### `git remote show`
+
+Shows a list of remotes, and for each remote shows which branches exist on the server and locally, and the commit
+differences between them.
+
+### Tags
+
+Tags can be **lightweight** or **annotated**. Annotated tags contain information about the author, date, and a message.
+
+#### `git tag`
+
+Shows all available tags (can be filtered).
+
+##### `git tag <name>`
+
+Creates a lightweight tag.
+
+##### `git tag -a <name> -m "<Message>"`
+
+Creates an annotated tag.
+
+##### `git push origin <name>`
+
+Push a tag to the server.
+
+### Aliases
+
+You can define shortcuts (aliases) for frequently used commands.
+
+##### `git config --global alias.<short-name> <default-name>`
+
+Example: `git config --global alias.cm commit`. If you replace multiple commands, wrap them in single quotes.
+
+### Merge
+
+Merge behaves differently depending on the situation:
+
+- **Linear history**: merge from the current pointer to the last commit in the branch. Git will use `--fast-forward` and
+  move the current pointer to the end of the branch.
+- **Diverged history**: Git performs a three-way merge by finding the common ancestor. Changes from both branches are added
+  into a new **merge commit**.
+
+##### Merge conflict
+
+When both branches modify the same parts of the same code, you must resolve conflicts manually.
+
 ```html
-<<<<<<< HEAD:index.html <!-- HEAD указывает на ветку, в которую производится слитие -->
+<<<<<<< HEAD:index.html <!-- HEAD points to the branch into which you merge -->
 <div id="footer">contact : email.support@github.com</div>
-======= <!-- Разделение конфликтных зон -->
+======= <!-- Separator between conflict sections -->
 <div id="footer">
  please contact us at support@github.com
 </div>
->>>>>>> iss53:index.html <!-- Ветка, которую сливают -->
+>>>>>>> iss53:index.html <!-- The branch being merged in -->
 ```
-Можно вручную отредактировать проблемные участки. Можно использовать IDEA.
 
-### rebase 
-Команда выполняет перебазирование. Берется общий родительский коммит. Дельты коммитов, идущих после, по очереди
-применяются к последнему коммиту текущей ветки. В случае, когда конфликтов не будет, коммиты двух веток будут совпадать.
-В противном случае, коммиты в двух ветках, для которых были решены конфликты, будут различаться.
+You can edit the problematic sections manually; IDEs like IntelliJ IDEA can help.
 
-### branch
-Отслеживать удаленную ветку из локальной можно с помощью флага **-u**: `git branch -u origin/<name>`. Здесь -u означает 
-`--set-upstream`
+### Rebase
 
-### fetch
-Команда `git fetch` загрузит изменения из удаленного репозитория, но не изменит рабочую директорию. Это позволяет
-выполнить merge самостоятельно.
+Rebase takes the common ancestor commit; then commit “deltas” after that are applied one by one onto the last commit of
+the current branch. If there are no conflicts, the commit sequences in both branches will line up; otherwise the commits
+will differ where conflicts were resolved.
 
-### pull
-Команда `git pull` выполняет git fetch и, затем, git merge.
+### Branch tracking
 
-##### git pull -r (--rebase)
-Команда выполняет git fetch и git rebase, вместо merge. История коммитов чище.
+You can set an upstream tracking branch with **-u**: `git branch -u origin/<name>` (`--set-upstream`).
 
-## Общее
+### `git fetch`
 
-#### Уникальность коммитов
-Каждый коммит имеет уникальный номер - SHA-1. Он состоит из 40 символов или 20 байт. Для идентификации коммита в
-репозитории достаточно менее 20 символов. Минимально - 7. Если коммитов много и существуют несколько, у которых первые
-7 знаков совпадают, берется 8. Если 8 совпадает - 9. И так далее.
+Downloads changes from the remote repository but does not change your working directory. This lets you perform a merge
+manually.
 
-#### Спецсимволы
-В git используются
+### `git pull`
 
-##### ^
-Указатель на родителя. Можно добавлять как к номеру коммита - sh24fa2^, так и к указателю - develop^, HEAD^.
-Если родителей несколько (ветвление), можно указывать номер родителя - ^2, ^3 и т.д.
+Runs `git fetch` and then `git merge`.
 
-##### ~
-Тоже указатель на родителя, но запись ~2 укажет на родителя родителя. ~5 - 5 коммитов назад.
+##### `git pull -r` (`--rebase`)
 
-## Иерархичность
-Система поддерживает возможность делать композиции из репозиториев.
+Runs `git fetch` and then `git rebase` instead of merge, producing a cleaner history.
 
-### Git Submodules
-Данный вид иерархической структуры позволяет включать в репозиторий **ссылки** на другие репозитории. Например,
-репозиторий **A** имеет submodule **B**. При `git push` в B репозиторий A никак не изменится. Чтобы подтянуть изменения
-из B, необходимо в A выполнить `git submodule update`. По сути submodule - указатель на конкретный коммит в другом
-репозитории.
+## General
 
-### Git Subtree
-По сравнению с предыдущим, этот вид включает в себя репозиторий целиком, **как копию**, со всей ее историей. Изменения в
-"скопированном" репозитории будут доступны сразу. Также, размер репозитория увеличится на размер subtree.
+### Commit uniqueness
+
+Each commit has a unique SHA-1 ID (40 hex characters / 20 bytes). In most cases fewer than 20 characters are enough to
+identify a commit. Minimum is often 7; if your repo is large and collisions occur, Git will require more characters.
+
+### Special symbols
+
+Git uses:
+
+#### `^`
+
+Parent pointer. Can be added to a commit hash (`sh24fa2^`) or to a ref (`develop^`, `HEAD^`). If there are multiple
+parents (merge commits), you can specify the parent number: `^2`, `^3`, etc.
+
+#### `~`
+
+Also a parent pointer, but `~2` means “the parent of the parent”. `~5` means “5 commits back”.
+
+## Hierarchical repositories
+
+Git supports composing repositories.
+
+### Git submodules
+
+This structure lets you include **links** to other repositories. For example, repo **A** has submodule **B**. When you
+`git push` in repo B, repo A does not change. To bring changes from B into A, you must run `git submodule update` in A.
+Essentially, a submodule is a pointer to a specific commit in another repo.
+
+### Git subtree
+
+Unlike submodules, this includes the other repo fully, **as a copy** (with its history). Changes inside the copied repo
+are immediately available, but the overall repository size increases by the size of the subtree.
+
+

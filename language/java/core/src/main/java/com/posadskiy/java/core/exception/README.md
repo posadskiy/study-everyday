@@ -1,34 +1,32 @@
 # Exceptions
 
-Исключения используются, когда выполнение программы зашло в тупик. Это происходит, когда невозможно продолжать
-выполнение
-приложения в нормальном режиме.
+Exceptions are used when program execution has hit a dead end — when it’s impossible to continue running the application
+normally.
 
-#### Применимость
+#### When it’s useful
 
-Одно из важных применений исключений - возможность с помощью одной команды убрать всё со стека. Перехват исключений
-используется, чтобы позволять очистку стека до определенного момента. Представим, что снизу представлен стек с уровнями
-вложенности:
+One important use of exceptions is the ability to unwind the stack with a single statement. Catching exceptions is used
+to allow stack cleanup up to a specific point. Imagine the stack levels below:
 
 1 -\
 2 --\
-3 --- catch (MyException e) { ... }\
+3 --- `catch (MyException e) { ... }`\
 4 ----\
-5 ----- throw new MyException();\
+5 ----- `throw new MyException();`\
 
-В данном примере, выбрасывая исключение на 5-ом "листе" стека, можно вернуться сразу на третий, минуя остальные и
-продолжить выполнение программы.
+In this example, throwing an exception on level 5 lets you return immediately to level 3, skipping intermediate frames,
+and continue program execution.
 
-#### Деление
+#### Classification
 
-Исключение делятся на проверяемые (`checked`) и непроверяемые (`unchecked`). Первые обычно вызваны ошибками в работе
-программы, в то время, как вторые, обычно, плохим качеством программирования или ошибками системы.
+Exceptions are divided into checked (`checked`) and unchecked (`unchecked`). The former are usually caused by runtime
+conditions the program must handle explicitly, while the latter are usually due to programming errors or system issues.
 
-#### Лови, не проверяй
+#### Catch unchecked without declaring
 
-В обработчике `catch` можно прописать логику отлова `unchecked` исключения, даже если код в `try` явно не декларирует
-возможность его выбросить. А вот попросить программу отловить `checked` исключения, которые не могут быть выброшены в
-`try`, не получится.
+In a `catch` handler you can catch an unchecked exception even if the code in `try` does not explicitly declare it can be
+thrown. But you can’t ask the program to catch checked exceptions that cannot be thrown from the `try` block — the
+compiler won’t allow it.
 
 ```java
 public class NotThrowButCatch {
@@ -42,9 +40,10 @@ public class NotThrowButCatch {
 }
 ```
 
-#### Выброшенное дважды не поймать
+#### You can’t catch the same thrown exception twice
 
-`Exception`, выброшенное из блока `catch`, не перехватывается дальше, даже если соответствует сигнатуре.
+An `Exception` thrown from a `catch` block is not caught by another `catch` later in the same `try` statement, even if it
+matches that handler’s type.
 
 ```java
 public class DoubleThrow {
@@ -53,18 +52,18 @@ public class DoubleThrow {
             throw new NullPointerException();
         } catch (NullPointerException e) {
             throw e;
-        } catch (Exception e) { // Здесь NPE не перехватится, хотя является наследником Exception
+        } catch (Exception e) { // NPE will not be caught here, although it is a subclass of Exception
             log.info(e.getMessage());
         }
     }
 }
 ```
 
-#### Бросаем Exception внутри Throwable
+#### Throwing `Throwable` that wraps an `Exception`
 
-Если выбрасывается родитель, внутри которого находится потомок, то в catch можно отловить потомка, но обязательно должен
-быть обработчик на родителя или, как в случае ниже, сигнатура метода указывает возможность выброса родителя. Другие
-варианты не пропустит компилятор.
+If you throw a parent type that actually contains a child instance, you can catch the child type — but you must also
+have a handler for the parent type, or (as below) the method signature must declare it can throw the parent. Other
+variants won’t compile.
 
 ```java
 public class ThrowThrowableCatchException {
@@ -79,12 +78,11 @@ public class ThrowThrowableCatchException {
 }
 ```
 
-#### Наследование методов, бросающих исключения
+#### Overriding methods that throw exceptions
 
-Список исключений, которые могут быть выброшены из метода, при наследовании можно оставить прежним или сузить. Но
-расширять нельзя. Это может привести к тому, что на месте использования родителя, будет получено неожиданное исключение,
-"серьезнее" того, которые ожидаются и могут быть обработаны. В примере ниже в потомке описана возможность выброса
-`IOException`, которое является родителем `FileNotFoundException`.
+When overriding, the list of exceptions a method can throw can stay the same or be narrowed, but cannot be widened. If it
+could be widened, callers expecting the parent type might receive an unexpected “more serious” exception. In the example
+below the child declares it can throw `IOException`, which is a parent of `FileNotFoundException`.
 
 ```java
 class InheritanceMethodsWithThrow {
@@ -97,9 +95,9 @@ class Children extends InheritanceMethodsWithThrow {
 }
 ```
 
-#### Исключения - неизменны
+#### Exceptions are effectively final in multi-catch
 
-Пойманное в блоке `catch` исключение можно переопределить, но только экземпляром того же класса или потомка.
+An exception caught in a `catch` block can be reassigned, but only to an instance of the same class or a subclass.
 
 ```java
 public class DoNotChangeException {
@@ -109,16 +107,16 @@ public class DoNotChangeException {
         } catch (IOException e) {
             e = new IOException("In-catch exception");
             e = new EOFException();
-            // e = new Exception("In-catch exception"); Так нельзя. 
+            // e = new Exception("In-catch exception"); Not allowed.
             e.printStackTrace();
-        } 
+        }
     }
 }
 ```
 
-#### System.err
+#### `System.err`
 
-`System.out` - буфферизованный поток вывода в консоль, а `System.err` - нет. Поэтому, в таком примере:
+`System.out` is buffered, while `System.err` is not. Therefore, in an example like:
 
 ```java
 public class Start {
@@ -129,10 +127,12 @@ public class Start {
 }
 ```
 
-может сначала вывестись `Message`, а затем `Error`, а может наоборот. Если же `System.out` заменить на `System.err`, то
-всегда будет выведено сначала `Message`, потом `Error`.
+you might see `Message` printed before `Error`, or vice versa. If you print to `System.err` instead, you will always see
+`Message` first and then `Error`.
 
-#### Throw null
+#### `throw null`
 
-Java позволяет выбросить null-исключение: `throw null`. В этом случае происходит проверка аргумента и, в данном случае,
-геренируется NullPointerException.
+Java allows throwing a null exception: `throw null`. In that case Java checks the argument and throws a
+`NullPointerException`.
+
+

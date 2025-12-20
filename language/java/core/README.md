@@ -1,93 +1,101 @@
-#### Инициализация
-Способы инициализации поля класса по порядку вызова:
+#### Initialization
 
-* *Инициализация в super-class*
-* *Инициализация при объявлении*
-`String name = "John"`
-* *Блок статической инициализации*
-`static { name = "Garry" }`
-* *Блок инициализации*
-`{ this.name = "Mary" }`
-* *Конструктор* 
-`public Person() { this.name = "Alex" }`
+Ways to initialize a class field, in order of execution:
 
-Переменные экземпляра и класса инициализируются по умолчанию. Локальные переменные - нет.
+- Initialization in the superclass
+- Initialization at declaration time  
+  `String name = "John"`
+- Static initialization block  
+  `static { name = "Garry" }`
+- Instance initialization block  
+  `{ this.name = "Mary" }`
+- Constructor  
+  `public Person() { this.name = "Alex" }`
 
-В классе может находиться метод с названием класса. Он должен возвращать значение или быть void.
+Instance and class variables are initialized with default values; local variables are not.
 
-Статический инициализатор обычно используется, чтобы задать значения статическим полям, когда на 
-это требуется больше одной строки. Например, для инициализации ArrayList значениями. В таком случае
-принято выносить всю статическую инициализацию в одно место для удобства чтения.
+A class may contain a method with the same name as the class. It must return a value or be `void`.
 
-Конструктор по-умолчанию будет сгенерирован, если в классе отсутствует хотя бы один конструктор.
-Финальные переменные могут быть инициализированы ровно один раз. Это может произойти при объявлении
-или в блоке инициализации.
+Static initializers are typically used to assign values to static fields when more than one line is needed (for example,
+initializing an `ArrayList` with values). In that case it’s common to keep all static initialization in one place for
+readability.
 
-#### Примитивные типы
+A default constructor is generated if the class contains no constructors.
 
-| Тип | Размер | Значение
-| --- | --- | ---
-| byte | 8 бит | 0
-| short | 16 бит | 0
-| integer | 32 бита | 0
-| long | 64 бита | 0
-| float | 32 бита | 0.0
-| double | 64 бита | 0.0
-| char | 16 бит | \u0000
+Final variables can be initialized exactly once — either at declaration or in an initialization block.
 
-Переменные типов int и double можно записывать через "_" для разделения знаков.
-`int value = 1_000_000`
+#### Primitive types
+
+| Type | Size | Default value |
+| --- | --- | --- |
+| byte | 8 bits | 0 |
+| short | 16 bits | 0 |
+| integer | 32 bits | 0 |
+| long | 64 bits | 0 |
+| float | 32 bits | 0.0 |
+| double | 64 bits | 0.0 |
+| char | 16 bits | \\u0000 |
+
+You can write `int` and `double` literals with `_` as a digit separator:
+
+`int value = 1_000_000`  
 `double balance = 2_232.0_0`
 
-#### Объектные типы
-Метод может возвращать `null` если ожидается, что он вернет объект. Для *void* нельзя возвращать `null`.
+#### Reference types
 
-#### Импорт
+A method can return `null` if it returns an object type. You can’t return `null` from a `void` method.
 
-Если классы находятся в одном пакете, то при использовании одного другим импорт *не нужен*.
+#### Imports
 
-В файле с классом обязательным является только само объявление.
-Строка `package` может отсутствовать, если класс не находится в пакете.
-Список импортов также может не присутствовать.
+If classes are in the same package, you don’t need an import for one to use the other.
 
-#### Запуск из консоли
+In a class file, the only strictly required element is the class declaration itself.
+The `package` line can be absent if the class is in the default package.
+The import list may also be absent.
+
+#### Running from the console
 
 `java MyClass parameterOne "parameterTwo"`
 
-#### Сравнение
+#### Comparison
 
-Нельзя сравнивать разные типы данных с помощью `==`.
+You can’t compare different data types using `==`.
 
-#### Коллекции
+#### Collections
 
 ##### ArrayList
-Сравнение через equals двух листов с одинаковыми элементами вернет `true`.
 
-##### VarArg
+Calling `equals` on two lists with the same elements returns `true`.
 
-Если вместо данных передать null, это вызовет NPE.
+##### Varargs
 
-#### Конвертация
-При вызове метода может произойти одинарная конвертация аргумента. Например, int -> Integer или
-int -> long. Но Java не пропустит конвертацию порядка два или выше. Например, int -> long -> Long,
-как в примере ниже.
+If you pass `null` instead of values, it will cause an NPE.
+
+#### Conversions
+
+At a method call site, Java can perform a single implicit conversion (e.g., `int -> Integer` or `int -> long`). But it
+won’t allow two-step conversions like `int -> long -> Long`, as in the example below:
+
 ```java
-public class TooManyConversions { 
+public class TooManyConversions {
     public static void play(Long l) { }
-    public static void play(Long... l) { } 
+    public static void play(Long... l) { }
     public static void main(String[] args) {
         play(4); // DOES NOT COMPILE
-        play(4L); // calls the Long version 
+        play(4L); // calls the Long version
     }
 }
 ```
 
-#### Модификаторы доступа
-Метод может быть final. Тогда его нельзя переопредять при наследовании.
+#### Access modifiers
 
-| Модификатор | Внутри класса | В других классах пакета | В классах - наследниках  | В других классах из других пакетов
-| --- | --- | --- | --- | ---
-| private | + | - | - | -
-| package-private | + | + | В своем пакете +, в других - | -
-| protected | + | + | + | - 
-| public | + | + | + | + 
+A method can be `final`; then it can’t be overridden in subclasses.
+
+| Modifier | Inside class | Other classes in same package | Subclasses | Other classes in other packages |
+| --- | --- | --- | --- | --- |
+| private | + | - | - | - |
+| package-private | + | + | + in same package, - in others | - |
+| protected | + | + | + | - |
+| public | + | + | + | + |
+
+

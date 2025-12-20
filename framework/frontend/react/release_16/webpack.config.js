@@ -23,7 +23,7 @@ const config = {
 module.exports = (env, argv) => {
 
     if (argv.mode === 'development') {
-        console.info("Включен режим разработки");
+        console.info("Development mode is enabled");
     }
 
     return config;

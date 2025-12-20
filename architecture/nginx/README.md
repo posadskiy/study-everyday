@@ -1,45 +1,51 @@
 ### Nginx
-Средство для раздачи статического содержимого и проксирования запросов.
 
-Конфигурационный файл называется `nginx.conf`
+A tool for serving static content and proxying requests.
 
-#### Команды
+The main configuration file is called `nginx.conf`.
 
-Управление происходит с помощью команды `nginx -s <команда>`, где команда:
+#### Commands
 
-* stop — быстрое завершение
-* quit — плавное завершение
-* reload — перезагрузка конфигурационного файла
-* reopen — переоткрытие лог-файлов
+Control is performed with `nginx -s <command>`, where `<command>` is:
 
-**nginx.conf** - конфигурационный файл.
+- `stop` — fast shutdown
+- `quit` — graceful shutdown
+- `reload` — reload the configuration file
+- `reopen` — reopen log files
 
-Конфигурация сервера находится в блоке
-```
+**`nginx.conf`** is the configuration file.
+
+Server configuration is located inside the `server` block:
+
+```nginx
 server {
     listen 8080;
     server_name localhost;
-    
+
     location / {
-        <список параметров>
+        <list_of_directives>
     }
 }
 ```
 
-Здесь
-* *listen* указывает на порт, который необходимо слушать,
-* *sever_name* - домен
-* *location* - адреса, которые необходимо обслуживать
+Where:
 
-#### Location
-В location можно указывать как путь, так и регулярное выражение. Nginx сначала произведет
-поиск обработчика среди путей. Затем - среди регулярных выражений. Они являются более приоритетными.
+- `listen` specifies the port to listen on
+- `server_name` is the domain name
+- `location` defines the paths/locations to handle
+
+#### `location`
+
+In `location` you can specify either a path or a regular expression. Nginx first looks for a matching prefix/path-based
+location, then checks regex locations. Regex locations have higher priority.
+
+Example:
 
 `location ~ \.(jpg|png|gif)$`
 
-Доступные параметры внутри блока `location`:
+Common directives inside `location`:
 
-* **root** указывает на корень папки, контент в которой будет сопоставлен адресу в location.
-* **proxy_path** указывает на URL, на который будет передан запрос и откуда отображен ответ
-при переходе по адресу в location.
+- `root` points to the directory root; content from it is mapped to the location URI
+- `proxy_pass` specifies the upstream URL to forward the request to and proxy the response from
+
 

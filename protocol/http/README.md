@@ -1,44 +1,48 @@
 ### HTTP
 
 #### POST and PUT
-Оба метода используются для создания или обновления сущностей. Разница в том, что PUT - идемпотентный.
-Другими словами, при любом количестве применений операций PUT к сущности результат будет одинаков.
 
-**POST** хорошо использовать, когда back-end инкапсулирует какую-либо логику, которая будет менять сущность
-по-разному вызов от вызова. Например, создание сущности, когда генерируется ее id. Это POST.
+Both methods are used for creating or updating entities. The difference is that **PUT is idempotent**. In other words,
+no matter how many times you apply PUT operations to the same entity, the result should be the same.
 
-**PUT** хорошо использовать для обновления сущностей и отсутствии инкапсулированной логики на back-end.
-Например, обновление сущности, зная ее id.
+**POST** is best when the back end encapsulates logic that can change the entity differently from call to call. For
+example, creating an entity where the server generates the `id` — that is POST.
 
-#### Коды ответов
-##### 1xx - информационный
-##### 2** - успех
-*200 OK* - просто успешный ответ.  
-*201 Created* - в результате запроса был создан ресурс. Его адрес можно указать в теле ответа или в 
-заголовке `Location`  
-*202 Accepted* - запрос принят. Клиенту не нужно ждать результата, исполнение может занять
-продолжительное время.  
-*203 Non-Authoritative Information* - ОК, но данные ответа могут быть неактуальными, т.к. взяты
-у третьей стороны. Например, другого сервера.  
-*204 No Content* - в ответе не содержится контент, только заголовки. 
-##### 3** - перенаправление
-*301 Moved Permanently* - ресурс окончательно перемещен по адресу, указанному в `Location`  
-*302 Moved Temporarily* - ресурс временно перемещен по адресу, указанному в `Location`.  
-##### 4** - ошибка клиента
-*400 Bad Request* - синтаксическая ошибка в запросе клиента  
-*401 Unauthorized* - доступ к ресурсу возможнен только для авторизованных. В заголовке ответа дожен
-присутствовать `WWW-Authenticate` с условиями авторизации. Клиент при повторной попытке получить
-доступ может отправить заголовок `Authorization` с требуемыми данными.  
-*403 Forbidden* - клиент авторизован, но доступ к ресурсу для него запрещен.  
-*404 Not Found* - ресурс не найден.  
-*405 Method Not Allowed* - переданный клиентом метод не применим к ресурсу. Например, вместо GET
-клиент передал POST. В ответе сервер должен указать доступные методы в заголовке `Allow`.  
-##### 5** - ошибка сервера
-*500 Internal Server Error* - любая ошибка сервера, которая не попадает под остальные категории.  
-*501 Not implemented* - сервер не понимает указанный в запросе метод. Если метод известен, но не
-поддерживается, то нужно вернуть `405`.  
-*502 Bad Gateway* - сервер, как шлюз или прокси-сервер, получил некорректное сообщение от
-сервера выше.
-*503 Service Unavailable* - сервер временно не обрабатывает запросы. В заголовке ответа `Retry-After`
-сервер может указать время, через которое советует клиенту обратиться повторно.  
-*504 Gateway Timeout* - сервер, как шлюз или прокси-сервер, не дождался ответа от сервера выше.  
+**PUT** is best for updating entities when there’s no encapsulated back-end logic involved. For example, updating an
+entity when you already know its `id`.
+
+#### Response codes
+
+##### 1xx — informational
+
+##### 2xx — success
+
+- `200 OK` — general success response
+- `201 Created` — the request created a resource; its address can be returned in the body or in the `Location` header
+- `202 Accepted` — the request was accepted; the client doesn’t have to wait for completion (processing may be long)
+- `203 Non-Authoritative Information` — OK, but the response may be stale because it came from a third party (e.g. another server)
+- `204 No Content` — no content in the response, only headers
+
+##### 3xx — redirection
+
+- `301 Moved Permanently` — resource moved permanently to the URL in `Location`
+- `302 Moved Temporarily` — resource moved temporarily to the URL in `Location`
+
+##### 4xx — client error
+
+- `400 Bad Request` — request syntax error
+- `401 Unauthorized` — only authorized clients can access; response should include `WWW-Authenticate` describing auth requirements.
+  A subsequent request may include `Authorization` with the required credentials.
+- `403 Forbidden` — client is authenticated but not allowed to access the resource
+- `404 Not Found` — resource not found
+- `405 Method Not Allowed` — method not allowed for the resource. Server should list allowed methods in the `Allow` header.
+
+##### 5xx — server error
+
+- `500 Internal Server Error` — generic server error that doesn’t fit other categories
+- `501 Not Implemented` — server does not understand the method. If the method is understood but not supported for the resource, return `405`.
+- `502 Bad Gateway` — gateway/proxy received an invalid response from an upstream server
+- `503 Service Unavailable` — server temporarily cannot process requests; may include `Retry-After` with a suggested retry time
+- `504 Gateway Timeout` — gateway/proxy did not receive a response from an upstream server in time
+
+

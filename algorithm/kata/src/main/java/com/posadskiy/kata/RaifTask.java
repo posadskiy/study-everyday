@@ -43,7 +43,7 @@ import java.util.List;
  * John 35 null null
  * 
  * 
- * 3. Реализовать метод List<Person> getTopAgeForName(List<Person> persons), который повторяет логику из первой задачи
+ * 3. Implement the method List<Person> getTopAgeForName(List<Person> persons), which repeats the logic from task 1
  */
 public class RaifTask {
     List<Person> getTopAgeForName(List<Person> persons) {

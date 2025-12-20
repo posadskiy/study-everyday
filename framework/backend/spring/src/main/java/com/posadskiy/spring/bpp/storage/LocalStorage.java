@@ -21,7 +21,7 @@ public class LocalStorage implements Storage {
 
     public void edit(Integer id, ToDo toDo) {
         if (!storage.containsKey(id)) {
-            throw new IllegalArgumentException("Элемент с таким id отсутствует");
+            throw new IllegalArgumentException("An element with this id does not exist");
         }
         storage.replace(id, toDo);
     }

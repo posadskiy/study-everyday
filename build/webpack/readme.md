@@ -1,25 +1,30 @@
 #### Webpack
 
-Webpack - инструмент для сборки проекта (js, css, image, ...) в единый бандл
-и запуска задач (линтинг, тесты, ...).
+Webpack is a tool for bundling a project (js, css, images, ...) into a single bundle and for running tasks (linting,
+tests, ...).
 
-Установка Webpack:
+Install Webpack:
+
 `npm i -g webpack`
 
-Инициализация проекта:
+Initialize a project:
+
 `npm init`
 
-На данном шаге создастся файл package.json с скриптами запуска, зависимостями и прочими
-атрибутами проекта.
+This step creates `package.json` with scripts, dependencies, and other project attributes.
 
-##### Запуск
-Запуск происходит вызовом команды `webpack`.
+##### Run
 
-##### Конфигурация
+Run by calling `webpack`.
 
-Для Webpack создается конфигурационный файл. По умолчанию он имеет название `webpack.config.js`.
-Можно указывать и другой конфигурационный файл с помощью флага *--config*: 
-`webpack --config <fileName>.config.js`.
+##### Configuration
+
+Webpack uses a config file. By default it is called `webpack.config.js`. You can specify a different config file with
+the `--config` flag:
+
+`webpack --config <fileName>.config.js`
+
+Example:
 
 ```javascript
 const path = require("path");
@@ -45,34 +50,36 @@ module.exports = {
 };
 ```
 
-**mode** - *production* или *development* (еще есть *none*). Задают режимы сборки проекта и
-необходимостью применения к нему плагинов. Например, в режиме production применяется
-UglifyJs. Если при запуске webpack передан параметр `--mode <mode_name>`, то значение здесь
-игнорируется.
+`mode` can be `production` or `development` (also `none`). It controls build optimizations and defaults. For example, in
+production mode Webpack minifies output. If you pass `--mode <mode_name>` when running webpack, that value overrides the
+one in the config.
 
-**entry** - имя файла входа в проект. Аргументом может быть как строка в примере, так и объект.
-Объект используется для многобандльной структуры. Например:
-```
+`entry` is the project entry file. It can be a string (as above) or an object. Objects are used for multi-bundle setups,
+e.g.:
+
+```js
 entry: {
     dashboard: 'dashboard/app.js',
     profile: 'profile/app.js'
 }
 ```
 
-**output** - параметры выходного файла. Путь и название. При многобандльной структуре имя
-можно задавать как `[name].js`.
+`output` specifies output path and filename. In multi-bundle setups you can use `[name].js`.
 
-**module** - описание модулей сборки.
-```
+`module` describes how different module types are built. Example rules:
+
+```js
 rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
-            }
-        ]
+    {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader"
+        }
+    }
+]
 ```
 
-Здесь мы для всех `.js` файлов указываем лоадер *babel*.
+Here, for all `.js` files we use the `babel` loader.
+
+

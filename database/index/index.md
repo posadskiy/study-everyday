@@ -4,19 +4,21 @@ A database index is a data structure that improves the speed of data retrieval o
 cost of additional writes and storage space to maintain the index data structure.
 
 - fast lookup
-- policing the database constraints
+- enforcing database constraints
 
 Types:
 
-- В-tree
+- B-tree
 - Hash
 - GiST
 - SP-GiST
 - GIN
 - BRIN
 
-- One column index
-- Two or more column index
+- Single-column index
+- Multi-column index
 - Unique index
-- Statement-based index - `(lower(full_name))`
-- Partly index - `where id > 10000`
+- Expression index — e.g. `(lower(full_name))`
+- Partial index — e.g. `where id > 10000`
+
+

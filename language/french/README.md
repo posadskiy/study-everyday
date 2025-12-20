@@ -1,42 +1,53 @@
 # French
 
-## Типы речи
+## Parts of speech
 
-### Существительное
-#### Род
-Родов два - мужской и женский. Среднего не существует. Определение рода слова происходит по словарю. Окончание не
-помогает.
-#### Число
-Чисел два - единственное и множественное. Множественное образуется добавлением непроизносимой `-s` на конце.
+### Noun
 
-### Прилагательное
-Зависит от рода и числа существительного. 
-#### Формы
-Имеет 4 формы: мужскую (по-умолчанию), женскую, мужскую множественную, женскую множественную.
-Различается окончанием.
+#### Gender
 
-| Муж | Жен | Муж Множ | Жен Множ |
+There are two genders: masculine and feminine. There is no neuter. You determine a word’s gender from the dictionary;
+the ending usually doesn’t help.
+
+#### Number
+
+There are two numbers: singular and plural. The plural is formed by adding a usually unpronounced `-s` at the end.
+
+### Adjective
+
+It depends on the noun’s gender and number.
+
+#### Forms
+
+An adjective has 4 forms: masculine (default), feminine, masculine plural, feminine plural. They differ by ending.
+
+| Masc | Fem | Masc plural | Fem plural |
 | ------------- | ------------- | ------------- | ------------- |
 | = | -e | -s | -es |
 
-##### Пример
-| Муж | Жен | Муж Множ | Жен Множ |
+##### Example
+
+| Masc | Fem | Masc plural | Fem plural |
 | ---------- | ---------- | ---------- | ---------- |
 | dur | dure | durs | dures |
 | table | table | tables | tables |
 | gris | grise | gris | grises |
 
-#### Расположение
-Стоит после существительного (постпозиция). `mots tendres` - ласковые слова.
+#### Position
 
-### Местоимение
-| Рус | Фран |
+It comes after the noun (post-position). `mots tendres` — “tender words”.
+
+### Pronoun
+
+| Russian | French |
 | ----------- | ----------- |
-| я | je |
-| мы | nous |
-| они-женщины | elles |
-| ты | tu |
-| они (ж + м) | ils |
-| она | elle |
-| вы | vous |
-| он | il |
+| I | je |
+| we | nous |
+| they (women) | elles |
+| you (singular) | tu |
+| they (mixed) | ils |
+| she | elle |
+| you (plural/formal) | vous |
+| he | il |
+
+
