@@ -5,7 +5,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>language</artifactId>
-    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -20,6 +19,7 @@
         <module>swift</module>
         <module>english</module>
         <module>french</module>
+        <module>italian</module>
     </modules>
 
 

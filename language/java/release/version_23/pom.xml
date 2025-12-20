@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>version_23</artifactId>
-    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>

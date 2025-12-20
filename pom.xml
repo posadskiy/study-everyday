@@ -24,12 +24,12 @@
             <dependency>
                 <groupId>com.posadskiy</groupId>
                 <artifactId>kata</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.posadskiy</groupId>
                 <artifactId>core</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
