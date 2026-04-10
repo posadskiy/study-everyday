@@ -115,7 +115,7 @@
         <!-- Shared versions (avoid drift across modules) -->
         <lombok.version>1.18.42</lombok.version>
         <junit4.version>4.13.2</junit4.version>
-        <log4j2.version>2.25.3</log4j2.version>
+        <log4j2.version>2.25.4</log4j2.version>
 
         <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.5.4</maven.surefire.plugin.version>
