@@ -145,16 +145,26 @@ Sweat loses water and sodium. Sodium keeps fluid in the blood and protects again
 
 You only need to actively plan for sodium. Potassium and magnesium come from normal food.
 
-### Natural sodium sources (no tabs needed for normal training)
+### DIY electrolyte drink
 
-| Option | Sodium |
-|--------|--------|
-| 1/8 tsp table salt in 500 ml water | ~300 mg |
-| Water + salt + honey + lemon (DIY drink) | ~300 mg per 500 ml |
-| Salted potatoes / rice | Easy after runs |
-| Soup or broth | Good after long/cold runs |
-| Olives, pickles | Strong sodium, good post-run |
-| Salted crackers / pretzels | Sodium + carbs during long runs |
+Better than plain salt water — gives you sodium, fast carbs, and a bit of potassium. Tastes decent cold.
+
+**Recipe (500 ml bottle / one flask):**
+
+| Ingredient | Amount | Why |
+|------------|--------|-----|
+| Water | 500 ml | Base |
+| Table salt | 1/4 tsp (1.5 g) | ~580 mg sodium |
+| Honey | 15 g (1 tbsp) | ~12 g fast carbs, mild flavour |
+| Lemon juice | 20 ml (~half a small lemon) | Potassium, taste, vitamin C |
+
+Mix, shake, carry in one flask. Tastes slightly salty-sweet-sour — fine cold, less pleasant warm.
+
+**Sodium:** ~580 mg per 500 ml — within the 400–600 mg/L target.
+
+**Scaling:** for a full 1 L bottle, double everything. For a lighter version (shorter run, cooler weather), halve the salt.
+
+**Variation:** replace honey with 2 tsp of sugar if you do not have honey. Replace lemon with a pinch of citric acid powder if you want to batch-prepare it dry.
 
 Add electrolytes during runs over 90 min or in hot weather (target ~400–600 mg sodium per litre). After shorter runs, salted food at lunch is enough.
 
