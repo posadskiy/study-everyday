@@ -1,4 +1,6 @@
-# Training Schedule
+# Training Schedule — Annual Plan
+
+> **This document applies after you complete the 6-month foundation in [`progression/`](progression/).** For the first 24 weeks of running, use the phase-specific plans there instead. This file covers the year-round structure from month 7 onward.
 
 ## Year Overview
 
@@ -11,7 +13,7 @@ Strength focus Quality runs   Maintain       Strength focus
 
 ---
 
-## Your Weekly Template (4 runs/week)
+## Weekly Template (4 runs/week)
 
 | Day | Session | Duration |
 |-----|---------|----------|
@@ -24,6 +26,8 @@ Strength focus Quality runs   Maintain       Strength focus
 | Sun | Rest | — |
 
 **Quality run = hill repeats or sustained tempo climb.** Everything else = conversational pace. If you can't hold a short conversation, slow down.
+
+This template is identical to what you ran in week 21–23 of `progression/month-6.md`. Continuity is intentional.
 
 ---
 
@@ -40,15 +44,24 @@ Strength focus Quality runs   Maintain       Strength focus
 
 ---
 
-## Hill Repeats (Tuesday Quality Session)
+## Quality Sessions
 
-Find a trail with 100–200m climb at 10–15% grade. Run up hard (breathing heavily but controlled), walk back down.
+You graduated from `progression/` already executing **5 × 5 min uphill repeats**. That's the standard Base-phase quality session — keep doing it for the first 3 months of independent training.
 
-| Month | Repeats | Climb duration |
-|-------|---------|----------------|
-| 1–2 | 4 | 3 min |
-| 3–4 | 5 | 4 min |
-| 5–6 | 6 | 5 min |
+### Hill repeats (Tuesday quality, Base and Build phases)
+
+Find a trail with 100–200 m climb at 10–15% grade. Run up hard (RPE 8, breathing heavy but controlled). Walk the entire descent for recovery.
+
+**Default Base-phase prescription:** 5 × 5 min uphill. Increase one rep, then one minute, never both at once.
+
+### Tempo introduction (after first 3 months of Base)
+
+Once you've held 5 × 5 min hill repeats for 8+ weeks without issue, you can alternate Tuesday between hills and tempo:
+
+- **Tempo climb:** 15–25 min sustained climb at RPE 7. Single effort, not intervals.
+- **Tempo flat:** 20–30 min at threshold pace on rolling terrain. Used sparingly — hills always primary for mountain running.
+
+Alternate weeks: hills one Tuesday, tempo the next.
 
 ---
 
@@ -58,4 +71,4 @@ Cut volume 40–50% the week before. Keep 2–3 short quality efforts (5 min tem
 
 ## Post-Race Recovery
 
-After any 30km+ race: minimum 7 days easy or off. Do not run hard again until you feel completely normal on stairs and easy walking.
+After any 30 km+ race: minimum 7 days easy or off. Do not run hard again until you feel completely normal on stairs and easy walking.

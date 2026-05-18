@@ -63,7 +63,7 @@ A normal big breakfast is too heavy before a 9:00 run. Eat light before, make up
 
 **Avoid before the run:** eggs with cheese, fried food, nuts/oil-heavy meals, high-fiber bread, very large coffee without food.
 
-**What to carry:** 2 × 500 ml flasks, 2 gels or 10–12 dates (eat at 40 min, then at 80 min), electrolyte in one flask if run is over 90 min or warm.
+**What to carry** depends on phase — see your current progression file. The rule for drinking the honey flask is the same at every phase: sip every 25–30 min starting at the 40-min mark, then immediately sip plain water from the bladder to dilute it in the stomach.
 
 ## Strength Before Breakfast
 
@@ -79,37 +79,51 @@ Optional tendon support: **15 g collagen + 50 mg vitamin C** 30–60 min before 
 
 ## On-Run Fueling
 
-### When to eat
+### Fueling strategy
 
-| Run duration | Action |
-|-------------|--------|
-| Under 60 min | Water only |
-| 60–90 min | 1 gel or dates, optional |
-| 90 min – 3 hours | Fuel every 30–45 min — required |
-| 3+ hours | Fuel every 30 min; mix gels + real food |
+| Run | Fuel |
+|-----|------|
+| Under 60 min | Plain water only |
+| 60–90 min | 1 flask light honey (15 g honey), start at 40 min |
+| 90–150 min | 1 flask medium honey (30 g honey) + 4–6 dates |
+| 150+ min / race under 3 h | 1–2 flasks full honey (45 g each) + 8 dates |
+| Race over 3 hours | 2 flasks full honey + 8 dates + aid station real food |
 
-**Eat before hungry. Drink before thirsty.** Hunger lags 15–30 min behind actual need.
+**Eat before hungry. Drink before thirsty.** Both lag 15–30 min behind actual need.
 
 ### Carbs per hour
 
-| Duration | Target |
-|----------|--------|
-| 60–90 min | 30–60 g/hr |
-| 90 min – 2.5 hours | 60 g/hr |
-| 2.5+ hours | 60–90 g/hr |
+| Duration | Target | How to hit it |
+|----------|--------|---------------|
+| 60–90 min | 30 g/hr | Light honey flask sips |
+| 90–150 min | 45–60 g/hr | Medium honey flask + dates |
+| 150+ min | 60 g/hr | Full honey flasks + dates |
+| Race 60+ g/hr | 60–90 g/hr | Both flasks + dates + aid station food |
 
-Over 60 g/hr from one source, gut absorption stalls. Over 90 g/hr you need mixed carbs (glucose + fructose). Start at 30 g/hr and train the gut up over months.
+Start at 30 g/hr in months 2–3. Train the gut up gradually over months — it adapts.
 
-### Fuel options
+Honey is glucose + fructose (same as most gels). No absorption disadvantage.
 
-| Food | Carbs | Notes |
-|------|-------|-------|
-| Dates / dried figs | ~20 g per 30 g | Real food, cheaper, works well |
-| Energy gel (Maurten, SiS, Gu) | 21–25 g | Fast, easy to carry. Test in training first. |
-| Banana | ~25 g | Good at aid stations |
-| Boiled potato + salt | ~15 g per 60 g | Best tolerated late in a long run |
+### Carbs in carried food
 
-Never try a new product on race day.
+| Item | Quantity | Carbs | Calories |
+|------|----------|-------|----------|
+| Flask — light (15 g honey) | 250 ml | ~12 g | ~45 kcal |
+| Flask — medium (30 g honey) | 250 ml | ~25 g | ~90 kcal |
+| Flask — full (45 g honey) | 250 ml | ~37 g | ~135 kcal |
+| 2 × full flasks | 500 ml | **~74 g** | **~270 kcal** |
+| Dates | 8 dates (~80 g) | ~56 g | ~220 kcal |
+| **Total carried (2 flasks + dates)** | | **~130 g carbs** | **~490 kcal** |
+
+| Aid station food (per stop) | ~Carbs | ~Calories |
+|-----------------------------|--------|-----------|
+| Banana (1 medium) | ~25 g | ~90 kcal |
+| Chips / crisps (small bag) | ~15 g | ~80 kcal |
+| Broth/soup (200 ml) | ~5 g | ~30 kcal |
+| Bread / potato (1 portion) | ~20 g | ~90 kcal |
+| **Realistic per station** | **~40–50 g** | **~150–200 kcal** |
+
+Never test a new fuel product on race day.
 
 ---
 
@@ -145,26 +159,24 @@ Sweat loses water and sodium. Sodium keeps fluid in the blood and protects again
 
 You only need to actively plan for sodium. Potassium and magnesium come from normal food.
 
-### DIY electrolyte drink
+### DIY honey electrolyte drink
 
-Better than plain salt water — gives you sodium, fast carbs, and a bit of potassium. Tastes decent cold.
+Sodium + fast carbs + potassium in one flask. This is your standard training and race carry drink.
 
-**Recipe (500 ml bottle / one flask):**
+**Recipe — 250 ml flask (one chest flask):**
 
 | Ingredient | Amount | Why |
 |------------|--------|-----|
-| Water | 500 ml | Base |
-| Table salt | 1/4 tsp (1.5 g) | ~580 mg sodium |
-| Honey | 15 g (1 tbsp) | ~12 g fast carbs, mild flavour |
-| Lemon juice | 20 ml (~half a small lemon) | Potassium, taste, vitamin C |
+| Honey | 45 g (3 tbsp) | ~37 g fast carbs |
+| Table salt | 1/8 tsp (0.75 g) | ~290 mg sodium |
+| Lemon juice | 10 ml (~1/4 small lemon) | Potassium, taste, vitamin C |
+| Water | fill to 250 ml (~190 ml) | Base |
 
-Mix, shake, carry in one flask. Tastes slightly salty-sweet-sour — fine cold, less pleasant warm.
+Add honey, salt and lemon first, then fill with water to the 250 ml mark. Shake well.
 
-**Sodium:** ~580 mg per 500 ml — within the 400–600 mg/L target.
+**Sodium:** ~290 mg per flask. For runs over 90 min in heat, use both flasks as honey drink (580 mg sodium total) and use the bladder for plain water.
 
-**Scaling:** for a full 1 L bottle, double everything. For a lighter version (shorter run, cooler weather), halve the salt.
-
-**Variation:** replace honey with 2 tsp of sugar if you do not have honey. Replace lemon with a pinch of citric acid powder if you want to batch-prepare it dry.
+Salt and lemon stay the same in all versions.
 
 Add electrolytes during runs over 90 min or in hot weather (target ~400–600 mg sodium per litre). After shorter runs, salted food at lunch is enough.
 
@@ -231,13 +243,56 @@ Creatine may increase scale weight by **1–2 kg** in the first 2–3 weeks — 
 
 ## Race Day Fueling (future reference)
 
-For 30 km / ~7 hours:
+### Energy budget — 30 km / ~7 hours / 3 aid stations
 
-| Time | Action |
-|------|--------|
-| 60 min before | Light meal: oats, rice, banana, coffee |
-| 15 min before | 1 gel + electrolyte drink |
-| Every 30–35 min during | 1 gel (~60 g carbs/hr) |
-| Aid stations | Banana, broth, boiled potato |
-| Hours 4–7 | Switch to real food |
-| Within 30 min after | 30–40 g protein + 80–100 g carbs |
+Aid stations at km 8, 16, 24. At ~14 min/km average, segments are ~110 min each. Final segment ~85 min.
+
+**Carb target:** ~45 g/hr (realistic for hiking-heavy beginner race) × 7 h = **~315 g total**.
+
+**What to carry (prepared at home, nothing mixed on course):**
+
+| Item | Carbs | Calories |
+|------|-------|----------|
+| Flask 1 — 45 g honey + salt + lemon, fill to 250 ml | ~37 g | ~135 kcal |
+| Flask 2 — same | ~37 g | ~135 kcal |
+| 8 dates (~80 g bag) | ~56 g | ~220 kcal |
+| 2 gels (emergency backup only) | ~44 g | ~160 kcal |
+| **Total carried** | **~174 g** | **~650 kcal** |
+
+| At each aid station | ~Carbs | ~Calories |
+|---------------------|--------|-----------|
+| Isotonic drink (~200–250 ml) | ~15 g | ~60 kcal |
+| Real food: banana, chips, bread, broth | ~40 g | ~160 kcal |
+| **Per station total** | **~55 g** | **~220 kcal** |
+| **3 stations total** | **~165 g** | **~660 kcal** |
+
+| **Grand total** | **~339 g carbs** | **~1310 kcal** | **above target** |
+
+**Segment plan:**
+
+| Segment | Duration | Between stations | At station |
+|---------|----------|-----------------|------------|
+| Start → AS1 (~110 min) | ~83 g needed | Flask 1 (37 g) + 3 dates (21 g) = **58 g** | Isotonic 200 ml + food = ~55 g |
+| AS1 → AS2 (~110 min) | ~83 g needed | Flask 2 (37 g) + 3 dates (21 g) = **58 g** | Isotonic 200 ml + food = ~55 g |
+| AS2 → AS3 (~110 min) | ~83 g needed | Remaining 2 dates (14 g) + 1 gel if needed = **~36 g** | Isotonic 200 ml + food = ~55 g |
+| AS3 → Finish (~85 min) | ~64 g needed | 1 gel if needed = **~22 g** | — |
+
+Because isotonic is now available at each stop, the honey flasks + dates cover the between-station gap, and you top up at stations. **Gels become last resort only** — use one only if you feel a sharp energy drop mid-segment.
+
+**Isotonic at aid station: drink ~200–250 ml.** Do not gulp the whole cup — sip steadily over 1–2 min while also eating real food.
+
+### Race day timeline
+
+| Timing | Action |
+|--------|--------|
+| 90–120 min before | Light breakfast: toast + honey, oats + banana, coffee |
+| 15 min before | First sip from Flask 1 + sip plain water |
+| Every 25–30 min | Sip Flask 1 → immediately sip plain water from bladder |
+| Every 45 min | Eat 1–2 dates |
+| Flask 1 empty (~90 min in) | Switch to Flask 2, same rhythm |
+| At each aid station | ~200 ml isotonic + real food (banana, chips, bread, broth) + refill bladder |
+| Hours 4+ | Rely more on aid station real food; honey flask rhythm optional |
+| Use a gel only if | Energy drops sharply mid-segment and next station is still 30+ min away |
+| Within 30 min after finish | 30–40 g protein + 80–100 g carbs |
+
+For races **under 3 hours:** 1 flask + 5 dates + isotonic and food at stations. No gels needed.
