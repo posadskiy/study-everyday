@@ -28,7 +28,7 @@ This is **only the beginning** of adaptation for everything below muscle. Treat 
 | Sat | **Long run** (easy, mostly flat) + daily mobility | 50–75 min run / 10 min mobility |
 | Sun | Rest + daily mobility | 10 min |
 
-3 runs per week. 2 strength sessions. **3 full rest days.** Daily mobility is the same 10-min routine every day — see [`../strength/mobility.md`](../strength/mobility.md). On Tue/Thu it's most efficient right after the strength session.
+3 runs per week. 2 strength sessions. **3 full rest days.** Daily mobility is the same 10-min routine every day — see [`../strength/mobility/README.md`](../strength/mobility/README.md). On Tue/Thu it's most efficient right after the strength session.
 
 ---
 
@@ -77,33 +77,33 @@ Reference: [`../technique/06-strength-and-mobility.md`](../technique/06-strength
 
 | Exercise | Sets × Reps | Note |
 |---------|-------------|------|
-| Single-leg calf raise (straight knee) | 2 × 10 each side | Slow: 3 s up, 3 s down. Off a step for full range. |
-| Bulgarian split squat (bodyweight) | 2 × 8 each side | Slow eccentric, no weight. |
-| Step-down | 2 × 8 each side | 20–30 cm step. Control descent. |
-| Dead bug | 2 × 8 each side | Lower back flat to floor. |
+| [Single-leg calf raise (straight knee)](../strength/calves/calf-raises.md) | 2 × 10 each side | Slow: 3 s up, 3 s down. Off a step for full range. |
+| [Bulgarian split squat (bodyweight)](../strength/lower-body/bulgarian-split-squat.md) | 2 × 8 each side | Slow eccentric, no weight. |
+| [Step-down](../strength/lower-body/step-down.md) | 2 × 8 each side | 20–30 cm step. Control descent. |
+| [Dead bug](../strength/core/dead-bug.md) | 2 × 8 each side | Lower back flat to floor. |
 
 ### Session B — Thursday (25 min, strength only)
 
 | Exercise | Sets × Reps | Note |
 |---------|-------------|------|
-| Hip thrust (bodyweight) | 2 × 12 | 1-sec squeeze at top. |
-| Single-leg squat to box | 2 × 6 each side | Box version only — don't progress yet. |
-| Clamshells | 2 × 12 each side | No band yet. |
-| Tibialis raise | 2 × 15 | Crucial — calves need their antagonist trained. |
-| Side plank | 2 × 20 sec each side | Build to 30 sec by end of month. |
+| [Hip thrust (bodyweight)](../strength/lower-body/hip-thrust-glute-bridge.md) | 2 × 12 | 1-sec squeeze at top. |
+| [Single-leg squat to box](../strength/lower-body/single-leg-squat.md) | 2 × 6 each side | Box version only — don't progress yet. |
+| [Clamshells](../strength/lower-body/clamshells.md) | 2 × 12 each side | No band yet. |
+| [Tibialis raise](../strength/calves/tibialis-raise.md) | 2 × 15 | Crucial — calves need their antagonist trained. |
+| [Side plank](../strength/core/side-plank.md) | 2 × 20 sec each side | Build to 30 sec by end of month. |
 
 **Form is the entire point this month.** Stop a set if form breaks. Watch the Squat University and James Dunne YouTube videos linked in `../technique/06-strength-and-mobility.md` if any exercise feels uncertain.
 
 ### Daily mobility (10 min, every day — separate from strength)
 
-The full routine lives in [`../strength/mobility.md`](../strength/mobility.md). It is the **same 10-min routine every day**, done once per day:
+The full routine lives in [`../strength/mobility/README.md`](../strength/mobility/README.md). It is the **same 10-min routine every day**, done once per day:
 
-1. Hip flexor stretch — 60 sec each side
-2. Calf stretch (straight knee + bent knee) — 30 sec each, both sides
-3. Ankle dorsiflexion (knee-to-wall) — ~1 min per foot
-4. Hamstring stretch — 60 sec each side
-5. Figure-4 / IT band — 60 sec each side
-6. Thoracic rotation (thread the needle) — 10 reps each side
+1. [Hip flexor stretch](../strength/mobility/hip-flexor-stretch.md) — 60 sec each side
+2. [Calf stretch](../strength/mobility/calf-stretch.md) (straight knee + bent knee) — 30 sec each, both sides
+3. [Ankle dorsiflexion](../strength/mobility/ankle-dorsiflexion.md) (knee-to-wall) — ~1 min per foot
+4. [Hamstring stretch](../strength/mobility/hamstring-stretch.md) — 60 sec each side
+5. [Figure-4 / IT band](../strength/mobility/figure-4-it-band.md) — 60 sec each side
+6. [Thoracic rotation](../strength/mobility/thoracic-rotation.md) (thread the needle) — 10 reps each side
 
 **When to do it:** Tue and Thu → immediately after strength as cool-down. Mon/Wed/Fri/Sun → any time (morning, before bed). Sat → after the long run.
 
@@ -134,7 +134,7 @@ You're in weight loss phase. See [`../nutrition/nutrition.md`](../nutrition/nutr
 
 | When | What | How long |
 |------|------|----------|
-| Daily | Mobility routine ([strength/mobility.md](../strength/mobility.md)) | 10 min |
+| Daily | Mobility routine ([strength/mobility/README.md](../strength/mobility/README.md)) | 10 min |
 | After every run | Light walking cooldown | 5 min |
 | Tue & Thu evening | Foam roll calves + quads + glutes | 10 min |
 | Sat evening | Full lower body foam roll + light walk | 15 min |
@@ -162,9 +162,9 @@ The first month is when most injuries develop. Watch these specifically.
 | Signal | Response |
 |--------|----------|
 | Calves "clogged" or pumped on a low-effort run | Walk for 10 min, return easier. If recurs, drop to 2 runs/week. |
-| Shin pain (front of lower leg) | Rest 3 days. Check cadence (likely too low) + tibialis raises daily. |
-| Achilles soreness lasting 24h+ after running | 3 days off. Heavy slow calf raises become priority. |
-| Knee pain on stairs | Glute weakness — increase clamshells and hip thrusts; back off step-downs. |
+| Shin pain (front of lower leg) | Rest 3 days. Check cadence (likely too low) + [tibialis raises](../strength/calves/tibialis-raise.md) daily. |
+| Achilles soreness lasting 24h+ after running | 3 days off. Heavy slow [calf raises](../strength/calves/calf-raises.md) become priority. |
+| Knee pain on stairs | Glute weakness — increase [clamshells](../strength/lower-body/clamshells.md) and [hip thrusts](../strength/lower-body/hip-thrust-glute-bridge.md); back off [step-downs](../strength/lower-body/step-down.md). |
 | Foot pain anywhere | Stop. Walk only for 1 week. Don't run on foot pain — this is how stress fractures start. |
 
 ---
