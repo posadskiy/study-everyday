@@ -1,27 +1,5 @@
 # Module 01 — Fix the Foundations
 
-**Level: A2 consolidation**
-
-This module covers core A2 gaps: past tense word order, the full case map, locative vs accusative, dual forms, and Slavic false friends.
-
----
-
-## Module structure
-
-Work through in this order:
-
-| Step | What | File |
-|------|------|------|
-| 1 | **Theory** | [index.md](index.md) (Parts 1–5) |
-| 2 | **Practice** | [exercises](practice/exercises.md) + [online](practice/online.md) |
-| 3 | **Reading** | [reading](reading.md) |
-| 4 | **Listening** | [listening](listening.md) |
-| 5 | **Writing** | [writing](writing.md) |
-
-**Rule:** If you can explain a rule but fail exercises, do more practice — not more theory.
-
----
-
 ## Part 1 — Past tense and word order
 
 ### Past tense: the whole system
@@ -217,7 +195,7 @@ Learn cases as **preposition + ending chunks**: *v šoli*, *v šolo*, *nimam ča
 
 ### Endings you need for practice
 
-Cases are not just names — you need **endings**. For Module 01, learn three singular patterns; print the full tables from **[Appendix B — Case endings (A2)](../reference/case-endings-a2.md)** and use them for every §2 drill.
+Cases are not just names — you need **endings**. For Module 01, learn three singular patterns; print the full tables from **[Appendix B — Case endings (A2)](reference/case-endings-a2.md)** and use them for every §2 drill.
 
 | Pattern | Model | rodilnik | tožilnik | mestnik | orodnik |
 |---------|-------|----------|----------|---------|---------|
@@ -237,7 +215,7 @@ Cases are not just names — you need **endings**. For Module 01, learn three si
 4. *Sem v šoli.* (loc) — I'm at school. *šola* → mestnik *-i*
 5. *Pijem s prijateljem.* (ins) — I'm drinking with a friend. *prijatelj* → orodnik *-em*
 
-→ **Reference (print):** [Appendix B — Case endings](../reference/case-endings-a2.md) · **Practice:** [exercises §2](practice/exercises.md#2-cases--identify-and-fill-in) · **Online:** [cases](practice/online.md#cases--nouns--prepositions)
+→ **Reference (print):** [Appendix B — Case endings](reference/case-endings-a2.md) · **Practice:** [exercises §2](practice/exercises.md#2-cases--identify-and-fill-in) · **Online:** [cases](practice/online.md#cases--nouns--prepositions)
 
 ---
 
@@ -341,7 +319,7 @@ Vocabulary traps number in the hundreds if you know Russian. Use the full append
 
 ### Reference
 
-**[Appendix A — False Friends and Slavic Traps (Russian focus)](../reference/false-friends-russian.md)** — 90+ entries: wrong meaning pairs, verb traps, English false friends, and safe cognates.
+**[Appendix A — False Friends and Slavic Traps (Russian focus)](reference/false-friends-russian.md)** — 90+ entries: wrong meaning pairs, verb traps, English false friends, and safe cognates.
 
 **How to use it:**
 1. After Part 5, skim appendix sections 1–2.
@@ -376,7 +354,5 @@ Russian **case names** match the system (see Part 2). Russian **case endings** d
 - [ ] [Reading](reading.md) — all three texts + questions
 - [ ] [Listening](listening.md) — at least 3 task sets
 - [ ] [Writing](writing.md) — tasks 1–6 attempted
-- [ ] [Appendix A](../reference/false-friends-russian.md) skimmed + quick drill
-- [ ] [Appendix B](../reference/case-endings-a2.md) printed or open for case drills
-
-**Next:** Module 02 — Everyday Slovenian *(not yet refactored)*
+- [ ] [Appendix A](reference/false-friends-russian.md) skimmed + quick drill
+- [ ] [Appendix B](reference/case-endings-a2.md) printed or open for case drills
