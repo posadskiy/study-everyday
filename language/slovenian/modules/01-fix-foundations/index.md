@@ -126,7 +126,7 @@ With *a/ali*:
 
 - *A si že jedel?* — Have you eaten already?
 - *Ali ste bili doma?* — Were you at home?
-- *A sta vidva videla film?* — Did you two see the film?
+- *A sta vidva videla film?* — Did you two see the film? (*sta* = dual auxiliary for any “you two”; *vidva* + *videla* = two women; two men: *A sta vidve videli film?*)
 
 In questions, the auxiliary still stays early. Do not move it after the participle.
 
@@ -154,15 +154,6 @@ Use the subject when you contrast or clarify:
 - *Jaz sem šel v trgovino, Ana pa je šla v knjižnico.*
 - *Midva sva bila doma, oni pa so šli ven.*
 
-### Core examples
-
-1. *Včeraj sem šel v trgovino in kupil kruh.* — Yesterday I went to the store and bought bread.
-2. *Ana je bila v knjižnici, Marko pa je bil doma.* — Ana was in the library, while Marko was at home.
-3. *Marko in Ana sta sedela na klopi.* — Marko and Ana were sitting on a bench.
-4. *Nismo imeli časa, zato nismo gledali filma.* — We did not have time, so we did not watch the film.
-5. *Kje si bila včeraj?* — Where were you yesterday?
-6. *A sta vidva že jedla?* — Have you two eaten already?
-
 → **Practice:** [exercises §1](practice/exercises.md#1-past-tense--auxiliary) · **Listening:** [task set 1](listening.md#task-set-1--after-part-1-past-tense)
 
 ---
@@ -184,26 +175,29 @@ Slovenian has **6 cases** — same count as Russian, different endings and quest
 
 ### Russian reference — what transfers
 
-| Works similarly | Different in Slovenian |
-|-----------------|------------------------|
-| Genitive after negation: *нет времени* → *nimam časa* | Locative **only with a preposition** (*v šoli*, not *šoli* alone) |
-| Dative experiencer: *мне холодно* → *hladno mi je* | **Dual** number for exactly two |
-| Instrumental *с*: *с другом* → *s prijateljem* | *v* + locative (where) vs *v* + accusative (where to) |
-| Six cases feel familiar | Endings differ — do not copy Russian forms |
+**Same idea as Russian:**
+- Six cases — same framework, different endings (do not copy Russian forms).
+- Genitive after negation: *нет времени* → *nimam časa*.
+- Dative experiencer: *мне холодно* → *hladno mi je*.
+- Instrumental with *s*: *с другом* → *s prijateljem*.
+- Locative with preposition: *в школе* → *v šoli* — предложный also needs *в/на/о*, not the bare form.
+- Same preposition, different case for where vs where to: *в школе / в школу* → *v šoli / v šolo*.
+
+**New or stricter in Slovenian:**
+- **Dual** for exactly two people/things.
+- Endings and *v*/*na* pairings differ — learn chunks (*na morje*, *v šolo*), do not guess from Russian.
 
 Learn cases as **preposition + ending chunks**: *v šoli*, *v šolo*, *nimam časa*, *s prijateljem*.
 
 ### Endings you need for practice
 
-Cases are not just names — you need **endings**. For Module 01, learn three singular patterns; print the full tables from **[Appendix B — Case endings (A2)](reference/case-endings-a2.md)** and use them for every §2 drill.
+Cases need **endings**, not just names. Module 01 drills use three singular patterns — learn which model a noun follows, then look up the case form:
 
-| Pattern | Model | rodilnik | tožilnik | mestnik | orodnik |
-|---------|-------|----------|----------|---------|---------|
-| feminine *-a* | *miza* | mize | mizo | mizi | mizo |
-| masc. consonant | *prijatelj* | prijatelja | prijatelja¹ | prijatelju | prijateljem |
-| neuter *-o* | *mesto* | mesta | mesto | mestu | mestom |
+- masculine consonant → *prijatelj*
+- neuter *-o* → *mesto*
+- feminine *-a* → *miza*
 
-¹ Animate masculine (people, animals): accusative = genitive (*vidim psa*). Inanimate: accusative = nominative (*vidim vlak*).
+All six cases for each pattern are in **[Appendix B — Case endings](reference/case-endings.md)** — print it and keep it open for every §2 drill.
 
 **Drill loop:** (1) name the case from context → (2) pick the noun pattern → (3) read the ending from Appendix B → (4) say the phrase aloud.
 
@@ -215,7 +209,7 @@ Cases are not just names — you need **endings**. For Module 01, learn three si
 4. *Sem v šoli.* (loc) — I'm at school. *šola* → mestnik *-i*
 5. *Pijem s prijateljem.* (ins) — I'm drinking with a friend. *prijatelj* → orodnik *-em*
 
-→ **Reference (print):** [Appendix B — Case endings](reference/case-endings-a2.md) · **Practice:** [exercises §2](practice/exercises.md#2-cases--identify-and-fill-in) · **Online:** [cases](practice/online.md#cases--nouns--prepositions)
+→ **Reference (print):** [Appendix B — Case endings](reference/case-endings.md) · **Practice:** [exercises §2](practice/exercises.md#2-cases--identify-and-fill-in) · **Online:** [cases](practice/online.md#cases--nouns--prepositions)
 
 ---
 
@@ -289,8 +283,6 @@ For **exactly two** people or things, Slovenian uses **dual** — Russian does *
 | you two | *Vidva **sta** prišla?* |
 | they two | *Onadva **sta** videla.* |
 
-Common mistake: *viste prišli* → ***Vidva sta prišla.***
-
 **midva** = two men or mixed · **midve** = two women
 
 ### Russian reference
@@ -315,18 +307,7 @@ No dual in Russian — you use plural (*мы двое пошли*) where Sloveni
 
 ## Part 5 — Slavic traps (grammar + vocabulary)
 
-Vocabulary traps number in the hundreds if you know Russian. Use the full appendix — not a short inline list.
-
-### Reference
-
-**[Appendix A — False Friends and Slavic Traps (Russian focus)](reference/false-friends-russian.md)** — 90+ entries: wrong meaning pairs, verb traps, English false friends, and safe cognates.
-
-**How to use it:**
-1. After Part 5, skim appendix sections 1–2.
-2. While doing practice, keep the appendix open.
-3. Do the appendix quick drill (section 6) before Module 02.
-
-### Grammar traps (patterns — learn here)
+### Grammar traps (patterns)
 
 | Wrong (from Russian) | Correct Slovenian |
 |----------------------|-------------------|
@@ -335,12 +316,40 @@ Vocabulary traps number in the hundreds if you know Russian. Use the full append
 
 Russian **case names** match the system (see Part 2). Russian **case endings** do not.
 
-### Examples (from appendix)
+### False friends — nouns
 
-1. *Novice so bile dobre.* — The news was good. (*novice*, not *vest*)
-2. *Grad stoji na hribu.* — The castle stands on the hill. (*grad* ≠ city)
-3. *Stol stoji ob mizi.* — The chair is by the table. (*stol* ≠ RU *стол*)
-4. *Zdaj grem v šolo.* — Now I'm going to school.
+| SI | SI meaning | Looks like (RU) | RU meaning | Use instead |
+|----|-----------|-----------------|------------|-------------|
+| *vest* | conscience | *весть* | news | *novice* / *novica* |
+| *grad* | castle | *город* | city | *mesto* |
+| *stol* | chair | *стол* | table | *miza* |
+| *predlog* | proposal, motion | *предлог* | preposition (grammar) | grammar term in SI = *predloga* |
+| *svet* | world; council | *свет* | light | *svetloba* = light |
+| *mesto* | city (primary) | *место* | place, spot | — note: SI *mesto* = city first |
+| *vreme* | weather | *время* | time | *čas* = time |
+
+### False friends — adjectives
+
+| SI | SI meaning | Looks like (RU) | RU meaning | Note |
+|----|-----------|-----------------|------------|------|
+| *čuden* | strange, odd | *чудный* | wonderful, marvellous | Russian is positive; Slovenian is not |
+| *genialen* | great, cool (colloquial) | *гениальный* | of genius (formal) | SI *genialen* = "awesome" in speech, not a high compliment |
+| *familijaren* | informal, cosy | *фамильярный* | presumptuous, rude | opposite connotation |
+
+### Reliable cognates
+
+These usually transfer correctly from Russian:
+
+*mir, sol, voda, hiša, šola, sin, brat, sestra, jezik, glava, srce, delo, noč, dan, mesec, dober, slab, velik, nov, star, mlad, bel, črn, govoriti, imeti, biti, dati, videti, slišati, pisati, piti, jesti, spati, ljubiti, ključ, okno, vrata, most, reka, morje, gora, sonce, luna, zvezda, dež, sneg, veter, oblak, pes, pesem, noga, roka.*
+
+### Quick drill
+
+1. *vest* → Russian thinks? → Correct SI for "news"?
+2. *grad* → Russian means? → SI word for city?
+3. *stol* → Russian *стол* means? → SI word for table?
+4. *predlog* → grammar term or proposal?
+5. *čuden* → positive or negative?
+6. *familijaren* → cosy or rude?
 
 → **Practice:** [exercises §5–6](practice/exercises.md#5-slavic-traps-russian-focus) · **Writing:** [task 5](writing.md#task-5--slavic-trap-correction)
 
@@ -348,11 +357,11 @@ Russian **case names** match the system (see Part 2). Russian **case endings** d
 
 ## Checklist before Module 02
 
-- [ ] Theory Parts 1–5 read
-- [ ] [Practice exercises](practice/exercises.md) done
-- [ ] [Online exercises](practice/online.md) — at least 4 sets at ~80%+
-- [ ] [Reading](reading.md) — all three texts + questions
-- [ ] [Listening](listening.md) — at least 3 task sets
-- [ ] [Writing](writing.md) — tasks 1–6 attempted
-- [ ] [Appendix A](reference/false-friends-russian.md) skimmed + quick drill
-- [ ] [Appendix B](reference/case-endings-a2.md) printed or open for case drills
+- [ ] Theory Parts 1–5
+- [ ] [Practice exercises](practice/exercises.md)
+- [ ] [Online exercises](practice/online.md)
+- [ ] [Reading](reading.md)
+- [ ] [Listening](listening.md)
+- [ ] [Writing](writing.md)
+- [ ] Part 5 quick drill
+- [ ] [Appendix B — case endings](reference/case-endings.md)
