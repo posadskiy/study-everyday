@@ -1,0 +1,7 @@
+# Optional if you prefer Docker over `temporal server start-dev`
+services:
+  temporal:
+    image: temporalio/auto-setup:1.28.1
+    ports:
+      - "7233:7233"
+      - "8233:8233"
