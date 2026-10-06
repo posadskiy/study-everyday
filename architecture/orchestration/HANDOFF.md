@@ -8,9 +8,8 @@ Implementation of the **320 h learning plan** from the `personal-career` repo:
 
 - **Track:** engine-neutral orchestration engineer, **payments** as domain.
 - **Pitch:** payment processes that cannot lose money or skip approval — including bounded AI agent steps (later phases).
-- **Full plan (modules, final checks, sources):**  
-  `personal-career` → `docs/career/job/learning-plan.md`  
-  (GitHub: `posadskiy/personal-career`, merged via PR #24.)
+- **Full plan with topic explanations:** [README.md](README.md) in this folder. The original plan
+  is `docs/career/job/learning-plan.md` in `posadskiy/personal-career`.
 
 ## Decisions already made (career chat, Oct 2026)
 
@@ -26,6 +25,7 @@ Implementation of the **320 h learning plan** from the `personal-career` repo:
 
 ```
 architecture/orchestration/
+  README.md           ← learning guide: every topic explained, final checks
   HANDOFF.md          ← this file
   START_HERE.md       ← current module + commands
   learning-log.md     ← one line per study session
@@ -48,8 +48,8 @@ Copy into the first message:
 
 ```
 Continue the orchestration career track in study-everyday.
-Read architecture/orchestration/HANDOFF.md and START_HERE.md.
-Follow docs/career/job/learning-plan.md in personal-career (module 1.1 final check).
+Read architecture/orchestration/HANDOFF.md, START_HERE.md and README.md.
+Follow README.md module by module (current: 1.1 final check).
 Do not re-plan the track — implement and teach module by module.
 ```
 

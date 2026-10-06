@@ -6,4 +6,5 @@ the learning plan in `personal-career`.
 **Phase 1:** durable refunds on Temporal. **Later:** disputes, agent step, HITL, evals, Kafka,
 BPMN second engine.
 
-Parent docs: [../START_HERE.md](../START_HERE.md), [../HANDOFF.md](../HANDOFF.md).
+Parent docs: [../README.md](../README.md) (learning guide), [../START_HERE.md](../START_HERE.md),
+[../HANDOFF.md](../HANDOFF.md).
