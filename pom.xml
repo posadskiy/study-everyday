@@ -94,7 +94,6 @@
         <module>algorithm</module>
         <module>architecture</module>
         <module>build/maven</module>
-        <module>config</module>
         <module>design</module>
         <module>framework/backend/spring</module>
         <module>language/java</module>
