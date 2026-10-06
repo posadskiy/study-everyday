@@ -6,8 +6,9 @@
 
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>build</artifactId>
+        <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>maven</artifactId>

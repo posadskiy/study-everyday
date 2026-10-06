@@ -6,8 +6,9 @@
 
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>language</artifactId>
+        <artifactId>study-everyday</artifactId>
         <version>0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>java</artifactId>
@@ -32,7 +33,6 @@
         <module>aspect</module>
         <module>core</module>
         <module>release</module>
-        <module>jvm</module>
     </modules>
 
 

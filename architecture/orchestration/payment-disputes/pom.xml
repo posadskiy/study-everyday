@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.posadskiy</groupId>
-        <artifactId>orchestration</artifactId>
+        <artifactId>architecture</artifactId>
         <version>0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>payment-disputes</artifactId>
