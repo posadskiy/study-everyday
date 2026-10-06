@@ -2,7 +2,8 @@
 
 ## Module
 
-**1.1 The durable execution model** (20 h) — see `personal-career/docs/career/job/learning-plan.md`.
+**1.1 The durable execution model** (20 h) — topics and final check in
+[README.md](README.md#11-the-durable-execution-model--20-h).
 
 ## Run locally
 

@@ -16,6 +16,7 @@
 - [Kafka](architecture/kafka)
 - [Load Balancer](architecture/load-balancer)
 - [Nginx](architecture/nginx)
+- [Orchestration — payments learning guide](architecture/orchestration)
 - [Rate Limiter](architecture/rate-limiter)
 - [Tracing](architecture/tracing)
 
