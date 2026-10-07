@@ -104,6 +104,62 @@ class Lab02HistoryAndReplayTest {
         WorkflowReplayer.replayWorkflowExecution(history, SwappedArgumentsImpl.class);
     }
 
+    @Test
+    void appendingAStepFailsAgainstAFinishedHistory() {
+        assertReplayFails(AppendedStepImpl.class, "does not match command type COMMAND_TYPE_SCHEDULE_ACTIVITY_TASK");
+    }
+
+    @Test
+    void removingTheFirstStepFails() {
+        assertReplayFails(FirstStepRemovedImpl.class, "does not match command type COMMAND_TYPE_COMPLETE_WORKFLOW_EXECUTION");
+    }
+
+    @Test
+    void insertingATimerFails() {
+        assertReplayFails(SleepInsertedImpl.class, "does not match command type COMMAND_TYPE_START_TIMER");
+    }
+
+    private void assertReplayFails(Class<? extends ThreeStepWorkflow> impl, String expectedFragment) {
+        WorkflowExecutionHistory history = runOnce("wf-" + impl.getSimpleName());
+        assertThatThrownBy(() -> WorkflowReplayer.replayWorkflowExecution(history, impl))
+                .hasMessageContaining("NonDeterministicException")
+                .hasMessageContaining(expectedFragment);
+    }
+
+    public static class AppendedStepImpl implements ThreeStepWorkflow {
+        private final StepActivities activities = stub();
+        @Override
+        public String run(String refundId) {
+            activities.step("validate");
+            activities.step("reserve");
+            activities.step("psp");
+            activities.step("notify");
+            return "done:" + refundId;
+        }
+    }
+
+    public static class FirstStepRemovedImpl implements ThreeStepWorkflow {
+        private final StepActivities activities = stub();
+        @Override
+        public String run(String refundId) {
+            activities.step("reserve");
+            activities.step("psp");
+            return "done:" + refundId;
+        }
+    }
+
+    public static class SleepInsertedImpl implements ThreeStepWorkflow {
+        private final StepActivities activities = stub();
+        @Override
+        public String run(String refundId) {
+            activities.step("validate");
+            Workflow.sleep(Duration.ofSeconds(1));
+            activities.step("reserve");
+            activities.step("psp");
+            return "done:" + refundId;
+        }
+    }
+
     /** Second step is now a different activity type (audit instead of step). */
     public static class DifferentActivityImpl implements ThreeStepWorkflow {
 

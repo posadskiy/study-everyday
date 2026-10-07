@@ -2,8 +2,10 @@
 
 ## Module
 
-**1.1 The durable execution model** (20 h) — topics and final check in
-[README.md](README.md#11-the-durable-execution-model--20-h).
+**1.1 The durable execution model** (20 h) — follow the course in
+[01-durable-execution/](01-durable-execution/README.md): ten two-hour sessions, each with lab,
+exercises and checkpoint questions. Start with
+[Session 1](01-durable-execution/S01-the-problem.md).
 
 ## Run locally
 
@@ -25,11 +27,14 @@ mvn -q test
 - `RefundActivitiesImpl` with idempotent PSP mock (`pspByRefundId`).
 - `RefundWorkflowTest` using `TestWorkflowEnvironment`.
 
-## Your next exercises (1.1)
+## Labs
 
-1. Add `docs/event-history-walkthrough.md` — sketch history for crash after `reserveFunds`.
-2. Add a workflow **query** `getStage()` and **signal** `cancel` (exercise from learning plan).
-3. Record progress in `learning-log.md`.
+| Lab | Where | Server needed |
+|---|---|---|
+| 1 naive refund, 2 history/replay, 4 tasks wait, 5 timers, 6 signal/query/update, 7 child/continue-as-new, 8 retries | `payment-disputes/src/test/java/.../lab11/` (`mvn -q test -Dtest=Lab02*`) | No |
+| 3 worker crash | `01-durable-execution/scripts/crash-lab.sh` (run from repository root) | Starts its own dev server |
+
+Record progress in `learning-log.md` after every session.
 
 ## Final check (module 1.1)
 

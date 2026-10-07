@@ -82,6 +82,10 @@ and BPMN engines; learn the concept, use Temporal as the lab.
 
 ### 1.1 The durable execution model — 20 h
 
+> **Full course:** [01-durable-execution/](01-durable-execution/README.md) — ten two-hour sessions
+> with explanations, runnable labs (tests and a real worker-crash script), exercises, checkpoint
+> questions and a capstone. The summary below is only the map.
+
 **Why it matters.** Everything else in the track builds on one idea: the engine remembers what
 already happened, so your process continues after any crash as if nothing happened. If this model is
 not clear, retries, versioning and agent steps all become guesswork.
@@ -95,53 +99,24 @@ adds KYC waits of days. Those use the same workflow, activity, timer and signal 
 are the subject of phases 2 and 3. One process, learned deeply, transfers; three processes sketched
 in parallel do not.
 
-**Topics**
+**Sessions**
 
-- **Workflow vs activity.** A *workflow* is the orchestration code: the order of steps, decisions,
-  waits. It must be deterministic, because the engine *replays* it to rebuild state. An *activity* is
-  one unit of side-effecting work — a PSP call, a database write, an e-mail. Activities may fail and
-  are *retried*. The split exists so that the unreliable part (I/O) is isolated and recorded, and the
-  reliable part (decisions) can be recomputed at any time. Rule of thumb: if it touches the network,
-  the clock, randomness or a database, it is an activity.
-
-- **Event history.** For every workflow execution the engine stores an append-only log:
-  `WorkflowExecutionStarted`, `ActivityTaskScheduled`, `ActivityTaskCompleted` (with the result),
-  `TimerStarted`, `TimerFired`, `WorkflowExecutionSignaled`, and so on. This log is the source of
-  truth, not your process memory.
-
-- **Replay.** When a worker picks up a workflow (after a crash, a deploy or cache eviction), it runs
-  the workflow code from the start. Each time the code asks for an activity, the SDK checks the
-  history: if the result is already recorded, it returns it *without calling the activity again*.
-  Execution "fast-forwards" to the first step not in the history and continues live from there.
-  Consequence: workflow code runs many times; activities run (at least) once per attempt.
-
-- **Workers, task queues and polling.** The Temporal server never runs your code. It holds state and
-  queues tasks. Your *worker* process long-polls a *task queue*, receives a workflow task or activity
-  task, executes it and reports the result. Scaling means adding workers; isolating workloads means
-  separate task queues (e.g. `refund-task-queue` vs `llm-task-queue`). If no worker polls, tasks
-  wait — nothing is lost.
-
-- **Timers and long waits.** `Workflow.sleep(Duration.ofDays(30))` is a durable timer stored on the
-  server. No thread is blocked; the workflow can be evicted from memory and resumed when the timer
-  fires. This is why chargeback deadlines of weeks are cheap to model.
-
-- **Signals, queries and updates** — three ways to talk to a running workflow:
-  - *Signal* (`@SignalMethod`): fire-and-forget input, recorded in history. "Customer adds evidence."
-  - *Query* (`@QueryMethod`): read-only, not recorded, must not change state. "Show dispute status."
-  - *Update* (`@UpdateMethod`, optional `@UpdateValidatorMethod`): request–response; the caller waits
-    for the workflow to process it and gets a result or a validation error. "Approve and return the
-    new state."
-
-- **Child workflows and continue-as-new.** A *child workflow* is a separate execution with its own
-  history, useful for independent sub-processes (one per evidence item, one per payout batch).
-  *Continue-as-new* ends the current run and starts a fresh one with the same workflow ID and new
-  input — the way to keep long-lived workflows (a merchant's monthly cycle) from growing an
-  unbounded history. Know that histories have hard limits (tens of thousands of events, tens of MB)
-  and the SDK warns before you hit them.
+| # | Session | Covers |
+|---|---|---|
+| 1 | [The problem](01-durable-execution/S01-the-problem.md) | Why a plain refund breaks; what any fix needs |
+| 2 | [Workflow vs activity](01-durable-execution/S02-workflow-vs-activity.md) | The split, stubs, determinism vs idempotency |
+| 3 | [Event history](01-durable-execution/S03-event-history.md) | Events, commands, workflow tasks, what is and is not recorded |
+| 4 | [Replay and determinism](01-durable-execution/S04-replay-and-determinism.md) | How replay works, violations, the replay test and its blind spot |
+| 5 | [Workers and the crash lab](01-durable-execution/S05-workers-and-the-crash-lab.md) | Task queues, polling, sticky queues, `kill -9` mid-activity |
+| 6 | [Activity failure and idempotency](01-durable-execution/S06-activity-failure-and-idempotency.md) | Retries, four timeouts, unknown outcomes, idempotency keys |
+| 7 | [Timers](01-durable-execution/S07-timers.md) | Durable sleep, event-or-deadline, long loops |
+| 8 | [Signals, queries, updates](01-durable-execution/S08-signals-queries-updates.md) | Semantics, validators, choosing |
+| 9 | [Child workflows and continue-as-new](01-durable-execution/S09-child-workflows-continue-as-new.md) | Fan-out, history budget, limits |
+| 10 | [Capstone](01-durable-execution/S10-capstone.md) | Build `getStage` + `cancel`; the three final-check items |
 
 **Build:** `RefundWorkflow` — validate → reserve funds → call the PSP refund API (mock) → post ledger
 entries → notify. Activities as Spring beans; a worker app with Spring Boot. *(Started in
-[payment-disputes/](payment-disputes/).)* Add a `getStage()` query and a `cancel` signal.
+[payment-disputes/](payment-disputes/).)* Add a `getStage()` query and a `cancel` signal (session 10).
 
 **Sources:** learn.temporal.io courses *Temporal 101* and *102* (Java); docs "Workflows",
 "Activities", "Event History"; `temporalio/samples-java`.
