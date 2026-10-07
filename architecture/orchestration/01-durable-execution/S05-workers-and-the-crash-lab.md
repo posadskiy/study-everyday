@@ -65,7 +65,7 @@ A task queue is just a name. You decide what to put behind it:
   API keys). A flood of slow LLM activities cannot starve refunds.
 - **Different hardware or language:** a queue served only by a GPU box; an activity written in
   Python, workflow in Java.
-- **Rate limiting** per queue (`maxTaskQueueActivitiesPerSecond`) — protecting a PSP.
+- **Rate limiting** per queue (`WorkerOptions.setMaxTaskQueueActivitiesPerSecond`) — protecting a PSP.
 
 ## 2. Tasks wait; nothing is lost (Lab 4)
 
@@ -103,7 +103,7 @@ a worker dies *between* activities. When a worker dies *during* an activity, ano
 Practical implications:
 
 - Replay is the exception on a healthy system, and the norm after deploys.
-- A worker's cache has a size limit (`maxCachedWorkflows`): workflows get evicted and replayed.
+- A worker's cache has a size limit (`WorkerFactoryOptions.setWorkflowCacheSize` in the Java SDK): workflows get evicted and replayed.
   Hence determinism must hold *always*, not just after crashes.
 
 ## 4. Lab 3 — kill a worker in the middle of an activity
