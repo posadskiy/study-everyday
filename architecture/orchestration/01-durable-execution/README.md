@@ -33,6 +33,12 @@ once. The labs are built to surprise you in places where intuition is wrong.
 A session is one 2-hour block of the 8 h/week plan, so the module is about two and a half weeks
 of calendar time. Do the sessions in order — each uses the previous one.
 
+## Verified with
+
+Everything in the course was run against: Temporal Java SDK 1.35.0, Spring Boot 4.0.1, Java 25,
+Temporal CLI 1.9.1 (dev server 1.32.0). Command output and event numbers in the text come from
+those versions; CLI column layouts and event type names may differ slightly in other versions.
+
 ## Setup (once, 30 minutes counted inside session 2)
 
 - Java 25 (the repository enforces it), Maven 3.9+.
