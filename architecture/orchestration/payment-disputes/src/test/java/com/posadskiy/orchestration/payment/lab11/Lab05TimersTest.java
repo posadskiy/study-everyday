@@ -63,6 +63,30 @@ class Lab05TimersTest {
         }
     }
 
+    @WorkflowInterface
+    public interface CoolingOffWorkflow {
+
+        @WorkflowMethod
+        String run(String refundId);
+
+        class Impl implements CoolingOffWorkflow {
+
+            private final StepActivities activities = Workflow.newActivityStub(
+                    StepActivities.class,
+                    ActivityOptions.newBuilder()
+                            .setStartToCloseTimeout(Duration.ofSeconds(10))
+                            .build());
+
+            @Override
+            public String run(String refundId) {
+                activities.step("reserve");
+                Workflow.sleep(Duration.ofHours(24)); // durable: no thread is held for a day
+                activities.step("release");
+                return "released";
+            }
+        }
+    }
+
     private TestWorkflowEnvironment env;
     private WorkflowClient client;
     private RecordingStepActivities activities;
@@ -71,7 +95,7 @@ class Lab05TimersTest {
     void setUp() {
         env = TestWorkflowEnvironment.newInstance();
         Worker worker = env.newWorker(QUEUE);
-        worker.registerWorkflowImplementationTypes(DeadlineWorkflow.Impl.class);
+        worker.registerWorkflowImplementationTypes(DeadlineWorkflow.Impl.class, CoolingOffWorkflow.Impl.class);
         activities = new RecordingStepActivities();
         worker.registerActivitiesImplementations(activities);
         env.start();
@@ -123,5 +147,25 @@ class Lab05TimersTest {
         types.forEach(t -> System.out.println("EVENT " + t));
         assertThat(types).contains(EventType.EVENT_TYPE_TIMER_STARTED);
         assertThat(types).doesNotContain(EventType.EVENT_TYPE_TIMER_FIRED);
+    }
+
+    @Test
+    void sleepWritesTimerStartedThenTimerFiredBetweenTwoActivities() {
+        CoolingOffWorkflow workflow = client.newWorkflowStub(
+                CoolingOffWorkflow.class,
+                WorkflowOptions.newBuilder().setTaskQueue(QUEUE).setWorkflowId("wf-cooling").build());
+
+        assertThat(workflow.run("r-1")).isEqualTo("released");
+
+        var types = client.fetchHistory("wf-cooling").getEvents().stream()
+                .map(e -> e.getEventType())
+                .filter(t -> t.name().contains("TIMER") || t.name().contains("ACTIVITY_TASK_SCHEDULED"))
+                .toList();
+        types.forEach(t -> System.out.println("EVENT " + t));
+        assertThat(types).containsExactly(
+                EventType.EVENT_TYPE_ACTIVITY_TASK_SCHEDULED,
+                EventType.EVENT_TYPE_TIMER_STARTED,
+                EventType.EVENT_TYPE_TIMER_FIRED,
+                EventType.EVENT_TYPE_ACTIVITY_TASK_SCHEDULED);
     }
 }

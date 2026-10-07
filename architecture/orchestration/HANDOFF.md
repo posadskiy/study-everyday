@@ -26,6 +26,7 @@ Implementation of the **320 h learning plan** from the `personal-career` repo:
 ```
 architecture/orchestration/
   README.md           ← learning guide: every topic explained, final checks
+  01-durable-execution/ ← full 20 h course for module 1.1 (10 sessions + crash-lab script)
   HANDOFF.md          ← this file
   START_HERE.md       ← current module + commands
   learning-log.md     ← one line per study session
@@ -36,7 +37,7 @@ architecture/orchestration/
 
 | Module | State | Next |
 |---|---|---|
-| **1.1 Durable execution model** | **Started** — `RefundWorkflow` + activities + one test | Add signal/query exercise, event-history notes, crash-recovery demo |
+| **1.1 Durable execution model** | **Course written, in review** — [01-durable-execution/](01-durable-execution/README.md), labs `lab11/` (8 test classes), `crash-lab.sh` | Learner works through S01–S10; if the format is approved, write 1.2–1.5 the same way |
 | 1.2 Failure semantics | Not started | Fault-injecting PSP mock, retry tuning |
 | 1.3 Sagas / ledger | Not started | Compensation path, ledger invariant tests |
 | 1.4 Determinism / versioning | Not started | `getVersion` exercise, replay tests |
