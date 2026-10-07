@@ -71,8 +71,10 @@ Written as a panel of four:
 
 ## Phase 1 — Correctness in an engine (70 h)
 
-**Goal:** a payment refund modelled as a durable workflow that is correct under crashes, retries,
-timeouts and redeploys.
+**Goal:** one payment process modelled as a durable workflow that is correct under crashes, retries,
+timeouts and redeploys. The lab process is a **refund** — the shortest money movement that still
+fails in real ways. The same model covers disputes, payouts and onboarding; those arrive in later
+modules, when the extra rules are the point of the lesson.
 
 **Engine:** Temporal Java SDK — named most in the ads, open source, runs on a laptop
 (`temporal server start-dev`). Every concept here has an equivalent in Conductor, Step Functions
@@ -83,6 +85,15 @@ and BPMN engines; learn the concept, use Temporal as the lab.
 **Why it matters.** Everything else in the track builds on one idea: the engine remembers what
 already happened, so your process continues after any crash as if nothing happened. If this model is
 not clear, retries, versioning and agent steps all become guesswork.
+
+**Why the example is a refund.** Not because refunds are the only thing ads or tutorials show.
+Payment ads name refunds, disputes, payouts, reconciliation and onboarding together. A refund is
+used here because it is linear — validate, reserve, call the PSP, post the ledger, notify — so the
+new ideas (history, replay, signals) are the hard part, not the business rules. A chargeback adds
+scheme deadlines, evidence and a human decision; a payout adds batches and cut-off times; onboarding
+adds KYC waits of days. Those use the same workflow, activity, timer and signal primitives, and they
+are the subject of phases 2 and 3. One process, learned deeply, transfers; three processes sketched
+in parallel do not.
 
 **Topics**
 
