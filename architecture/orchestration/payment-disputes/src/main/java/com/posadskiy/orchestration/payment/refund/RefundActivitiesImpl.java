@@ -3,8 +3,10 @@ package com.posadskiy.orchestration.payment.refund;
 import io.temporal.spring.boot.ActivityImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.time.Duration;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -18,6 +20,10 @@ public class RefundActivitiesImpl implements RefundActivities {
     /** Simulated PSP: idempotent on refundId. */
     private final Map<String, String> pspByRefundId = new ConcurrentHashMap<>();
     private final Map<String, Long> ledgerMinorByRefundId = new ConcurrentHashMap<>();
+
+    /** Lab hook: makes the PSP call slow so there is time to kill the worker mid-activity. */
+    @Value("${refund.psp-delay:PT0S}")
+    private Duration pspDelay = Duration.ZERO;
 
     @Override
     public void validate(RefundRequest request) {
@@ -35,6 +41,7 @@ public class RefundActivitiesImpl implements RefundActivities {
     public String submitToPsp(RefundRequest request, String reservationId) {
         return pspByRefundId.computeIfAbsent(request.refundId(), id -> {
             log.info("submitToPsp refundId={} reservationId={}", id, reservationId);
+            sleep(pspDelay);
             return "psp-" + UUID.randomUUID();
         });
     }
@@ -52,6 +59,15 @@ public class RefundActivitiesImpl implements RefundActivities {
     @Override
     public void notifyCustomer(RefundRequest request, String pspReference) {
         log.info("notifyCustomer refundId={} pspReference={}", request.refundId(), pspReference);
+    }
+
+    private static void sleep(Duration duration) {
+        try {
+            Thread.sleep(duration);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new IllegalStateException("interrupted while waiting on the PSP", e);
+        }
     }
 
     /** Test hook: how many times ledger was credited for this refund. */
