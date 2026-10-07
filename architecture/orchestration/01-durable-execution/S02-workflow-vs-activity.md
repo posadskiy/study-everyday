@@ -188,9 +188,13 @@ recorded result.
 
 ### Prediction questions (write the answer first, then run)
 
-1. Start a second workflow with the **same** `--workflow-id`. What happens? (Try it. Which setting
-   would change the behaviour? Hint: the Web UI "Start workflow" dialog and the CLI flag
-   `--id-conflict-policy`.)
+1. Start a second workflow with the **same** `--workflow-id`. What happens? (Try it, once after the
+   first has finished and once while a slow one — session 5's `--refund.psp-delay` — is still
+   running. Measured here: after the first one **completed**, the second start was accepted and
+   created a new run with a new run ID. While one is **running**, the default is to refuse the start
+   (documented). The CLI flags `--id-reuse-policy` and `--id-conflict-policy` change this. Think about
+   which behaviour you want for "start refund r-1": you want *at most one* refund per refund ID.
+   Using the refund ID as the workflow ID is a second layer of idempotency.)
 2. Start a workflow with a *new* ID but the **same** `refundId`. What does `submitToPsp` do? Why is
    that not enough protection in production?
 3. Stop the worker (Ctrl+C), start another workflow, look at it in the UI. What state is it in? Start

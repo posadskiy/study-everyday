@@ -171,7 +171,18 @@ Module 1.2 maps this to the full failure taxonomy; module 1.3 builds the compens
    own memory). Re-run Lab 3 (`crash-lab.sh`). How many *refunds* now exist at the "PSP" after the
    crash? How many *calls*? Explain the difference.
 2. **Watch the retries.** Start the real server and worker. Add a property `refund.psp-fail-first=3`
-   so the activity throws on the first 3 attempts (write the code like in Lab 8's `FlakyPsp`).
+   so the activity throws on the first 3 attempts. Sketch:
+
+   ```java
+   @Value("${refund.psp-fail-first:0}") private int failFirst;
+   private final AtomicInteger pspCalls = new AtomicInteger();
+   // at the top of submitToPsp:
+   if (pspCalls.incrementAndGet() <= failFirst) {
+       throw new IllegalStateException("PSP returned 503");
+   }
+   ```
+
+   (This is the same idea as Lab 8's `FlakyPsp`, in the real activity.)
    Start a workflow and run, repeatedly, `temporal workflow describe --workflow-id ...`. Find
    "Pending Activities", the attempt number and the last failure. Then `temporal workflow show`:
    how many `ActivityTask*` events for `SubmitToPsp` at the end?

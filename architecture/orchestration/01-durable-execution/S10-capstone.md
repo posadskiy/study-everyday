@@ -53,8 +53,22 @@ runs validate -> reserve -> PSP -> ledger -> notify.
 | `replayStillWorks` | Run the workflow, export the history, replay with `WorkflowReplayer` against the new code: green. |
 | `breakingChangeIsDetected` | Swap the order of `reserveFunds` and `validate` in a copy of the class; replaying the old history fails with `NonDeterministicException`. |
 
+Note: `RefundResult.RefundStatus` currently has only `COMPLETED` and `FAILED`; add `CANCELLED`.
+The workflow task cannot decide a cancel cut-off by itself in a test unless you make the timing
+deterministic — that is why the hints below propose a short `Workflow.await` window before the PSP
+call. Think about whether you would ship that window.
+
 Definition of done: `mvn -q test` green; each test has a one-line comment stating what it proves;
 `learning-log.md` has your entry.
+
+### Reference solution
+
+Only after your own attempt and tests: a working reference lives in
+[`CapstoneReferenceTest`](../payment-disputes/src/test/java/com/posadskiy/orchestration/payment/lab11/CapstoneReferenceTest.java)
+(a test-scope copy of the workflow plus five tests covering the table above except the
+`breakingChangeIsDetected` case, which you write yourself). Compare design choices, not just
+green/red: where is the cut-off, what is the cost of the 5 s window, what does `getStage()` return
+during the window?
 
 ## Part 2 — Final check A: the crash history (20 min)
 
