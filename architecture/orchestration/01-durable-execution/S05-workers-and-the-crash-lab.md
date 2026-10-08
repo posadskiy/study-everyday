@@ -58,11 +58,15 @@ and `application.yaml` only tells the starter where to look for them:
 spring:
   temporal:
     workers-auto-discovery:
-      packages:
+      workflow-packages:
         - com.posadskiy.orchestration.payment.refund
+      register-activity-beans: true
 ```
 
-(Without `workers-auto-discovery`, the annotations alone start no worker — we tried: no pollers, the
+(`packages` is the deprecated name of `workflow-packages`. `workflow-packages` finds only workflows:
+without `register-activity-beans: true` the worker polls for workflow tasks but never for activity
+tasks, and every workflow stops after its first activity is scheduled (5 history events, status
+Running). Without `workers-auto-discovery`, the annotations alone start no worker — we tried: no pollers, the
 workflow sat at 2 history events. The alternative is to list `workers:` with `workflow-classes` and
 `activity-beans` explicitly in YAML.)
 
