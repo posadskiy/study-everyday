@@ -6,5 +6,6 @@ spring:
       target: 127.0.0.1:7233
     namespace: default
     workers-auto-discovery:
-      packages:
+      workflow-packages:
         - com.posadskiy.orchestration.payment.refund
+      register-activity-beans: true
