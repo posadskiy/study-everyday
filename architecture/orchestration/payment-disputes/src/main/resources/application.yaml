@@ -5,10 +5,6 @@ spring:
     connection:
       target: 127.0.0.1:7233
     namespace: default
-    workers:
-      - task-queue: refund-task-queue
-        name: refund-worker
-        workflow-classes:
-          - com.posadskiy.orchestration.payment.refund.RefundWorkflowImpl
-        activity-beans:
-          - refundActivitiesImpl
+    workers-auto-discovery:
+      packages:
+        - com.posadskiy.orchestration.payment.refund
