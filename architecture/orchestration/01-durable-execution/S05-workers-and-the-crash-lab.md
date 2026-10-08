@@ -44,14 +44,27 @@
 | **Workflow task** | A workflow starts, or an event it is waiting on happens | Runs workflow code until it blocks, returns commands | Commands -> events |
 | **Activity task** | The workflow asked to schedule an activity | Runs the activity method | `ActivityTaskCompleted` / failure |
 
-Both kinds travel through a task queue named in your configuration. In `application.yaml`:
+Both kinds travel through a task queue. In this project the queue is declared with annotations,
+next to the code it belongs to:
+
+```java
+@WorkflowImpl(taskQueues = RefundWorkflowImpl.TASK_QUEUE)   // on RefundWorkflowImpl
+@ActivityImpl(taskQueues = RefundWorkflowImpl.TASK_QUEUE)   // on RefundActivitiesImpl (a Spring @Component)
+```
+
+and `application.yaml` only tells the starter where to look for them:
 
 ```yaml
-workers:
-  - task-queue: refund-task-queue
-    workflow-classes: [ ...RefundWorkflowImpl ]
-    activity-beans:   [ refundActivitiesImpl ]
+spring:
+  temporal:
+    workers-auto-discovery:
+      packages:
+        - com.posadskiy.orchestration.payment.refund
 ```
+
+(Without `workers-auto-discovery`, the annotations alone start no worker — we tried: no pollers, the
+workflow sat at 2 history events. The alternative is to list `workers:` with `workflow-classes` and
+`activity-beans` explicitly in YAML.)
 
 So this worker polls `refund-task-queue` for both workflow tasks and activity tasks.
 
